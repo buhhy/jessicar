@@ -1,0 +1,245 @@
+/* Text */
+
+@font-face {
+  font-family: 'MyFontFamily';
+  src: url('fonts/Avenir.ttf') format('truetype'), 
+       url('fonts/Gotham-Light.otf') format('embedded-opentype'), 
+       url('fonts/MuseoSans.otf')  format('embedded-opentype');
+}
+
+body, html, h1, h2, h3, h4, h5 {
+	padding: 0;
+	margin : 0;
+}
+
+h1 {
+	font-weight: 500;
+	font-size: 36px; 
+    font-family: 'Museo Sans 500';
+    text-align: right;
+}
+
+h2 {
+	font-weight: 500;
+	font-size: 40px; 
+    font-family: 'Museo Sans 500';
+}
+
+p {
+	font-weight: 500;
+	font-size: 14px;
+	font-family: 'Avenir';
+}
+
+hr, ul {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;	
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.line {
+	border-right: 1px solid #F7C4C4;
+	height: 100%;
+}
+
+.float-left {
+	float: left;
+}
+
+.relative {
+	position: relative;
+}
+
+.wide {
+	width: 100%;
+}
+
+.tall {
+	height: 100%;
+}
+
+.hidden {
+	position: absolute;
+	display: none;
+	opacity: 0;
+}
+
+.invisible {
+	opacity: 0;
+}
+
+
+/*Top Navigation*/
+ul.hori {
+	position: relative;
+	z-index: 5;
+	list-style-type: none;
+	padding: 0;
+	margin: 0.5em 0 0 0;
+}
+
+ul.hori li {
+	float: left;
+	font-size: 21px;
+	font-family: 'Museo Sans 500';
+	font-weight: 500;
+	padding: 0.2em 0;
+	margin: 0 1.2em;
+}
+
+ul.hori li:first-child {
+	margin-left: 0;
+}
+
+/*Timeline*/	
+ul.verti {
+	list-style-type: none;
+	padding: 0;
+	text-align: right;
+}
+
+ul.verti li:first-child {
+	padding-top: 0;
+}
+
+ul.verti li {
+	padding: 90px 25px 0px 0;
+}
+
+a {
+	text-decoration: none;
+	color: #4C4C4C;
+}
+
+/*Sections*/
+
+div.window {
+	color: #4C4C4C;
+
+	width: 100%;
+	height: 100%;
+}
+
+div.timeline {
+	font-family: 'Gotham Light';
+	font-size: 16px;
+	font-weight: 500;
+	padding: 30px 0 0 0;
+}
+
+article.content {
+	padding: 20px 0 0 0;
+	font-family: 'Avenir';
+	font-size: 14px;
+	font-weight: 500;
+}
+
+p {
+	line-height: 20px;
+	padding: 0;
+	margin: 15px 0 0 0;
+}
+
+br {
+	line-height: 19px;
+	padding: 0;
+	margin: 0;
+}
+
+/* Display Table */
+.table {
+	display: table;
+}
+
+.table .row {
+	display: table-row;
+}
+
+.table .row .cell {
+	display: table-cell;
+	vertical-align: top;
+	padding: 2em 4em 0 3em;
+}
+
+.table .row .cell.left {
+	min-width: 13em;
+}
+
+
+.header-circle {
+	width: 2em;
+	height: 2em;
+	border-radius: 1em;
+	color: #fff;
+	background: #F7C4C4;
+	display: inline-block;
+	margin: 10px 0 0 5px;
+	position: absolute;
+	font-size:15px;
+	line-height:27px;
+	text-align:center;
+}
+
+.top-circle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2em;
+	height: 2em;
+	border-radius: 1em;
+	border: 1px solid #F7C4C4;
+
+	margin: -2.2em 0 0 -1em;
+}
+
+.left-circle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1.2em;
+	height: 1.2em;
+	border-radius: 0.6em;
+	border: 1px solid #F7C4C4;
+
+	margin: -0.6em 0 0 -0.6em;
+}
+
+.left-circle.active {
+	background: #F7C4C4;
+}
+
+.border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.verti-divider {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 100%;
+	padding: 0.7em 0 0em;
+}
+
+.hori-divider {
+	height: 0;
+	width: 100%;
+}
