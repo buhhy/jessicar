@@ -34,19 +34,17 @@ $(function() {
 		var $lis = $topNavList.children("li");
 
 		var setIndicatorPos = function(_$el) {
-			$topNavIndicator.css("left", _$el.position().left + _$el.width()/2);
-			$topNavIndicator.fadeTo(150, 1, function() {
-			});
+			$topNavIndicator.animate({
+				"left": _$el.position().left + _$el.width()/2
+			}, 250);
 		};
 
 		$lis.each(function() {
 			var $el = $(this).children("a");
 
 			$el.bind({
-				click: function(_e) {
-					$topNavIndicator.fadeTo(150, 0, function() {
-						setIndicatorPos($el);
-					})
+				mouseover: function(_e) {
+					setIndicatorPos($el);
 				}
 			});
 		});
