@@ -1,95 +1,129 @@
 <!DOCTYPE HTML>
-
 <html>
 	<head>
-		<title>jessica fung</title>
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<title>Jessica Fung</title>
+		<link rel="stylesheet" type="text/css" href="css.css" />
 	</head>
+	<body>
+<!-- MODAL -->
 
-	<body class="border-box">
-
-		<!--Window-->
-		<div class="table window">
-			<div class="row">
-
-
-		<!--Logo-->
-				<header class="cell left">
-					<h1><a href="index.html">jessica fung</a><span class="header-circle">hi!</span></h1>
-				</header>
-
-		<!--Top Navigation-->
-				<nav class="cell">
-					<div class="tall wide relative border-box">
-						<ul id="topNavList" class="hori clearfix">
-							<li><a href="#">home</a></li>
-							<li><a href="http://www.behance.net/jessica-fung">portfolio</a></li>
-							<li><a href="../JessicaFungResume.pdf">resume</a></li>
-							<!--<li><a href="#">blog</a></li>-->
-							<li><a href="mailto:me@jessicafung.com">contact</a></li>
-						</ul>
-						<div class="hori-divider relative border-box">
-							<div id="topNavIndicator" class="top-circle border-box"></div>
-						</div>
-					</div>
-				</nav>
-			</div>
-
-		<!--Timeline-->
-			<div class="row tall">
-				<nav class="cell left border-box">
-					<div class="timeline tall wide border-box">
-						<div class="tall wide relative">
-							<ul id="leftNavList" class="verti">
-								<li class="active"><a href="">welcome</a></li>
-								<!--<li><a href="#">hire me</a></li>
-								<li><a href="#">another list</a></li>-->
-							</ul>
-							<div class="verti-divider border-box">
-								<div class="line relative">
-									<div id="leftNavPointer" class="left-circle border-box"></div>
-									<div id="leftNavIndicator" class="left-circle active border-box"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</nav>
-
-		<!--Content-->
-				<div class="cell">
-					<article class="content">
-						<h2>Hi! I'm a UI-UX designer from Toronto.</h2>
-						<p>
-							I have experience in <i>graphic design</i>, <i>information architecture</i>, and <i>interface design</i>.
-							<br>
-							I plan to expand my horizons in the field, and challenge myself to learn user experience on my own. 
-							<br> 
-						</p>
-
-						<p>
-							At the moment, I am a fourth-year Honours Psychology Co-op student at the <a href="http://www.uwaterloo.ca">University of Waterloo</a>.
-							<br> 
-							I expect to graduate in April 2014, and will be looking for full-time opportunities shortly after.
-							<br>
-						</p>
-						
-						<div class="bodyDivider"></div>
-						
-						<h2>I am currently looking for a Fall design internship.</h2>
-						<h3>Fall = September to December 2013</h3>
-						<p>
-							My biography is currently under construction, but please feel free to <a href="http://www.behance.net/jessica-fung">visit my portfolio at Behance</a>.
-						</p>
-
-						<!--<p>
-							If you fancy personality types, I&#39;ve been consistently an INFJ. It fits me to a T.
-						</p>-->
-					</article>
+		<div class="md-modal md-effect-1" id="modal-1">
+			<div class="md-content">
+				<a id="closeButton" class="button">x</a> Scroll to browse.
+				<div class="openImg">
+					<img src="images/behkon.jpg">
 				</div>
 			</div>
 		</div>
+		<div class="md-modal md-effect-1" id="modal-2">
+			<div class="md-content">
+				<a id="closeButton" class="button">x</a> Scroll to browse.
+				<div class="openImg">
+					<img src="images/behent.jpeg">
+				</div>
+			</div>
+		</div>
+		<div class="md-overlay"></div>
 
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+
+		<header id="pageHeader">
+			<nav>
+				<ul>
+					<a id="linkName"><li>jessica fung</li></a>
+					<a id="linkPortfolio"><li>portfolio</li></a>
+					<a id="linkResume"><li>resume</li></a>
+					<a href="http://jessicaafung.wordpress.com/"><li>blog</li></a>
+					<a id="linkContact"><li>contact me</li></a>
+				</ul>
+			</nav>
+		</header>
+		<aside>
+			<div class="circle face">
+				<div class="circle ear1"></div>
+				<div class="circle ear2"></div>
+				<div class="circle eye1"></div>
+				<div class="circle eye2"></div>
+			</div>
+		</aside>
+		<section class="bio">
+			<div class="triangle"></div>
+			<div class="bubble">
+			Hi! I&#39;m Jessica Fung, a user experience designer!
+			</div>
+			<article>My background in psychology and design helps me to actualize my ideas. I&#39;m also currently learning web development because I&#39;ve heard that it can magically make lives easier if done right.
+
+			<p>I will be graduating from the Honours Psychology Co-op program at the <a href="http://www.uwaterloo.ca/">University of Waterloo</a> in the fall of 2014, and will be looking for full-time opportunites shortly after.</p>
+			</article>
+		</section>
+		<section class="portfolio">
+			<h2>portfolio</h2>
+			<ul class="grid cs-style-3">
+				<li>
+					<figure>
+						<img src="images/koncover.jpg" alt="img04">
+						<figcaption>
+							<h3>Documentation Redesign</h3>
+							<span>At Kontagent</span>
+							<a id="dialogTrigger" class="button" data-modal="modal-1">Learn more</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/401.jpg" alt="img04">
+						<figcaption>
+							<h3>Entwine</h3>
+							<span>Personal project</span>
+							<!--<a href="http://dribbble.comshots/1116685-Settings">Learn more</a>-->
+							<a id="dialogTrigger" class="button" data-modal="modal-2">Learn more</a>
+
+						</figcaption>
+					</figure>
+				</li>
+
+
+				
+
+				<li>
+					<figure>
+						<div class="learnmore">View more<br />of my work</div>
+						<figcaption>
+							<a class="button" href="http://www.behance.net/jessica-fung">Go to my Behance portfolio</a>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+			<span id="resume-contact"></span>
+		</section>
+
+		<section class="table">
+			<section class="resume">
+				<h2>resume</h2> 
+				<a href="http://jessicafung.com/JessicaFungResume.pdf"><div class="button">	Download PDF</div></a>
+					<article class="paper">
+						<img src="images/JessicaFungResume.png">
+					</article>
+			</section
+			><section class="contact">
+				<h2>contact me</h2>
+				<article>I'd love to hear from you &ndash; just email me at <a href=
+				"mailto:jessicafung@live.ca">jessicafung@live.ca</a>.
+
+				<p>If you're also in San Francisco, you might see me around for a while. :)</p>
+				</article>
+			</section>
+		</section>
+		<footer>
+			&copy Jessica Fung 2013
+			<!--<ul class="social">
+				<li class="facebook">jeshiica</li>
+			</ul>-->
+		</footer>
 	</body>
+	<script src="jquery-2.0.3.min.js"></script>
+	<script src="js.js"></script>
+
+<!--Codrops-->
+		<script src="classie.js"></script>
+		<script src="modalEffects.js"></script>
 </html>
