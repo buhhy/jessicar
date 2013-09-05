@@ -84,7 +84,7 @@ article {
 }
 
 article a {
-	color: #9E1B0A;
+	color: #B83524;
 }
 
 article a:hover {
@@ -214,7 +214,7 @@ section.bio {
 
 section.bio article {
 	margin: 0;
-	padding: 105px 130px 0;
+	padding: 105px 130px 0;	
 }
 
 /* Body: Portfolio */ 
@@ -348,7 +348,7 @@ nav ul a {
 	font-weight: 500;
 	padding: 0.65em 0;
 	margin: 0 1.5em;
-	color: #FFCEBD;
+	color: #FFDBCA;
 	letter-spacing: 2.8px;
 	vertical-align: middle;
 
@@ -362,10 +362,10 @@ nav ul a {
 nav a:hover {
 	color: #FFE7D6;
 	opacity: 1;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;    
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;    
 }
 
 ul a#linkName {
@@ -377,12 +377,7 @@ ul a#linkName {
 }
 
 ul a#linkName:hover {
-	color: #FFE7D6;
-	opacity: 1;
-    -webkit-transition: all 0.8s ease-in-out;
-    -moz-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
+	color: #C54231;
 }
 
 .learnmore {
