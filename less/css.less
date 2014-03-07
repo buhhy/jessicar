@@ -1,0 +1,126 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+
+html, body {
+	width: 100%;
+	font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	line-height: 1.5em;
+	color: #636363;
+	margin: 0;
+	padding: 0;
+	display: block;
+	overflow: hidden;
+}
+
+h1 {
+	font-size: 2.6em;
+	font-weight: 400;
+	letter-spacing: 0.9px;
+	color: #636363;
+	text-align: center;
+	margin: 0.4em;
+}
+
+h2 {
+	font-size: 0.9em;
+	font-weight: 300;
+	color: #898989;
+	text-align: center;
+	margin: 0;
+	letter-spacing: 0.6px;
+}
+
+h3 {
+	font-size: 1.4em;
+	font-weight: 100;
+	padding: 0 0 0.3em 0;
+	margin: 0;
+}
+
+a {
+	color: #F77463;
+	text-decoration: none;
+
+	&:hover {
+		color: #FF8E7D;
+	}
+
+}
+
+b {
+	font-weight: 400;
+}
+
+.table {
+	display: table;	
+}
+
+.table-cell {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.intro {
+	width: 33%;
+
+	.short-about {
+		padding: 15%;
+
+		image:hover, circle:hover {
+			cursor: pointer;
+		}
+
+		image {
+			position: absolute;
+		}
+
+		.description {
+			margin-top: 20px;
+		}
+
+		.learn-more {
+			list-style-type: none;
+			margin: 0;
+			padding: 1.2em 0;
+			line-height: 2em;
+		}	
+
+		.copy {
+			font-weight: 300;
+			font-size: 0.8em;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+.portfolio {
+	width: 67%;
+
+	.works {
+		position: absolute;
+		top: 0;
+		list-style-type: none;
+		color: white;
+		margin: 6em 3em 0;
+
+		li {
+			padding: 2em;
+			margin: 3em 0;
+			width: 67%;
+
+			&:hover {
+				background-color:rgba(255,255,255,0.2);
+				cursor: pointer;
+			}
+		}
+	}
+
+	span {
+		margin: 0;
+		color: #515151;
+		line-height: 1.6em;
+	} 
+
+}
