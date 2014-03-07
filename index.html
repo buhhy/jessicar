@@ -1,128 +1,77 @@
-<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Jessica Fung</title>
-		<link rel="stylesheet" type="text/css" href="css.css" />
+		<link rel="stylesheet" type="text/css" href="css/css.css">
 	</head>
-	<body>
-<!-- MODAL -->
+	<body class="table">
+		<section class="intro table-cell">
+			<article class="short-about">
+				<svg class="logo">
+					<defs>
+						<filter id="dropShadow" x="0" y="0" width="200%" height="200%">
+					    	<feOffset result="offOut" in="SourceGraphic" dx="0" dy="1" />
+					    	<feColorMatrix result="matrixOut" in="offOut" type="matrix"
+					      values="0.33 0.33 0.33 0 0 0.33 0.33 0.33 0 0 0.33 0.33 0 0 0.33 0.33 0 0 0.33 0" />
 
-		<div class="md-modal md-effect-1" id="modal-1">
-			<div class="md-content">
-				<a id="closeButton" class="button">x</a>
-				<div class="openImg">
-					<img src="images/behkon.jpg">
-				</div>
-			</div>
-		</div>
-		<div class="md-modal md-effect-1" id="modal-2">
-			<div class="md-content">
-				<a id="closeButton" class="button">x</a>
-				<div class="openImg">
-					<img src="images/behent.jpeg">
-				</div>
-			</div>
-		</div>
-		<div class="md-overlay"></div>
+					     	<feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="2" />
+					     	<feBlend in="SourceGraphic" in="blurOut" mode="normal" />
+				    	</filter>
 
-		<header id="pageHeader">
-			<nav>
-				<ul>
-					<a id="linkName"><li>jessica fung</li></a>
-					<a id="linkPortfolio"><li>portfolio</li></a>
-					<a id="linkResume"><li>resume</li></a>
-					<a href="http://jessicaafung.wordpress.com/"><li>blog</li></a>
-					<a id="linkContact"><li>contact me</li></a>
+						<radialGradient id="logo" cx="-1" cy="-1" r="2.6" fx="0.25" fy="0.25">
+							<stop offset="0%" stop-color="#FDC2A2"/>
+							<stop offset="100%" stop-color="#F77463"/>
+						</radialGradient>
+					</defs>
+
+					<circle cx="50%" cy="50%" r="45" fill="url(#logo)" filter="url(#dropShadow)" />
+					<image xlink:href="logo.svg" x="43%" y="33%" height="44px" width="43px" filter="url(#dropShadow)"/>
+				</svg>
+				<h1>Jessica Fung</h1>
+				<h2>UI &#183; UX Designer</h2>
+				<article class="description">
+					<p>I&#700;m a UI &#183; UX Designer with a background in psychology, an appreciation of code, and a passion for design.</p>
+
+					<p>Last term, I had an amazing internship at <a href="http://www.inkling.com/">Inkling</a>, one of Fast Company&#700;s <a href="http://www.fastcompany.com/most-innovative-companies/2014/inkling">50 Most Innovative Companies of 2014</a>.</p>
+
+					<p>What matters the most to me are the <b>people</b>: the team, the clients, the users, you.</p>
+				</article>
+				<ul class="learn-more">
+					<li><a href="">Learn more about me</a></li>
+					<li><a href"">Twitter</a></li>
+					<li><a href="">LinkedIn</a></li>
+					<li><a href="">Facebook</a></li>
 				</ul>
-			</nav>
-		</header>
-		<aside>
-			<div class="circle face">
-				<div class="circle ear1"></div>
-				<div class="circle ear2"></div>
-				<div class="circle eye1"></div>
-				<div class="circle eye2"></div>
-			</div>
-		</aside>
-		<section class="bio">
-			<div class="triangle"></div>
-			<div class="bubble">
-			Hi! I&#39;m Jessica, a user experience designer!
-			</div>
-			<article>My background in psychology and design helps me to actualize my ideas. I&#39;m also currently learning web development because I&#39;ve heard that it can magically make lives easier if done right.
-
-			<p>I will be graduating from the Honours Psychology Co-op program at the <a href="http://www.uwaterloo.ca/">University of Waterloo</a> in the fall of 2014, and will be looking for full-time opportunites shortly after.</p>
+				<p class="copy">Designed and coded by Jessica Fung 2014</p>
 			</article>
 		</section>
-		<section class="portfolio">
-			<h2>portfolio</h2>
-			<ul class="grid cs-style-3">
-				<li>
-					<figure>
-						<img src="images/koncover.jpg" alt="img04">
-						<figcaption>
-							<h3>Documentation Redesign</h3>
-							<span>At Kontagent</span>
-							<a id="dialogTrigger" class="button" data-modal="modal-1">Learn more</a>
-						</figcaption>
-					</figure>
+		<section class="portfolio table-cell">
+			<svg>
+				<defs>
+					 <radialGradient id="bgGradient" cx="1" cy="0" r="1.4" fx="0.99" fy="0">
+        				<stop offset="0%" stop-color="white"/>
+        				<stop offset="12%" stop-color="#FFE4BD"/>
+        				<stop offset="98%" stop-color="#F77463"/>
+      				</radialGradient>
+      			</defs>
+
+      			<rect x="0" y="0" rx="0" ry="0" width="100%" height="100%" fill="url(#bgGradient)"/> 
+
+      		</svg>
+			<ul class="works">
+				<li class="librarypagination">
+					<h3>LIBRARY PAGINATION</h3>
+					<span>I redesigned Inkling&#700;s current library to accommodate the rapid growth of its readers and publishing community.
+					</span>
 				</li>
-				<li>
-					<figure>
-						<img src="images/401.jpg" alt="img04">
-						<figcaption>
-							<h3>Entwine</h3>
-							<span>Personal project</span>
-							<!--<a href="http://dribbble.comshots/1116685-Settings">Learn more</a>-->
-							<a id="dialogTrigger" class="button" data-modal="modal-2">Learn more</a>
-
-						</figcaption>
-					</figure>
+				<li class="incontentprompt">
+					<h3>IN-CONTENT PROMPT</h3>
+					<span>I created a prompt for Inkling to increase user awareness of Inkling&#700;s mobile apps to increase app downloads.</span>
 				</li>
-
-
-				
-
-				<li>
-					<figure>
-						<div class="learnmore">View more<br />of my work</div>
-						<figcaption>
-							<a class="button" href="http://www.behance.net/jessica-fung">Go to my Behance portfolio</a>
-						</figcaption>
-					</figure>
+				<li class="pinecone">
+					<h3>PINECONE SCHEDULER</h3>
+					<span>I designed a course scheduler for university students to effortlessly creates a simple, clean and customizable calendar.</span>
 				</li>
 			</ul>
-			<span id="resume-contact"></span>
 		</section>
-
-		<section class="table">
-			<section class="resume">
-				<h2>resume</h2> 
-				<a href="http://jessicafung.com/JessicaFungResume.pdf"><div class="button">	Download PDF</div></a>
-					<article class="paper">
-						<img src="images/JessicaFungResume.png">
-					</article>
-			</section
-			><section class="contact">
-				<h2>contact me</h2>
-				<article>I'd love to hear from you &ndash; just email me at <a href=
-				"mailto:jessicafung@live.ca">jessicafung@live.ca</a>.
-
-				<p>If you're also in San Francisco, you might see me around for a while. :)</p>
-				</article>
-			</section>
-		</section>
-		<footer>
-			&copy Jessica Fung 2013
-			<!--<ul class="social">
-				<li class="facebook">jeshiica</li>
-			</ul>-->
-		</footer>
 	</body>
-	<script src="jquery-2.0.3.min.js"></script>
-	<script src="js.js"></script>
-
-<!--Codrops-->
-		<script src="classie.js"></script>
-		<script src="modalEffects.js"></script>
 </html>
