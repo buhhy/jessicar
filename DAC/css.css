@@ -1,12 +1,13 @@
 @font-face {
-	font-family: Gotham;
-	src: url(fonts/go);
+  font-family: Gotham Book;
+  src: url(/fonts/gotham-book.otf);
+  font-weight: normal;
 }
 
 html, body {
 	margin: 0;
 	padding:0;
-	font-family: 'Gotham', 'Arial', san-serif;
+	font-family: 'Gotham Book', 'Arial', san-serif;
 }
 
 .close {
