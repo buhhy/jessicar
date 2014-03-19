@@ -1,0 +1,18 @@
+@font-face {
+	font-family: Gotham;
+	src: url(fonts/go);
+}
+
+html, body {
+	margin: 0;
+	padding:0;
+	font-family: 'Gotham', 'Arial', san-serif;
+}
+
+.close {
+
+}
+
+a {
+	color: red;
+}
