@@ -4,13 +4,21 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: Gotham Bold
+  src: url(/fonts/gotham-bold.otf);
+  font-weight: normal;
+}
+
 html, body {
+	display: block;
+	width: 640px;
+	height: 960px;
 	margin: 0;
 	padding: 0;
 	font-family: 'Gotham Book', 'Arial', san-serif;
 	font-size: 12px;
-	width: 640px;
-	height: 960px;
+	color: #424242;
 }
 
 .close {
@@ -24,6 +32,69 @@ html, body {
 	letter-spacing: 0.5px;
 }
 
+.content {
+	margin: 14px 0 0 7px;
+	width: 300px;
+}
+
+h1 {
+	font-family: 'Gotham Bold';
+	font-size: 1.5em;
+	letter-spacing: 1px;
+	margin: 0 0 2px 0;
+}
+
+h2 {
+	font-size: 1em;
+	margin: 0 0 20px 0;
+	letter-spacing: 0.6px;
+}
+
+h3 {
+	letter-spacing: 1px;
+}
+
 a {
-	color: red;
+	color: #1798e0;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	font-family: 'Gotham Book';
+	font-size: 1.1em;
+}
+
+ul {
+	list-style-type: none;
+	padding: 5px 0 0 7px;
+}
+
+li {
+		width: 285px;
+		border-radius: 2px;
+		padding: 5px;
+		margin: 3px 0 10px 0;
+		color: #ffffff;
+		font-family: 'Gotham Bold';
+		letter-spacing: 1px;
+		font-size: 1.1em;
+	}
+
+.upcoming-events {
+	background-color: #42ccb5;
+}
+
+.businesses {
+	background-color: #42b9cc;
+}
+
+.clubs {
+	background-color: #4076cc;
+}
+
+.event-group {
+	padding-left: 0;
+}
+
+.event-color {
+	font-family: 'Gotham Book';
 }
