@@ -51,7 +51,7 @@ html, body {
 
 .content {
 	margin: 14px 0 0 7px;
-	width: 300px;
+	max-width: 300px;
 }
 
 h1 {
@@ -69,6 +69,7 @@ h2 {
 
 h3 {
 	letter-spacing: 1px;
+	margin: 0;
 }
 
 a {
@@ -117,5 +118,17 @@ li {
 	font-family: 'Gotham Book';
 	color: #1798e0;
 	text-decoration: none;
+}
+
+.footer {
+	display: block;
+	background-color: #dfdfdf;
+	margin-bottom: 0;
+	padding: 10px 0;
+}
+
+.back {
+	display: block;
+	padding: 10px;
 
 }
