@@ -54,6 +54,11 @@ html, body {
 	margin: 0;
 }
 
+.class {
+	height: 300px;
+	width: 100%;
+}
+
 .content {
 	margin: 14px 7px 0 7px;
 }
