@@ -55,7 +55,7 @@ html, body {
 }
 
 .content {
-	margin: 14px 0 0 7px;
+	margin: 14px 7px 0 7px;
 }
 
 h1 {
@@ -155,4 +155,5 @@ th {
 
 .description {
 	margin-bottom: 30px;
+	line-height: 16px;
 }
