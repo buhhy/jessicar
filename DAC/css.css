@@ -145,8 +145,11 @@ li {
 
 table {
 	font-size: 0.9em;
+	text-align: left;
+	margin-top: 15px;
+	width: 100%;
 }
 
-.event-title {
-	font-family: 'Gotham Medium';
+th {
+	min-width: 50px;
 }
