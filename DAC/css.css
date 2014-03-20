@@ -151,5 +151,9 @@ table {
 }
 
 th {
-	min-width: 50px;
+	min-width: 70px;
+}
+
+.description {
+	margin-bottom: 30px;
 }
