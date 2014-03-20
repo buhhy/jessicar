@@ -10,6 +10,12 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url('fonts/gotham-medium.otf') format('opentype');
+  font-weight: mediuml;
+}
+
 html, body {
 	width: 100%;
 	margin: 0;
@@ -138,5 +144,9 @@ li {
 }
 
 table {
-	font-size: 0.5em;
+	font-size: 0.9em;
+}
+
+.event-title {
+	font-family: 'Gotham Medium';
 }
