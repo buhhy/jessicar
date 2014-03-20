@@ -1,12 +1,12 @@
 @font-face {
   font-family: Gotham Book;
-  src: url(/fonts/gotham-book.otf);
+  src: url(fonts/gotham-book.otf);
   font-weight: normal;
 }
 
 @font-face {
   font-family: Gotham Bold
-  src: url(/fonts/gotham-bold.otf);
+  src: url(fonts/gotham-bold.otf);
   font-weight: normal;
 }
 
@@ -97,4 +97,5 @@ li {
 
 .event-color {
 	font-family: 'Gotham Book';
+
 }
