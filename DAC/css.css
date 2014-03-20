@@ -5,7 +5,7 @@
 }
 
 @font-face {
-  font-family: 'Gotham Bold'
+  font-family: 'Gotham Bold';
   src: url('fonts/gotham-bold.otf') format('opentype');
   font-weight: normal;
 }
