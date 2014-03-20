@@ -29,7 +29,21 @@ html, body {
 	width: 285px;
 	border-radius: 2px;
 	letter-spacing: 0.5px;
+	top: 10px;
 }
+
+.up-triangle {
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent; 
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #f4f4f4;
+	font-size: 0;
+	line-height: 0;
+	position: relative;
+	top: 10px;
+	left: 12px;
+	}
 
 .content {
 	margin: 14px 0 0 7px;
