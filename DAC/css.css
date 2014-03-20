@@ -1,12 +1,12 @@
 @font-face {
-  font-family: Gotham Book;
-  src: url('fonts/gotham-book.otf') format("opentype");
+  font-family: 'Gotham Book';
+  src: url('fonts/gotham-book.otf') format('opentype');
   font-weight: normal;
 }
 
 @font-face {
-  font-family: Gotham Bold
-  src: url('fonts/gotham-bold.otf') format("opentype");
+  font-family: 'Gotham Bold'
+  src: url('fonts/gotham-bold.otf') format('opentype');
   font-weight: normal;
 }
 
