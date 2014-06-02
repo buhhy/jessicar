@@ -1,0 +1,320 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  letter-spacing: 0.35px;
+  line-height: 1.5em;
+  color: #777777;
+  margin: 0;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 2.6em;
+  font-weight: 400;
+  letter-spacing: 0.9px;
+  color: #636363;
+  text-align: center;
+  margin: 0.4em;
+  line-height: 0.9em;
+}
+h2 {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #898989;
+  text-align: center;
+  margin: 0 0 3em;
+  letter-spacing: 0.9px;
+}
+h3 {
+  font-size: 1.45em;
+  font-weight: 300;
+  padding: 0 0 0.3em 0;
+  margin: 0;
+  letter-spacing: 1.5px;
+  color: #FFFFFF;
+}
+h4 {
+  font-size: 3em;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 3em;
+  bottom: 1.5em;
+  line-height: 0.9em;
+  color: #FFFFFF;
+}
+h5 {
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0;
+  position: relative;
+  top: 1em;
+}
+a {
+  text-decoration: none;
+}
+b {
+  color: #636363;
+  font-weight: 400;
+}
+.fill-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.table {
+  display: table;
+}
+.table-cell {
+  display: table-cell;
+  vertical-align: top;
+  height: 100%;
+}
+.intro {
+  width: 33%;
+}
+.intro .short-about {
+  padding: 15%;
+}
+.intro .short-about image:hover,
+.intro .short-about circle:hover {
+  cursor: pointer;
+}
+.intro .short-about image {
+  position: absolute;
+}
+.intro .short-about .logo {
+  height: 100px;
+  width: 100%;
+}
+.intro .short-about .description {
+  margin-top: 20px;
+}
+.intro .short-about .learn-more {
+  list-style-type: none;
+  margin: 0;
+  padding: 1.2em 0;
+  line-height: 2em;
+}
+.intro .short-about .copy {
+  font-weight: 400;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  color: #999999;
+}
+.intro .short-about a {
+  color: #F77463;
+  text-decoration: none;
+}
+.intro .short-about a:hover {
+  color: #FF8E7D;
+}
+.portfolio {
+  width: 67%;
+}
+.portfolio .relative-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.portfolio .works {
+  position: absolute;
+  top: 0;
+  list-style-type: none;
+  color: white;
+  margin: 5%;
+  display: none;
+}
+.portfolio .works.visible {
+  display: block;
+}
+.portfolio .works ul {
+  list-style-type: none;
+}
+.portfolio .works ul li {
+  padding: 2em;
+  margin: 2em 0;
+  width: 67%;
+}
+.portfolio .works ul li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.portfolio .works ul li .icon {
+  position: absolute;
+  display: inline;
+}
+.portfolio .works ul li span {
+  padding-left: 8em;
+  display: block;
+}
+.portfolio .works ul li span .work-description {
+  padding: 0;
+}
+.portfolio .content {
+  display: none;
+  top: 0;
+  position: fixed;
+  margin: 4em 4em;
+  width: 900px;
+  height: 500px;
+}
+.portfolio .content.visible {
+  display: block;
+}
+.portfolio .content .port-nav {
+  display: table;
+  position: relative;
+  border-bottom: 2px solid #f77463;
+  width: 100%;
+  font-size: 0.75em;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.portfolio .content .port-nav .back {
+  display: table-cell;
+  text-align: left;
+  border-radius: 2px;
+}
+.portfolio .content .port-nav .back .highlight:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  -webkit-transition: width 0.25s, height 0.25s, background-color 0.25s, -webkit-transform 0.25s;
+  transition: width 0.25s, height 0.25s, background-color 0.25s, transform 0.25s;
+}
+.portfolio .content .port-nav .back span {
+  padding: 0.45em;
+  color: #ffe4bd;
+  vertical-align: top;
+}
+.portfolio .content .port-nav .top {
+  display: table-cell;
+  text-align: center;
+  right: 6em;
+}
+.portfolio .content .port-nav .top .highlight:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  -webkit-transition: width 0.25s, height 0.25s, background-color 0.25s, -webkit-transform 0.25s;
+  transition: width 0.25s, height 0.25s, background-color 0.25s, transform 0.25s;
+}
+.portfolio .content .port-nav .top span {
+  padding: 0.45em;
+  color: #c48369;
+  position: relative;
+  right: 3em;
+  vertical-align: top;
+}
+.portfolio .content .port-nav .next {
+  color: #ee997e;
+  display: table-cell;
+  text-align: right;
+}
+.portfolio .content .port-nav .next .highlight:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  -webkit-transition: width 0.25s, height 0.25s, background-color 0.25s, -webkit-transform 0.25s;
+  transition: width 0.25s, height 0.25s, background-color 0.25s, transform 0.25s;
+}
+.portfolio .content .port-nav .next span {
+  padding: 0.45em;
+  color: #ee997e;
+  position: relative;
+  vertical-align: top;
+}
+.portfolio .content .scroll-container {
+  height: 150%;
+  overflow: auto;
+}
+.portfolio .content .blurb {
+  color: #515151;
+  padding: 1.2em 1.5em 0.5em;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 1.5em;
+}
+.portfolio .content .blurb h3 {
+  padding: 0;
+}
+.portfolio .content .blurb p {
+  margin: 1em 0;
+}
+.portfolio ul {
+  list-style-type: none;
+}
+.portfolio ul li {
+  padding: 2em;
+  margin: 3em 0;
+  width: 67%;
+}
+.portfolio ul li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  -webkit-transition: width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+  transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
+}
+.portfolio ul li .icon {
+  position: absolute;
+  display: inline;
+}
+.portfolio ul li span {
+  padding-left: 8em;
+  display: block;
+}
+span {
+  margin: 0;
+  color: #515151;
+  line-height: 1.6em;
+}
+/* Small screen ----------- */
+@media only screen and (max-width: 1366px) {
+  .portfolio .works ul li {
+    margin: 0;
+    width: 76%;
+  }
+}
+/* Smaller screen ----------- */
+@media only screen and (max-width: 1000px) {
+  .portfolio .works {
+    margin: 3% 0;
+  }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .intro .short-about .description {
+    font-size: 0.95em;
+  }
+  .portfolio .works ul li span .work-description {
+    font-size: 0.9em;
+  }
+}
+/* Smartphones (portrait and landscape) ----------- 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+	.body {
+		width: 33%;
+		font-size: 0.9em;
+	}
+
+	.table {
+		display: inline-block;
+	}
+
+	.intro {
+		width: 100%;
+		display: inline;
+	}
+}*/

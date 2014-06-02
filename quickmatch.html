@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jessica Fung</title>
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+	</head>
+	<body class="table">
+		<section class="intro table-cell">
+			<article class="short-about">
+				<svg class="logo">
+					<defs>
+						<filter id="dropShadow" x="0" y="0" width="200%" height="200%">
+					    	<feOffset result="offOut" in="SourceGraphic" dx="0" dy="1" />
+					    	<feColorMatrix result="matrixOut" in="offOut" type="matrix"
+					      values="0.33 0.33 0.33 0 0 0.33 0.33 0.33 0 0 0.33 0.33 0 0 0.33 0.33 0 0 0.33 0" />
+
+					     	<feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="2" />
+					     	<feBlend in="SourceGraphic" in="blurOut" mode="normal" />
+				    	</filter>
+
+						<radialGradient id="logo" cx="-1" cy="-1" r="2.6" fx="0.25" fy="0.25">
+							<stop offset="0%" stop-color="#FDC2A2"/>
+							<stop offset="100%" stop-color="#F77463"/>
+						</radialGradient>
+					</defs>
+
+					<circle cx="50%" cy="50%" r="45" fill="url(#logo)" filter="url(#dropShadow)" />
+					<image xlink:href="logo.svg" x="50%" y="50%" height="44px" width="43px" transform="translate(-22,-22)" filter="url(#dropShadow)"/>
+				</svg>
+				<h1>Jessica Fung</h1>
+				<h2>UX DESIGNER</h2>
+				<article class="description">
+					<p>Hi! I&#700;m a UX Designer with a background in psychology, a deep appreciation of code, and a passion for design.</p>
+
+					<p>In Fall 2013, I was a UX Design Intern for <a class="left-a" href="http://www.inkling.com/">Inkling</a>, one of <a class="left-a" href="http://www.fastcompany.com/most-innovative-companies/2014/inkling">Fast Company&#700;s 50 Most Innovative Companies</a> of the year.</p>
+
+					<p>At the most fundamental level, what matters the most to me are the <b>people</b>: the team, the clients, the users, you.</p>
+				</article>
+				<ul class="learn-more">
+					<li><a href="">Learn more about me</a></li>
+					<li><a href="">Twitter</a></li>
+					<li><a href="">LinkedIn</a></li>
+					<li><a href="">Facebook</a></li>
+				</ul>
+				<p class="copy">Designed and coded by Jessica Fung 2014</p>
+			</article>
+		</section>
+
+		<section class="portfolio table-cell">
+			<div class="relative-container">
+				<svg class="fill-container">
+					<defs>
+						 <radialGradient id="bgGradient" cx="1" cy="0" r="1.4" fx="0.99" fy="0">
+	        				<stop offset="0%" stop-color="white"/>
+	        				<stop offset="12%" stop-color="#FFE4BD"/>
+	        				<stop offset="98%" stop-color="#F77463"/>
+	      				</radialGradient>
+	      			</defs>
+
+	      			<rect x="0" y="0" rx="0" ry="0" width="100%" height="100%" fill="url(#bgGradient)"/>
+	      		</svg>
+
+	      		<article class="lib-pag">
+	      			<svg class="icon" width="90" height="90">
+		      			<circle cx="45" cy="44" r="43" style="fill:none; stroke:white"/>
+		      			<image xlink:href="logo.svg" x="50%" y="50%" height="44px" width="43px" transform="translate(-22,-22)"/>
+	      			</svg>
+	      			<h4>QUICKMATCH</h4>
+	      			<div class="port-nav">
+		      			<a class="back" href="jessica.com/">< BRING ME BACK</a>
+		      			<a class="top" href="">TAKE ME TO THE TOP</a>
+		      			<a class="next" href="">NEXT WORK ></a>
+	      			</div>
+	      			
+	      			<div class="scroll-container">
+		      			<article class="blurb">
+							<h3>BACKGROUND</h3>
+							<p>Inkling, one of Fast Company&#700;s Most Innovative Companies of 2014, a comprehensive list of interactive books available in its library. Although many of the visitors to the library are readers, an increasing number of them are publishing professionals.</p>
+							<p>From September to December 2013, I worked closely with the Inkling&#700;s Product Design team as a User Experience Design Intern. As the designer for the Library Pagination project, I brought it from ground zero towards implementation.</p> 
+						</article>
+
+						<article class="blurb">
+							<h3>PROBLEMS</h3>
+							<p>Publishing professionals are very involved in several projects, easily accumulating thousands of titles under their wing. However, these people have to wait up to three minutes to load the page before they can start working. Aside from long loading times, our users have addressed their difficulty in finding books. </p>
+
+							<p>In short, Inkling is experiencing growing pains: slow loading times & difficulty in finding books. The new design needs to accommodate the rapid growth of users.</p>
+						</article>
+
+						<article class="blurb">
+							<h3>PROCESS</h3>
+							<h5>INTRODUCTION</h5>
+							<p>I was introduced to a project involving pagination by my manager. He briefly explained that Inkling was foreseeing growing pains in the library, and then connected me with an expert on the matter. I was able to book a meeting with him in three days; in the meantime, I accustomed myself with the library.</p>
+
+							<h5>INTERVIEWING</h5>
+							<p>Prior to meeting, I created a list of questions that could help me understand the problem they were already beginning to experience with the increasing number of users and books. He provided me with a clear and thorough explanation of the problem, and was able to direct me to other people for more information if I needed it.</p>
+
+							<h5>IDEA GENERATION</h5>
+							<p>After understanding the problem, I connected (and sometimes collaborated) with developers and designers to work through some ideas. At Inkling, everyone was very supportive, knowledgeable, and responsive; we worked together to come up with questions and ideas that we wouldn’t have come up with on our own.</p>
+
+							<h5>WIREFRAMES</h5>
+							<p>At this time, so many iterations were being made to wireframes. This was an important time for the project because it helps us focus on functionality and solving the problem (instead of making pretty things). Throughout this process, I connected with the expert to ask questions and for his opinions on the final wireframe rounds. My manager believed in collaborating with other designers as much as possible; we worked together through the wireframes, sometimes also with other members of the Product Design team.</p>
+
+							<h5>MOCKUPS</h5>
+							<p>After running through the wireframes, it was time to take a few of them and mock them in high fidelity. In this stage, there are still many more iterations.</p>
+
+							<p>As I got closer to the final iterations, I also ran my mockups through other people not in my team (i.e., publishing managers and support). As mockups became more concrete, there was sometimes a little disagreement concerning design choices between different parties. I approached this obstacle by speaking to these parties, understanding their perspective at a fundamental level, and by making the final decision after considering all of the needs and goals.</p>
+						</article>
+					</div>
+				</article>
+			</div>
+		</section>
+	</body>
+</html>
