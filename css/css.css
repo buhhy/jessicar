@@ -137,6 +137,9 @@ img {
 .intro .short-about a:hover {
   color: #FF8E7D;
 }
+.navigation {
+  display: none;
+}
 .portfolio {
   width: 67%;
 }
@@ -370,20 +373,41 @@ span {
   }
 }
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .intro .short-about {
     width: 100%;
-    padding: 3em;
+    padding: 8em;
     box-sizing: border-box;
+    display: block;
   }
   .intro .short-about .description {
     text-align: center;
   }
+  .intro .short-about .learn-more {
+    text-align: center;
+  }
+  .intro .short-about .copy {
+    text-align: center;
+  }
+  .navigation {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: lightgrey;
+    height: 100%;
+  }
+  .navigation ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+  }
+  .navigation ul li {
+    text-align: center;
+    padding: 2em 0;
+  }
   .portfolio {
     display: none;
-  }
-  .portfolio .works ul li span .work-description {
-    font-size: 0.9em;
   }
 }
 /* Smartphones (portrait and landscape) ----------- 
