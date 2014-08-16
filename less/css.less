@@ -34,10 +34,9 @@ h2 {
 }
 
 h3 {
-	font-size: 1.45em;
-	font-weight: 300;
-	padding: 0 0 0.3em 0;
-	margin: 0;
+	font-size: 1.4em;
+	font-weight: 400;
+	margin: 0.35em 0;
 	letter-spacing: 1.5px;
 	color: #FFFFFF;
 }
@@ -48,31 +47,51 @@ h4 {
 	letter-spacing: 2.5px;
 	display: block;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 0 0.3em;
 	position: relative;
-	left: 3em;
-	bottom: 1.5em;
 	line-height: 0.9em;
-	color: #FFFFFF;
+	color: #515151;
 }
 
 h5 {
-	color: #ffffff;
-	font-size: 1em;
-	font-weight: 400;
+	color: #FFFFFF;
+	font-size: 2.5em;
+	font-weight: 300;
 	letter-spacing: 1px;
 	margin: 0;
-	position: relative;
+	display: inline-block;
+	position: absolute;
 	top: 1em;
+}
+
+h6 {
+	margin: 0.5em 0 0;
+	padding: 0;
+	color: #FFFFFF;
+	font-size: 0.83em;
+	letter-spacing: 1px;
+	font-weight: 400;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 a {
 	text-decoration: none;
+	max-width: 45em;
 }
 
 b {
-	color: #636363;
-	font-weight: 400;
+	color: #4c4c4c;
+	font-weight: 600;
+}
+
+img {
+	margin: 1em auto;
+	display: block;
+	background: #FFFFFF;
+	padding: 1em;
+	border-radius: 0.3em;
+	max-width: 45em;
+	max-height: 30em;
 }
 
 .fill-container {
@@ -92,7 +111,7 @@ b {
 }
 
 .intro {
-	width: 33%;
+	width: 25%;
 
 	.short-about {
 		padding: 15%;
@@ -150,10 +169,14 @@ b {
 
 	.works {
 		position: absolute;
+		height: 100%;
+		width: 100%;
+		overflow-y: auto;
+		box-sizing: border-box;
 		top: 0;
 		list-style-type: none;
 		color: white;
-		margin: 5%;
+		padding: 5% 3%;
 		display: none;
 
 		&.visible {
@@ -162,14 +185,17 @@ b {
 
 		ul {
 			list-style-type: none;
+			float: left;
+			position: relative;
+			width: 32%;
 
 			li {
-				padding: 2em;
-				margin: 2em 0;
-				width: 67%;
+				padding: 1em;
+				margin: 3em 0;
+				width: 80%;
 
 				&:hover {
-					background-color:rgba(255,255,255,0.2);
+					background-color:rgba(150,0,0,0.1);
 					cursor: pointer;
 					border-radius: 5px;
 				}
@@ -196,10 +222,45 @@ b {
 		position: fixed;
 		margin: 4em 4em;
 		width: 46%;
-		height: 50%;
+		max-width: 960px;
+		height: 75%;
+		opacity: 0;
 
 		&.visible {
 			display: block;
+		}
+
+		.worktitle {
+			opacity: 1;
+			cursor: pointer;
+			transition: opacity .3s ease-in-out;
+			-moz-transition: opacity .3s ease-in-out;
+			-webkit-transition: opacity .3s ease-in-out;
+			left: 2.65em;
+		}
+
+		.backtomenu {
+			opacity: 0;
+			position: absolute;
+		}
+
+		.workheader {
+			display: inline;
+
+			&:hover {
+				.worktitle {
+					opacity: 0;
+				}
+
+				.backtomenu {
+					opacity: 1;
+					cursor: pointer;
+					transition: opacity 1s ease-in-out;
+					-moz-transition: opacity 1s ease-in-out;
+					-webkit-transition: opacity 1s ease-in-out;
+					left: 2.65em;
+				}
+			}
 		}
 
 		.port-nav {
@@ -273,7 +334,7 @@ b {
 		}
 
 		.scroll-container {
-			height: 150%;
+			height: 100%;
 			overflow: auto;
 
 		}
@@ -286,10 +347,43 @@ b {
 
 			h3 {
 				padding: 0;
+				margin: 0;
 			}
 
 			p {
 				margin: 1em 0;
+			}
+
+			li {
+				margin-bottom: 1em;
+			}
+
+			a {
+				color: #e75c4a;
+
+				&:hover {
+					color: #d74734;
+				}
+			}
+
+			.image-desc {
+				font-size: 1em;
+				text-align: center;
+				color: #FFFFFF;
+				display: block;
+				line-height: 1.4em;
+				padding-bottom: 0.7em;
+			}
+
+			.image-link {
+				margin: 1em auto;
+				display: block;
+				max-width: 45em;
+				opacity: 0.9;
+
+				&:hover {
+					opacity: 1;
+				}
 			}
 		}
 	}

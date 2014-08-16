@@ -1,3 +1,30 @@
+function setOpacity(element, opacity) {
+	element.style.opacity = opacity;
+	element.style.filter = "alpha(opacity=" + opacity + ")";
+}
+
+function fade(element, duration, start, target, callback) {
+	var opacity = start;
+	var interval = 5;
+	var delta = (start - target) / (duration / interval);
+	var progress = 0;
+	var id = setInterval(function () {
+		progress += interval;
+		opacity -= delta;
+		if (progress > duration) {
+			setOpacity(element, target);
+			clearInterval(id);
+			if (callback)
+				callback();
+		} else {
+			setOpacity(element, opacity);
+		}
+	}, interval);
+}
+
+function fadeIn(element, duration, callback) { fade (element, duration, 0.0, 1.0, callback); }
+function fadeOut(element, duration, callback) { fade (element, duration, 1.0, 0.0, callback); }
+
 var worksListEl = document.getElementById('works');				// Works List
 var homeBtn = document.getElementById("homeBtn")
 
@@ -22,13 +49,14 @@ var Work = function (name) {
 	this.backBtnEl = this.contentEl.querySelector("[data-id='backBtn']");
 	this.topBtnEl = this.contentEl.querySelector("[data-id='topBtn']");
 	this.nextBtnEl = this.contentEl.querySelector("[data-id='nextBtn']");
+	this.homeBtnEl = this.contentEl.querySelector("[data-id='homeBtn']");
 
 	this.topBtnEl.onclick = function (event) {
 		event.preventDefault();
 		self.scrollContainerEl.scrollTop = 0;
 	};
 
-	this.backBtnEl.onclick = function (event) {
+	this.homeBtnEl.onclick = function (event) {
 		event.preventDefault();
 		self.hide();
 	};
@@ -43,30 +71,43 @@ var Work = function (name) {
  * Shows the entry content, hides works list.
  */
 Work.prototype.show = function () {
-	this.contentEl.classList.add('visible');
-	worksListEl.classList.remove('visible');
+	var self = this;
+	fadeOut(worksListEl, 50, function () {
+		worksListEl.classList.remove('visible');
+		self.contentEl.classList.add('visible');
+		fadeIn(self.contentEl, 150, function () {
+		});
+	});
 };
 
 /**
  * Hides the entry content, shows the works list.
  */
 Work.prototype.hide = function () {
-	this.contentEl.classList.remove('visible');
-	worksListEl.classList.add('visible');
+	var self = this;
+	fadeOut(self.contentEl, 50, function () {
+		self.contentEl.classList.remove('visible');
+		worksListEl.classList.add('visible');
+		fadeIn(worksListEl, 150, function () {
+		});
+	});
+
+/*	this.contentEl.classList.remove('visible');
+	worksListEl.classList.add('visible');*/
 };
 
-Work.prototype.setNext = function(nextWork) {
+Work.prototype.setNext = function (nextWork) {
 	var self = this;
-		this.nextBtnEl.onclick = function (event) {
+	this.nextBtnEl.onclick = function (event) {
 		event.preventDefault();
 		self.hide();
 		nextWork.show();
 	};
 }
 
-Work.prototype.setPrev = function(prevWork) {
+Work.prototype.setPrev = function (prevWork) {
 	var self = this;
-		this.backBtnEl.onclick = function (event) {
+	this.backBtnEl.onclick = function (event) {
 		event.preventDefault();
 		self.hide();
 		prevWork.show();
@@ -75,12 +116,17 @@ Work.prototype.setPrev = function(prevWork) {
 
 var works = [
 	new Work("pagination"),
+	new Work("appdl"),
+	new Work("gDesign"),
 	new Work("quickmatch"),
 	new Work("pinecone"),
-	new Work("psychology"),
-	new Work("gDesign")
+	new Work("psychology")
 ];
 
 for (var i=0; i<works.length; i++){
-	works[i].setNext(works[(i+1)%works.length]);
+	works[i].setNext(works[(i + 1) % works.length]);
+}
+
+for (var i=0; i<works.length; i++){
+	works[i].setPrev(works[(i - 1 + works.length) % works.length]);
 }
