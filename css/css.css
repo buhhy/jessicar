@@ -1,3 +1,11 @@
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
 html,
 body {
   width: 100%;
@@ -364,7 +372,7 @@ span {
 /* Small screen ----------- */
 @media only screen and (max-width: 1366px) {
   .portfolio .content {
-    width: 60%;
+    width: 100%;
   }
   .portfolio .works ul {
     width: 41%;
@@ -376,6 +384,9 @@ span {
 }
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (max-width: 1024px) {
+  html {
+    overflow: auto;
+  }
   h4 {
     font-size: 2em;
     font-weight: 500;
@@ -409,6 +420,33 @@ span {
   }
   .portfolio ul li {
     min-width: 350px;
+  }
+  .portfolio .content {
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+  }
+  .portfolio .content .workheader,
+  .portfolio .content .workheader:hover {
+    display: inline;
+  }
+  .portfolio .content .workheader image.worktitle,
+  .portfolio .content .workheader:hover image.worktitle {
+    opacity: 0;
+    display: none;
+  }
+  .portfolio .content .workheader h5.worktitle,
+  .portfolio .content .workheader:hover h5.worktitle {
+    opacity: 1;
+  }
+  .portfolio .content .workheader image.backtomenu,
+  .portfolio .content .workheader:hover image.backtomenu {
+    opacity: 1;
+  }
+  .portfolio .content .workheader h5.backtomenu,
+  .portfolio .content .workheader:hover h5.backtomenu {
+    opacity: 0;
+    display: none;
   }
 }
 /* Smartphones (portrait and landscape) ----------- 

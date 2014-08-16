@@ -72,6 +72,9 @@ var Work = function (name) {
  */
 Work.prototype.show = function () {
 	var self = this;
+	var screen = document.querySelector("html");
+	screen.style.overflow = "hidden";
+	window.scrollTo(0,2000);
 	fadeOut(worksListEl, 50, function () {
 		worksListEl.classList.remove('visible');
 		self.contentEl.classList.add('visible');
@@ -85,6 +88,8 @@ Work.prototype.show = function () {
  */
 Work.prototype.hide = function () {
 	var self = this;
+	var screen = document.querySelector("html");
+	screen.style.overflow = "auto";
 	fadeOut(self.contentEl, 50, function () {
 		self.contentEl.classList.remove('visible');
 		worksListEl.classList.add('visible');
