@@ -112,6 +112,7 @@ img {
 
 .intro {
 	width: 25%;
+	.table-cell;
 
 	.short-about {
 		padding: 15%;
@@ -175,7 +176,6 @@ img {
 		position: absolute;
 		height: 100%;
 		width: 100%;
-		overflow-y: auto;
 		box-sizing: border-box;
 		top: 0;
 		list-style-type: none;
@@ -448,47 +448,47 @@ and (max-width : 1366px) {
 @media only screen 
 and (max-width : 1024px) {
 
-	.intro .short-about {
-		width: 100%;
-		padding: 8em;
-		box-sizing: border-box;
-		display: block;
-		
-		.description {
-			text-align: center;
-		}
-
-		.learn-more {
-			text-align: center;
-		}
-
-		.copy {
-			text-align: center;
-		}
+	h4 {
+		font-size: 2em;
+		font-weight: 500;
 	}
 
-	.navigation {
-		position: absolute;
+	.table .intro {
+		display: block;
 		width: 100%;
-		bottom: 0;
-		background-color: lightgrey;
-		height: 100%;
 
-		ul {
-			margin: 0;
-			padding: 0;
+		.short-about {
 			width: 100%;
-			position: absolute;
+			padding: 6em;
+			box-sizing: border-box;
 
-			li {
+			.description {
 				text-align: center;
-				padding: 2em 0;
+			}
+
+			.learn-more {
+				text-align: center;
+			}
+
+			.copy {
+				text-align: center;
 			}
 		}
 	}
 
 	.portfolio {
-		display: none;
+		display: block;
+		position: absolute;
+		width: 100%;
+		top: 85%;
+
+		ul {
+			min-width: 350px;
+
+			li {
+				min-width: 350px;
+			}
+		}
 	}
 }
 
