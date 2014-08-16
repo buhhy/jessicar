@@ -223,7 +223,7 @@ img {
 		margin: 4em 4em;
 		width: 46%;
 		max-width: 960px;
-		height: 75%;
+		height: 80%;
 		opacity: 0;
 
 		&.visible {
@@ -425,17 +425,18 @@ span {
 /* Small screen ----------- */
 @media only screen 
 and (max-width : 1366px) {
-	.portfolio .works ul li {
-		margin: 0;
-		width: 76%;
-	}
-}
 
-/* Smaller screen ----------- */
-@media only screen 
-and (max-width : 1000px) {
-	.portfolio .works {
-		margin: 3% 0;
+	.portfolio .content {
+		width: 60%;
+	}
+
+	.portfolio .works ul {
+		width: 41%;
+
+		li {
+			margin: 1.5em 0;
+			width: 76%;
+		}
 	}
 }
 
@@ -444,8 +445,19 @@ and (max-width : 1000px) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
 
-	.intro .short-about .description {
-		font-size: 0.95em;
+	.intro .short-about {
+		width: 100%;
+		padding: 3em;
+		box-sizing: border-box;
+		
+		.description {
+			text-align: center;
+
+		}
+	}
+
+	.portfolio {
+		display: none;
 	}
 
 	.portfolio .works ul li span .work-description {
