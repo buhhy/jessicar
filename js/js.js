@@ -1,29 +1,35 @@
+window.requestAnimationFrame =
+	window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+	window.webkitRequestAnimationFrame || window.oRequestAnimationFrame;
+
 function setOpacity(element, opacity) {
 	element.style.opacity = opacity;
 	element.style.filter = "alpha(opacity=" + opacity + ")";
 }
 
 function fade(element, duration, start, target, callback) {
-	var opacity = start;
-	var interval = 5;
-	var delta = (start - target) / (duration / interval);
-	var progress = 0;
-	var id = setInterval(function () {
-		progress += interval;
-		opacity -= delta;
-		if (progress > duration) {
-			setOpacity(element, target);
-			clearInterval(id);
-			if (callback)
-				callback();
-		} else {
-			setOpacity(element, opacity);
+	var starttime = null;
+	var d = element;
+	var disc = target - start;
+
+	function step(timestamp) {
+		if (starttime === null) 
+			starttime = timestamp;
+		var progress = timestamp - starttime;
+		var percent = progress / duration;
+		setOpacity(element, disc * percent + start);
+		if (progress < duration) {
+			requestAnimationFrame(step);
+		} else if (callback) {
+			callback();
 		}
-	}, interval);
+	}
+
+	requestAnimationFrame(step);
 }
 
-function fadeIn(element, duration, callback) { fade (element, duration, 0.0, 1.0, callback); }
-function fadeOut(element, duration, callback) { fade (element, duration, 1.0, 0.0, callback); }
+function fadeIn(element, duration, callback) { fade (element, duration, 0.0, 1.5, callback); }
+function fadeOut(element, duration, callback) { fade (element, duration, 1.5, 0.0, callback); }
 
 var worksListEl = document.getElementById('works');				// Works List
 var homeBtn = document.getElementById("homeBtn")
