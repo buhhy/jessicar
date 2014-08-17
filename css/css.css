@@ -136,6 +136,11 @@ img {
   margin: 0;
   padding: 1.2em 0;
   line-height: 2em;
+  display: table;
+  width: 100%;
+}
+.intro .short-about .learn-more li {
+  display: table-cell;
 }
 .intro .short-about .copy {
   font-weight: 400;
