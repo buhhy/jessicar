@@ -468,6 +468,7 @@ span {
     position: absolute;
     top: 0;
     width: 100%;
+    left: 0;
   }
   body .portfolio .content .workheader image.worktitle,
   body .portfolio .content .workheader:hover image.worktitle {
@@ -477,6 +478,7 @@ span {
   body .portfolio .content .workheader h5.worktitle,
   body .portfolio .content .workheader:hover h5.worktitle {
     opacity: 1;
+    left: 115px;
   }
   body .portfolio .content .workheader image.backtomenu,
   body .portfolio .content .workheader:hover image.backtomenu {
@@ -489,6 +491,7 @@ span {
     font-size: 1em;
     font-weight: 500;
     margin: 5.5em 8.7em;
+    left: 0;
   }
   body .portfolio .content .workheader h5.backtomenu:hover,
   body .portfolio .content .workheader:hover h5.backtomenu:hover {
