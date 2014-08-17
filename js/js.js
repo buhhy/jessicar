@@ -8,24 +8,43 @@ function setOpacity(element, opacity) {
 }
 
 function fade(element, duration, start, target, callback) {
-	var starttime = null;
-	var d = element;
-	var disc = target - start;
+	if (window.requestAnimationFrame) {
+		var starttime = null;
+		var d = element;
+		var disc = target - start;
 
-	function step(timestamp) {
-		if (starttime === null) 
-			starttime = timestamp;
-		var progress = timestamp - starttime;
-		var percent = progress / duration;
-		setOpacity(element, disc * percent + start);
-		if (progress < duration) {
-			requestAnimationFrame(step);
-		} else if (callback) {
-			callback();
+		function step(timestamp) {
+			if (starttime === null) 
+				starttime = timestamp;
+			var progress = timestamp - starttime;
+			var percent = progress / duration;
+			setOpacity(element, disc * percent + start);
+			if (progress < duration) {
+				requestAnimationFrame(step);
+			} else if (callback) {
+				callback();
+			}
 		}
-	}
 
-	requestAnimationFrame(step);
+		requestAnimationFrame(step);
+	} else {
+		var opacity = start;
+		var interval = 5;
+		var delta = (start - target) / (duration / interval);
+		var progress = 0;
+		var id = setInterval(function () {
+			progress += interval;
+			opacity -= delta;
+			if (progress > duration) {
+				setOpacity(element, target);
+				clearInterval(id);
+				if (callback)
+					callback();
+			} else {
+				setOpacity(element, opacity);
+			}
+		}, interval);
+	}
 }
 
 function fadeIn(element, duration, callback) { fade (element, duration, 0.0, 1.5, callback); }
