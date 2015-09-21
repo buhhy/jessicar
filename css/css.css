@@ -44,7 +44,7 @@ h3 {
   font-weight: 400;
   margin: 0.35em 0;
   letter-spacing: 1.5px;
-  color: #FFFFFF;
+  color: #704e44;
 }
 h4 {
   font-size: 3em;
@@ -55,7 +55,7 @@ h4 {
   padding-left: 0.3em;
   position: relative;
   line-height: 0.9em;
-  color: #515151;
+  color: #3f2722;
 }
 h5 {
   color: #FFFFFF;
@@ -324,6 +324,7 @@ img {
 .portfolio .content .blurb h3 {
   padding: 0;
   margin: 0;
+  color: #ffffff;
 }
 .portfolio .content .blurb p {
   margin: 1em 0;
@@ -378,7 +379,7 @@ img {
 }
 span {
   margin: 0;
-  color: #515151;
+  color: #7c564a;
   line-height: 1.6em;
 }
 /******************************************************************
