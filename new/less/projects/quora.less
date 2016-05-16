@@ -1,0 +1,337 @@
+@import "../_constants";
+
+.project-page {
+  .sticky-nav {
+    display: none;
+  }
+
+  &.quora-nux {
+    header {
+      background-color: #8e191f;
+
+      h1, h2 {
+        color: #fff;
+        text-align: left;
+        width: 50vw;
+        max-width: 760px;
+      }
+
+      .logo {
+        width: 14vw;
+        max-width: 200px;
+        min-width: 100px;
+      }
+    }
+  }
+
+  .box {
+    margin: 1.5em 0 0;
+    height: 30vh;
+    background-color: aliceblue;
+
+    &.full-b {
+      width: 90vw;
+      max-width: 760px;
+    }
+
+    &.half-b {
+      width: 25vw;
+    }
+  }
+
+  header {
+    padding: 0 10vw;
+    align-items: flex-start;
+
+    h1 {
+      margin: 0.5em 0;
+      font-size: 3.5em;
+      line-height: 1.1em;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      letter-spacing: 0.05em;
+      line-height: 1.8;
+    }
+
+    .half {
+      width: 50vw;
+    }
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    div {
+      line-height: 1.8;
+      font-size: 1.4em;
+      margin: 0 7vw;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      padding: 10em 0;
+      margin: 0;
+
+      &.blunt {
+        padding-bottom: 0;
+      }
+
+      &.continued {
+        padding-top: 0;
+
+        .over-cards {
+          margin: 0 auto 1em;
+
+          .little-card {
+            position: relative;
+            bottom: 0.5em;
+            box-shadow: 0 2px 4px #e6e6e6;
+            border-top: none;
+            padding: 0.5em;
+            box-sizing: border-box;
+
+            h4 {
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        background-color: #f4f4f4;
+      }
+
+      div {
+        font-size: 1.6em;
+
+        &.full {
+          width: 90vw;
+          max-width: 900px;
+        }
+
+        &.half {
+          width: 50vw;
+          text-align: left;
+          min-width: 320px;
+        }
+      }
+
+      h3 {
+        width: 100%;
+        font-size: 1.1em;
+        color: #515151;
+        margin-top: 6em;
+
+        &.blue {
+          color: #81aad9;
+        }
+      }
+
+      iframe {
+        margin-top: 1.5em;
+      }
+
+      img {
+        width: 25%;
+        position: relative;
+        min-width: 320px;
+      }
+
+      .window-container {
+        background-color: #eaeaea;
+        max-width: 760px;
+        border-radius: 5px;
+        background-image: url("../svg/browser.svg");
+        background-size: 2.75em;
+        background-repeat: no-repeat;
+        background-position: 5px 5px;
+        margin: 1.5em 3em 0.5em;
+        display: flex;
+        flex-direction: column;
+
+        img {
+          top: 0;
+          width: 100%;
+          border: 1px solid #eaeaea;
+          border-radius: 5px;
+          box-sizing: border-box;
+        }
+
+        h4 {
+          font-size: 0.6em;
+          margin: 0;
+          padding-top: 0.3em;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+      }
+
+      .over-cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 45%;
+        justify-content: space-around;
+        margin-top: 1.5em;
+
+        .little-card {
+          width: 14vw;
+          border: 1px solid #ececec;
+          box-shadow: 0 1px 4px #e6e6e6;
+          background-color: #fff;
+          margin: 0;
+          box-sizing: border-box;
+          min-width: 200px;
+
+          h4 {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.4em;
+            letter-spacing: 0.1em;
+            margin-top: 1.5em;
+
+            &.red {
+              color: #ce2d2d;
+            }
+
+            &.blue {
+              color: #81aad9;
+            }
+
+            &.green {
+              color: #a0c98c;
+            }
+          }
+
+          p {
+            font-size: 0.45em;
+            padding: 0 0.6em 1em;
+            line-height: 1.7;
+          }
+        }
+      }
+    }
+
+    ol {
+      font-size: 1.2em;
+      margin: 0;
+      padding-left: 2.5em;
+
+      li {
+        list-style-type: lower-roman;
+        font-weight: 600;
+        margin-bottom: 1em;
+
+        p {
+          font-weight: 500;
+          margin: 0.5em 0 0;
+          line-height: 1.6;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : (@screen-max-width-phone - 1px)) {
+  html, body {
+    font-size: 10px;
+
+    &.project-page.quora-nux {
+      header {
+
+        .half {
+          width: 100%;
+        }
+
+        h1, h2 {
+          width: 100%;
+        }
+
+        h1 {
+          line-height: 1.2;
+        }
+
+        h2 {
+          line-height: 1.5;
+        }
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
+
+      h4 {
+        font-size: 0.8em;
+        letter-spacing: 0.75px;
+      }
+
+      div.full, div.half {
+        text-align: left;
+        line-height: 1.5;
+      }
+
+      section {
+        padding: 5em 0;
+
+        &.blunt {
+          padding-bottom: 5em;
+        }
+
+        &.continued {
+          padding-top: 5em;
+
+          .over-cards .little-card {
+            box-shadow: none;
+          }
+        }
+      }
+      .over-cards {
+        margin: 0;
+        width: 80vw;
+
+        .little-card {
+          width: 80vw;
+          border: none;
+          box-shadow: none;
+          background-color: transparent;
+
+          h4 {
+            font-size: 0.5em;
+            text-align: left;
+            margin-bottom: 0;
+          }
+
+          p {
+            padding: 0;
+            font-size: 0.6em;
+            text-align: left;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-width : @screen-max-width-phone)
+and (max-width : (@screen-max-width-tablet - 1px)) {
+  html, body {
+    font-size: 12px;
+  }
+}

@@ -1,3 +1,269 @@
-@import "_media-desktop";
-@import "_media-tablet";
-@import "_media-phone";
+@import "_constants";
+
+// Resets
+.clearfix {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+// Transitions
+@keyframes slidein {
+  from {
+    position: relative;
+    top: -60px;
+  }
+
+  to {
+    position: relative;
+    top: 0;
+    display: flex;
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.35px;
+  line-height: 1.5em;
+  color: #777777;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-rendering: optimizeLegibility;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.nav-divider {
+  background-color: #dfdfdf;
+  display: block;
+  flex: 0 0 auto;
+  height: 8px;
+  width: 1px;
+}
+
+// Sticky Header Navigation
+nav.sticky-nav {
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #dfdfdf;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  padding: 0 18vw;
+  position: fixed;
+  width: 64vw;
+  z-index: 2;
+
+  a {
+    align-items: center;
+    color: @font-red-highlight;
+    display: flex;
+    padding: 0.75em;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-style: italic;
+    justify-content: center;
+    width: 100%;
+
+    &.sticky-name {
+      cursor: pointer;
+      font-family: 'Museo', 'Museo Sans 500', 'Arial', 'Helvetica', sans-serif;
+      font-size: 1.7em;
+      font-style: normal;
+    }
+  }
+
+  .nav-divider:first-of-type {
+    align-self: stretch;
+    height: auto;
+  }
+}
+
+// Splash Intro
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  justify-content: center;
+
+  // &.header-content {
+  // 	min-width:700px;
+  // }
+
+  h1 {
+    font-size: 3em;
+    font-family: 'Museo', 'Museo Sans 500', 'Arial', 'Helvetica', sans-serif;
+    font-weight: 500;
+
+    a.title-name {
+      text-decoration: none;
+      color: @font-red-highlight;
+      // font-style: italic;
+      // font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
+      font-weight: 600;
+      position: relative;
+      top: 1px;
+      font-size: 1.1em;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    width: 35vw;
+    line-height: 1.7;
+    font-weight: 500;
+    margin: 0.5em 0 1em;
+    color: #999;
+  }
+
+  nav.header-nav {
+    align-items: center;
+    display: flex;
+
+    a {
+      color: @font-red-highlight;
+      font-style: italic;
+      font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      font-size: 1.4em;
+    }
+  }
+}
+
+// Individual Groupings
+article {
+  display: flex;
+  flex-direction: column;
+  // margin: 0 20vw;
+  align-items: center;
+
+  section {
+    margin-bottom: 3em;
+    width: 50vw;
+
+    h3 {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.85em;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.3em;
+    }
+
+    a {
+      text-decoration: none;
+
+      // Large card style
+      .card {
+        display: flex;
+        border: 1px solid #ececec;
+        padding: 1.5em;
+        border-radius: 6px;
+        box-shadow: 0 1px 4px #e6e6e6;
+        -webkit-transition: box-shadow 0.5s;
+        transition: box-shadow 0.5s;
+
+        &:hover {
+          box-shadow: 0 3px 5px #ddd;
+        }
+
+        .image {
+          background-color: #f7f7f7;
+          width: 18vw;
+          height: 11vw;
+          display: inline-block;
+        }
+
+        .card-content {
+          display: inline-block;
+          width: 75%;
+          vertical-align: top;
+          margin-left: 1.5em;
+
+          span.read-more {
+            display: block;
+            text-decoration: none;
+            color: @font-red-highlight;
+            margin-top: 0.7em;
+            font-size: 1.2em;
+            font-style: italic;
+            width: 7em;
+
+            svg {
+              width: 22px;
+              position: relative;
+              top: 3px;
+              left: 8px;
+              display: none;
+            }
+          }
+        }
+
+        h4 {
+          margin: 0 0 0.4em;
+          font-size: 1.5em;
+          color: #777;
+        }
+
+        span {
+          font-size: 1.1em;
+          line-height: 1.7em;
+          color: #999;
+        }
+      }
+    }
+  }
+
+  // Small Card Style
+  .projects-row {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+
+    section {
+      width: 30%;
+
+      .card {
+        flex-direction: column;
+        padding: 0;
+        display: flex;
+        align-items: center;
+
+        .image {
+          width: 100%;
+          height: 100px;
+        }
+
+        h4 {
+          font-size: 1em;
+        }
+
+        .card-content {
+          width: 92%;
+          text-align: center;
+          margin: 1em 0;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          a.read-more {
+            font-size: 1em;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
