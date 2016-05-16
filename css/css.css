@@ -31,6 +31,9 @@ h1 {
   margin: 0.4em;
   line-height: 0.9em;
 }
+h1.secret_h1 {
+  text-align: left;
+}
 h2 {
   font-size: 0.9em;
   font-weight: 400;
@@ -92,6 +95,9 @@ img {
   border-radius: 0.3em;
   max-width: 90%;
   max-height: 30em;
+}
+img.secret_img {
+  display: inline-block;
 }
 .fill-container {
   width: 100%;
@@ -159,7 +165,7 @@ img {
   display: none;
 }
 .portfolio {
-  width: 67%;
+  width: 75%;
 }
 .portfolio .relative-container {
   width: 100%;
@@ -419,6 +425,9 @@ span {
     visibility: hidden;
     line-height: 0;
     height: 0;
+  }
+  body.secret_body {
+    padding: 5vh;
   }
   body .portfolio {
     display: block;
