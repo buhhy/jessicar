@@ -1,5 +1,41 @@
 @import "_constants";
 
+// Mixins
+.mixin-card() {
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px #e6e6e6;
+  text-decoration: none;
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 0 3px 5px #ddd;
+  }
+
+  .image {
+    background-color: #f7f7f7;
+  }
+
+  .read-more {
+    color: @font-red-highlight;
+    font-size: 1.2em;
+    font-style: italic;
+    text-decoration: none;
+  }
+
+  .card-title {
+    margin: 0 0 0.4em;
+    font-size: 1.5em;
+    color: #777;
+  }
+
+  .card-text {
+    font-size: 1.1em;
+    line-height: 1.7em;
+    color: #999;
+  }
+}
+
 // Resets
 .clearfix {
   content: ".";
@@ -27,18 +63,19 @@
 html, body {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: #777777;
   font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.35px;
   line-height: 1.5em;
-  color: #777777;
-  margin: 0;
-  padding: 0;
-  display: block;
   text-rendering: optimizeLegibility;
 }
-
 
 .hidden {
   display: none;
@@ -110,8 +147,6 @@ header {
     a.title-name {
       text-decoration: none;
       color: @font-red-highlight;
-      // font-style: italic;
-      // font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
       font-weight: 600;
       position: relative;
       top: 1px;
@@ -143,18 +178,21 @@ header {
   }
 }
 
-// Individual Groupings
-article {
+.projects {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  // margin: 0 20vw;
-  align-items: center;
+}
 
-  section {
+// Individual groupings
+.projects.featured {
+  // margin: 0 20vw;
+
+  .project {
     margin-bottom: 3em;
     width: 50vw;
 
-    h3 {
+    .project-title {
       font-weight: 600;
       text-transform: uppercase;
       font-size: 0.85em;
@@ -162,106 +200,79 @@ article {
       margin-bottom: 0.3em;
     }
 
-    a {
-      text-decoration: none;
+    // Large card style
+    .card {
+      .mixin-card();
 
-      // Large card style
-      .card {
-        display: flex;
-        border: 1px solid #ececec;
-        padding: 1.5em;
-        border-radius: 6px;
-        box-shadow: 0 1px 4px #e6e6e6;
-        -webkit-transition: box-shadow 0.5s;
-        transition: box-shadow 0.5s;
+      display: flex;
+      padding: 1.5em;
 
-        &:hover {
-          box-shadow: 0 3px 5px #ddd;
+      .image {
+        width: 18vw;
+        height: 11vw;
+        display: inline-block;
+      }
+
+      .card-content {
+        display: inline-block;
+        width: 75%;
+        vertical-align: top;
+        margin-left: 1.5em;
+
+        .read-more {
+          display: block;
+          margin-top: 0.7em;
+          width: 7em;
         }
+      }
 
-        .image {
-          background-color: #f7f7f7;
-          width: 18vw;
-          height: 11vw;
-          display: inline-block;
-        }
-
-        .card-content {
-          display: inline-block;
-          width: 75%;
-          vertical-align: top;
-          margin-left: 1.5em;
-
-          span.read-more {
-            display: block;
-            text-decoration: none;
-            color: @font-red-highlight;
-            margin-top: 0.7em;
-            font-size: 1.2em;
-            font-style: italic;
-            width: 7em;
-
-            svg {
-              width: 22px;
-              position: relative;
-              top: 3px;
-              left: 8px;
-              display: none;
-            }
-          }
-        }
-
-        h4 {
-          margin: 0 0 0.4em;
-          font-size: 1.5em;
-          color: #777;
-        }
-
-        span {
-          font-size: 1.1em;
-          line-height: 1.7em;
-          color: #999;
-        }
+      .card-text {
+        font-size: 1.1em;
+        line-height: 1.7em;
+        color: #999;
       }
     }
   }
+}
 
-  // Small Card Style
-  .projects-row {
-    display: flex;
-    justify-content: space-between;
-    width: 50vw;
+// Small Card Style
+.projects-row {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
 
-    section {
-      width: 30%;
+  .project {
+    margin-bottom: 3em;
+    width: 30%;
 
-      .card {
-        flex-direction: column;
-        padding: 0;
+    .card {
+      .mixin-card();
+
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+
+      .image {
+        width: 100%;
+        height: 100px;
+      }
+
+      .card-title {
+        font-size: 1em;
+      }
+
+      .card-content {
+        width: 92%;
+        text-align: center;
+        margin: 1em 0;
         display: flex;
         align-items: center;
+        flex-direction: column;
 
-        .image {
-          width: 100%;
-          height: 100px;
-        }
-
-        h4 {
+        .read-more {
           font-size: 1em;
-        }
-
-        .card-content {
-          width: 92%;
-          text-align: center;
-          margin: 1em 0;
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-
-          a.read-more {
-            font-size: 1em;
-            margin-top: 0;
-          }
+          margin-top: 0;
         }
       }
     }
