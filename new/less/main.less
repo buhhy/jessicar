@@ -182,6 +182,31 @@ html {
     margin-bottom: 3em;
     width: 50vw;
 
+    .pre {
+      overflow: hidden;
+      width: 41%;
+      background-position: center;
+      background-origin: border-box;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      border-right: 1px solid #ececec;
+      border-radius: 3px 0 0 3px;
+
+      &.quora {
+        background-image: url("../img/quora-pre.png");
+      }
+
+      &.inkling {
+        background-image: url("../img/inkling-pre.png");
+      }
+
+      &.quickmatch {
+        background-image: url("../img/quickmatch-pre.png");
+      }
+    }
+
     .project-title {
       font-weight: 600;
       text-transform: uppercase;
@@ -195,7 +220,12 @@ html {
       .mixin-card();
 
       display: flex;
-      padding: 1.5em;
+      // padding: 1.5em;
+      
+
+      &:hover .pre {
+        background-size: 150%;
+      }
 
       .image {
         width: 18vw;
@@ -205,9 +235,9 @@ html {
 
       .card-content {
         display: inline-block;
-        width: 75%;
+        width: 50%;
         vertical-align: top;
-        margin-left: 1.5em;
+        margin: 1.5em;
 
         .read-more {
           display: block;
