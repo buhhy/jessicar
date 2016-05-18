@@ -249,30 +249,6 @@ html {
     margin-bottom: 3em;
     width: 50vw;
 
-    .pre {
-      background-origin: border-box;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      border-radius: 3px 0 0 3px;
-      border-right: 1px solid #ececec;
-      overflow: hidden;
-      transition: all 0.3s ease-in-out;
-      width: 41%;
-
-      &.quora {
-        background-image: url("../img/quora-pre.png");
-      }
-
-      &.inkling {
-        background-image: url("../img/inkling-pre.png");
-      }
-
-      &.quickmatch {
-        background-image: url("../img/quickmatch-pre.png");
-      }
-    }
-
     .project-title {
       font-size: 0.85em;
       font-weight: 600;
@@ -287,14 +263,39 @@ html {
 
       display: flex;
 
-      &:hover .pre {
-        background-size: 150%;
+      &:hover .pre .image {
+        transform: scale(1.25);
       }
 
-      .image {
-        width: 18vw;
-        height: 11vw;
-        display: inline-block;
+      .pre {
+        border-radius: 3px 0 0 3px;
+        border-right: 1px solid #ececec;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        width: 41%;
+
+        .image {
+          background-origin: border-box;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          flex: 1 1 auto;
+          transition: transform 0.3s ease-in-out,
+              -webkit-filter 0.3s ease-in-out;
+        }
+
+        &.quora .image {
+          background-image: url("../img/quora-pre.png");
+        }
+
+        &.inkling .image {
+          background-image: url("../img/inkling-pre.png");
+        }
+
+        &.quickmatch .image {
+          background-image: url("../img/quickmatch-pre.png");
+        }
       }
 
       .card-content {
