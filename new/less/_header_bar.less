@@ -26,6 +26,7 @@
     justify-content: center;
     width: 100%;
     transition: background-color 0.2s;
+    text-align: center;
 
     &:hover {
       background-color: rgba(233, 96, 87, 0.05);
@@ -39,8 +40,9 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
-  .sticky-nav .nav-item.sticky-name {
-    text-align: center;
+@media only screen and (max-width : 800px) {
+  .sticky-nav {
+    width: 100vw;
+    padding: 0;
   }
 }

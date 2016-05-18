@@ -49,7 +49,6 @@ body {
 .project-page {
   .sticky-header {
     z-index: 3;
-    // display: none;
 
     .nav-item {
       align-items: center;
@@ -103,6 +102,7 @@ body {
     background-color: #5cacc8;
     display: flex;
     align-items: center;
+    height: 70vh;
 
     h1, h2 {
       color: #fff;
@@ -143,7 +143,7 @@ body {
       background-image: url("../../svg/white-chevron.svg");
       width: 100%;
       height: 100px;
-      bottom: 7vh;
+      bottom: 0vh;
       position: absolute;
       background-repeat: no-repeat;
       left: 0;
@@ -487,7 +487,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10em;
+  padding: 10em 0 5em;
 
   h2 {
     font-family: "Museo Sans", "Museo Sans 500";
@@ -617,81 +617,219 @@ footer {
   }
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-width : (@screen-max-width-phone - 1px)) {
-  html, body {
-    font-size: 10px;
 
-    &.project-page {
-      header {
 
-        .half {
-          width: 100%;
+
+
+
+
+
+
+
+
+/* jessmar media queries */
+@media only screen and (min-width : 1470px) {
+  .project-page article section div.halves-container {
+    width: 60vw;
+  }
+}
+
+/* jessmar */
+@media only screen and (max-width : 1110px) {
+  html {
+    font-size: 13px;
+
+    .project-page {
+      header h2{
+        line-height: 1.6;
+      }
+      article {
+
+        section {
+
+          div.half p {
+            margin-top: 0.25em;
+          }
         }
+
+        div {
+          line-height: 1.6;
+        }
+      }
+    }
+    .project-footer .footer-projects .card .card-text {
+      line-height: 1.4;
+    }
+  }
+}
+
+@media only screen and (max-width : 935px) {
+  html {
+    .sticky-nav {
+      width: 100vw;
+      padding: 0;
+    }
+    .project-page {
+      header {
+        .chevron {
+          bottom: 2vh;
+        }
+      }
+      article section {
+        padding: 5em 0;
+        .over-cards {
+          flex-direction: column;
+          width: 100vw;
+          align-items: center;
+          margin-top: 2em;
+          .little-card {
+            width: 60vw;
+            box-shadow: none;
+            margin-bottom: 1em;
+
+            h4 {
+              margin-top: 1.5em;
+            }
+            p {
+              width: 95%;
+              font-size: 0.75em;
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+
+    footer .footer-contact {
+      width: 75vw;
+      a {
+        width: 3.5em;
+        background-position: 0.5em 1em;
+        background-size: 5em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 805px) {
+  html {
+    .sticky-nav {
+      width: 100vw;
+      padding: 0;
+    }
+
+    .project-page {
+      header {
+        flex-direction: column;
+        justify-content: center;
 
         h1, h2 {
-          width: 100%;
+          text-align: center;
         }
 
-        h1 {
-          line-height: 1.2;
-        }
+        .half {
+          width: 75vw;
+          margin-right: 0;
+          text-align: center;
 
-        h2 {
-          line-height: 1.5;
-        }
-      }
+          h2 {
+            margin: 0.5em 1em;
+          }
 
-      h3 {
-        font-size: 1.2em;
-      }
-
-      h4 {
-        font-size: 0.8em;
-        letter-spacing: 0.75px;
-      }
-
-      div.full, div.half {
-        text-align: left;
-        line-height: 1.5;
-      }
-
-      section {
-        padding: 5em 0;
-
-        &.blunt {
-          padding-bottom: 5em;
-        }
-
-        &.continued {
-          padding-top: 5em;
-
-          .over-cards .little-card {
-            box-shadow: none;
+          .img-container {
+            max-height: 300px;
           }
         }
-      }
-      .over-cards {
-        margin: 0;
-        width: 80vw;
 
-        .little-card {
-          width: 80vw;
-          border: none;
-          box-shadow: none;
-          background-color: transparent;
-
+        .window-container {
+          width: auto;
+          margin-top: 2em;
           h4 {
-            font-size: 0.5em;
-            text-align: left;
-            margin-bottom: 0;
+            font-size: 1em;
           }
+        }
+        .chevron {
+          background-size: 12em;
+        }
+      }
+      article {
+        div.full {
+          width: 75vw;
+          margin: auto;
+
+          p:first-of-type {
+            margin: 0 0 2em;
+          }
+        }
+
+        div.half {
+          width: 100vw;
+          text-align: center;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
 
           p {
-            padding: 0;
-            font-size: 0.6em;
-            text-align: left;
-            margin-top: 0;
+            max-width: 100vw;
+            width: 70vw;
+          }
+        }
+        section {
+          flex-direction: column;
+          padding: 8em 0;
+
+          div {
+            &.fourth {
+              width: 100%;
+
+              .paper {
+                height: 145px;
+                width: 130px;
+
+                img {
+                  width: 95%;
+                }
+              }
+            }
+            &.halves-container {
+              width: 100vw;
+              flex-direction: column;
+              margin-top: 6em;
+
+              &.icon {
+                flex-direction: column-reverse;
+              }
+
+              .half-image {
+                width: 100vw;
+
+                img {
+                  height: 2em;
+                  margin-bottom: 1em;
+
+                  &.screenshot {
+                    height: auto;
+                    width: 65vw;
+                  }
+                }
+              }
+            }
+
+            &.standalone {
+              height: 21em;
+            }
+            .window-container {
+              width: 75%;
+
+              h4 {
+                font-size: 0.7em;
+              }
+
+              .img-container {
+                margin-top: 0.5em;
+                height: 245px;
+              }
+            }
           }
         }
       }
@@ -699,259 +837,167 @@ footer {
   }
 }
 
-/* Screens */
-// @media only screen
-// and (min-width : @screen-max-width-phone)
-// and (max-width : (@screen-max-width-tablet - 1px)) {
-//   html, body {
-//     font-size: 12px;
-//   }
-// }
-
-
-/*==========  Mobile First Method  ==========*/
-
-    /* Custom, iPhone Retina */ 
-    @media only screen and (min-width : 320px) {
-      // .project-page {
-      //   header {
-      //     flex-direction: column;
-      //     padding: 0;
-      //     font-size: 1.5em;
-      //     padding: 5em;
-
-      //     .half {
-      //       width: 80vw;
-      //       display: flex;
-      //       flex-direction: column;
-      //       align-items: center;
-
-      //       .logo {
-      //         width: 25vw;
-      //       }
-
-      //       h1, h2 {
-      //         text-align: center;
-      //         max-width: none;
-      //       }
-
-      //       .window-container {
-      //         width: 80vw;
-      //         background-size: initial;
-      //         background-position: 25px 25px;
-
-      //         h4 {
-      //           font-size: 1.5em;
-      //         }
-      //       }
-      //     }
-      //   }
-      //   article {
-      //     font-size: 0.9em;
-      //     section {
-      //       &.continued {
-      //         margin-top: 6em;
-      //         .over-cards {
-      //           display: none;
-      //         }
-      //       }
-
-      //       div {
-      //         &.full, &.half {
-      //           width: 80vw;
-      //           text-align: left;
-      //         }
-      //         &.window-container {
-      //           width: 80vw;
-      //           background-size: initial;
-      //           background-position: 25px 25px;
-
-      //           h4 {
-      //             font-size: 2.5em;
-      //           }
-      //         }
-      //         &.third-container {
-      //           flex-direction: column;
-      //           width: 100vw;
-      //           margin-top: 7em;
-
-      //           .third-item {
-      //             width: 100%;
-      //             font-size: 4.5em;
-      //             padding: 0;
-      //             text-align: left;
-      //             box-shadow: none;
-      //             border: 1px solid #ddd;
-
-      //             h3 {
-      //               padding: 0 1em;
-      //               margin: 0.75em 0 0;
-      //             }
-
-      //             p {
-      //               padding: 0 2em;
-      //               margin-bottom: 1em;
-      //             }
-      //           }
-      //         }
-      //       }
-      //       img.standalone {
-      //         width: 100vw;
-      //         margin-top: 6em;
-      //       }
-      //       .over-cards {
-      //         width: 100vw;
-      //         font-size: 2em;
-      //         margin-top: 5.5em;
-      //         text-align: left;
-
-      //         .little-card {
-      //           width: 100vw;
-      //           box-shadow: none;
-      //           border: 1px solid #ddd;
-
-      //           h4 {
-      //             padding: 0 1em;
-      //           }
-
-      //           p {
-      //             padding: 0 2em;
-      //             margin-top: 0.25em;
-      //           }
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
-      // footer {
-      //   font-size: 2.5em;
-      //   line-height: 1.5;
-      //   padding-top: 0;
-      //   text-align: center;
-
-      //   h2 {
-      //     padding: 1em 1.5em 0;
-      //     margin-bottom: 0;
-      //   }
-
-      //   .footer-contact {
-      //     width: 100vw;
-
-      //     a {
-      //       background-size: 50%;
-      //       background-position: center 2em;
-      //     }
-      //   }
-      //   .footer-projects {
-      //     font-size: 0.35em;
-      //     margin-top: 3em;
-
-      //     .project-title {
-      //       text-align: left;
-      //     }
-
-      //     .card {
-      //       flex-direction: column;
-      //       font-size: 2.5em;
-
-      //       .pre {
-      //         height: 200px;
-      //         width: 100%;
-      //       }
-      //       .card-content {
-      //         width: 87%;
-
-      //         .read-more {
-      //           width: 100%;
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
+@media only screen and (max-width : 690px) {
+  html .project-page {
+    header {
+      .window-container h4 {
+        font-size: 0.85em;
+      }
+      .half {
+        width: 95vw;
+        .logo {
+          width: 20vw;
+        }
+        h1 {
+          margin-top: 0.25em;
+        }
+      }
+    article {
+      div.full, div.half p {
+        width: 85vw;
+      }
+      section div {
+        .standalone {
+          height: 18em;
+        }
+        &.window-container {
+          max-height: 300px;
+        }
+        &.halves-container {
+          margin-top: 4em;
+        }
+      }
     }
-
-    /* Extra Small Devices, Phones */ 
-    @media only screen and (min-width : 480px) {
-
+    .project-footer {
+      .footer-contact {
+        width: 100vw;
+      }
+      .footer-projects {
+        h3.project-title {
+          margin-left: 1em;
+        }
+        .card {
+          border-radius: 0;
+        }
+      }
     }
-
-    /* Small Devices, Tablets */
-    @media only screen and (min-width : 768px) {
-      // html {
-      //   font-size: 13px;
-
-      //   .project-page {
-      //     header {
-      //       width: 100%;
-      //       max-width: 850px;
-      //       // width: 54vw;
-      //       // min-width: 690px;
-      //       font-size: 1em;
-
-      //       .half {
-      //         width: 60vw;
-
-      //         .window-container {
-      //           width: 60vw;
-
-      //           h4 {
-      //             font-size: 1em;
-      //           }
-      //         }
-      //       }
-      //     }
-
-      //     article {
-      //       width: 67vw;
-
-      //       section div {
-      //         &.full {
-      //           width: 85%;
-      //         }
-      //         &.window-container h4{
-      //           font-size: 1em;
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
     }
+  }
+}
 
-    /* Medium Devices, Desktops */
-    @media only screen and (min-width : 992px) {
+@media only screen and (max-width : 575px) {
+  html {
+    font-size: 11px;
+    .project-page {
+      header {
+        .window-container h4 {
+          font-size: 0.65em;
+          text-transform: uppercase;
 
+          h2 {
+            letter-spacing: 0.5px;
+          }
+        }
+        .chevron {
+          bottom: 6vh;
+        }
+      }
+      article section {
+        padding: 5em 0;
+        div {
+          letter-spacing: 0.5px;
+          &.standalone {
+            height: 15em;
+          }
+          &.fourth {
+            margin-left: 0.25em;
+
+            .paper {
+              background: none;
+              box-shadow: none; 
+              border: none;
+            }
+          }
+        }
+      }
+      .project-footer .footer-contact {
+        width: 85vw;
+        a {
+          background-position: 2.5em 1em;
+          background-size: 50px;
+        }
+      }
     }
+  }
+}
 
-    /* Large Devices, Wide Screens */
-    @media only screen and (min-width : 1200px) {
-
+@media only screen and (max-width : 450px) {
+  html .project-page {
+    header {
+      .window-container {
+        h4 {
+          width: 65%;
+          font-size: 0.75em;
+        }
+      }
     }
+    article {
+      section { 
+        h3 {
+          margin-top: 2em;
+        }
+        div {
+          &.full, &.half p {
+            width: 85vw;
+          }
+          &.fourth {
+            margin-bottom: 0;
+            .paper img {
+              width: 75%;
+            }
+          }
+          &.standalone {
+            height: 12em;
+          }
+          &.window-container {
+            width: 100%;
+            margin: 1em 0 0;
 
-
-
-    /*==========  Non-Mobile First Method  ==========*/
-
-    /* Large Devices, Wide Screens */
-    @media only screen and (max-width : 1200px) {
-
+            .img-container {
+              height:200px;
+              overflow-x: hidden;
+              height: 180px;
+            }
+          }
+          &.halves-container {
+            margin-top: 2em;
+            .half-image img {
+              height: 2.5em;
+            }
+          }
+        }
+        img {
+          width: 100%;
+        }
+      }
     }
-
-    /* Medium Devices, Desktops */
-    @media only screen and (max-width : 992px) {
-
+    .project-footer {
+      font-size: 10px;
+      .footer-contact a {
+        background-size: 38px;
+        background-position: 1.25em 2em;
+      }
+      .footer-projects .card .card-text {
+        font-size: 1.3em;
+      }
+      h2 {
+        text-align: center;
+        line-height: 1.5;
+      }
+      h3 {
+        margin-left: 1em;
+        font-size: 1em;
+      }
     }
-
-    /* Small Devices, Tablets */
-    @media only screen and (max-width : 768px) {
-
-    }
-
-    /* Extra Small Devices, Phones */ 
-    @media only screen and (max-width : 480px) {
-
-    }
-
-    /* Custom, iPhone Retina */ 
-    @media only screen and (max-width : 320px) {
-
-    }
+  }
+}

@@ -1,4 +1,5 @@
 @import "../_common";
+@import "../_constants";
 
 .footer-contact() {
   color: #868686;
@@ -16,7 +17,7 @@
   a {
     align-items: flex-end;
     background-repeat: no-repeat;
-    background-position: 2.25em 1.25em;
+    background-position: center 1.25em;
     border-radius: 6px;
     color: #868686;
     cursor: pointer;
@@ -113,8 +114,8 @@
 
 .project-footer {
   background-color: #fff;
-  border: 1px solid #dfdfdf;
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #dfdfdf;
+  box-shadow: 0 -0.2em 20em rgba(0, 0, 0, 0.1);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -148,5 +149,58 @@
 
   .footer-projects {
     .footer-projects();
+  }
+}
+
+
+@media only screen and (max-width : 1110px) {
+  .project-footer .footer-projects .card .card-text {
+    line-height: 1.4;
+  }
+}
+
+@media only screen and (max-width : 690px) {
+  .project-footer {
+    .footer-contact {
+      width: 100vw;
+    }
+    .footer-projects {
+      h3.project-title {
+        margin-left: 1em;
+      }
+      .card {
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 575px) {
+  .project-footer .footer-contact {
+    width: 85vw;
+    a {
+      // background-position: 2.5em 1em;
+      background-size: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width : 450px) {
+  html .project-page .project-footer {
+    font-size: 10px;
+    .footer-contact a {
+      background-size: 38px;
+    }
+    .footer-projects .card .card-text {
+      font-size: 1.3em;
+    }
+    h2 {
+      text-align: center;
+      line-height: 1.5;
+    }
+    h3 {
+      margin-left: 1em;
+      font-size: 1em;
+    }
   }
 }
