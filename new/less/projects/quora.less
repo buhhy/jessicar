@@ -1,4 +1,5 @@
 @import "../_constants";
+@import "../main";
 
 body {
   margin: 0;
@@ -268,7 +269,7 @@ body {
         flex-wrap: wrap;
         width: 45%;
         justify-content: space-around;
-        margin-top: 1.5em;
+        margin-top: 2em;
 
         .little-card {
           width: 14vw;
@@ -326,6 +327,146 @@ body {
 
         &:last-of-type {
           margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10em;
+
+  h2 {
+    font-family: "Museo Sans 500";
+    font-weight: 500;
+    color: #bababa;
+    font-size: 2em;
+    margin-bottom: 1.5em;
+  }
+
+  h3 {
+    font-family: 'Lato';
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.3em;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    justify-content: space-around;
+    font-family: 'Lato';
+    color: #868686;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+    font-size: 1em;
+    margin-bottom: 4em;
+
+    a {
+      background-repeat: no-repeat;
+      height: 6.5em;
+      width: 6.5em;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      padding: 1.5em;
+      background-position: 2.25em 1.25em;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #868686;
+
+      &:hover {
+        background-color: #f7f7f7;
+      }
+
+      &.email {
+        background-image: url("../../svg/email.svg");
+      }
+      &.linkedin {
+        background-image: url("../../svg/linkedin.svg");
+      }
+      &.twitter {
+        background-image: url("../../svg/twitter.svg");
+      }
+      &.form {
+        background-image: url("../../svg/form.svg");
+      }
+    }
+  }
+  .footer-projects {
+    max-width: 760px;
+
+    .card {
+      .mixin-card();
+      margin-bottom: 4em;
+
+      display: flex;
+      // padding: 1.5em;
+
+      &:hover .pre {
+        background-size: 150%;
+      }
+
+      .image {
+        width: 18vw;
+        height: 11vw;
+        display: inline-block;
+      }
+
+      .card-content {
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        margin: 1.5em;
+
+        .read-more {
+          display: block;
+          margin-top: 0.7em;
+          width: 7em;
+        }
+      }
+
+      .card-text {
+        font-size: 1.1em;
+        line-height: 1.7em;
+        color: #999;
+      }
+
+      .pre {
+        overflow: hidden;
+        width: 41%;
+        background-position: center;
+        background-origin: border-box;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        border-right: 1px solid #ececec;
+        border-radius: 3px 0 0 3px;
+
+        &.quora {
+          background-image: url("../../img/quora-pre.png");
+        }
+
+        &.inkling {
+          background-image: url("../../img/inkling-pre.png");
+        }
+
+        &.quickmatch {
+          background-image: url("../../img/quickmatch-pre.png");
         }
       }
     }

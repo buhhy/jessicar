@@ -14,35 +14,40 @@
     <div class="hidden" id='stickyNavContainer'>
       <nav class="sticky-nav" id='stickyNav'>
         <a class="nav-item sticky-name" id="stickyName">Jessica Fung</a>
-        <div class="nav-divider"></div>
         <a class="nav-item" target="_blank" href="../Jessica-Fung-Resume.pdf">
           Resume
         </a>
-        <div class="nav-divider"></div>
         <a class="nav-item" href="#" id="stickyProjectsLink">Projects</a>
-        <div class="nav-divider"></div>
-        <a class="nav-item" href="#" id="projectsLink">Say Hi</a>
+        <a class="nav-item" href="#" id="projectsLink">Contact</a>
       </nav>
     </div>
 
     <header class="page-header">
-      <h1 class="intro-title">Hi, I'm <a class="title-name" href="#">Jessica Fung</a></h1>
-      <h2 class="intro-text">
-        I'm passionate about clean and humanized design by calibrating user
-        needs with business goals. I have an affinity for information design,
-        responsive design, and product thinking.
-      </h2>
-      <nav class="header-nav">
-        <a class="intro-link" target="_blank" href="../Jessica-Fung-Resume.pdf">
-          View resume
-        </a>
-        <div class="nav-divider"></div>
-        <a class="intro-link" href="#">Say hi</a>
-        <div class="nav-divider"></div>
-        <a class="intro-link" href="#" id="splashProjectsLink">
-          Browse projects
-        </a>
-      </nav>
+      <div class="splash-container" id="splashContainer">
+        <h1 class="intro-title">Hi, I'm <a class="title-name" href="#">Jessica Fung</a></h1>
+        <h2 class="intro-text">
+          I'm passionate about clean and humanized design by calibrating user
+          needs with business goals. I have an affinity for information design,
+          responsive design, and product thinking.
+        </h2>
+        <nav class="header-nav" id="headerNav">
+          <a class="intro-link" target="_blank" href="../Jessica-Fung-Resume.pdf">
+            View resume
+          </a>
+          <a class="intro-link" href="#" id="contactDrawerLink">Contact me</a>
+          <a class="intro-link" href="#" id="splashProjectsLink">
+            Browse projects
+          </a>
+        </nav>
+      </div>
+      <div class="contact-container" id="contactContainer">
+        <div class="contact-options" id="contactOptions">
+          <a href="mailto:me@jessicafung.com&amp;subject=About%20your%20portfolio" class="email">Email</a>
+          <a target="_blank" href="https://www.linkedin.com/in/jessicafung" class="linkedin">LinkedIn</a>
+          <a target="_blank" href="https://twitter.com/jessicafung_" class="twitter">Twitter</a>
+          <a href="#" class="form">Form</a>
+        </div>
+      </div>
     </header>
 
     <article class="featured projects" id="featuredProjects">
@@ -128,12 +133,13 @@
         </section>
       </div>
     </article> -->
+    
     <script
         src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
     </script>
     <script src="../js/classlist_shim.js"></script>
     <script src="../js/main.js"></script>
-    <script src="https://use.typekit.net/zky3mif.js"></script>
+    <!-- <script src="https://use.typekit.net/zky3mif.js"></script> -->
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </body>
 </html>

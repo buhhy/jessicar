@@ -102,11 +102,15 @@ html {
     font-style: italic;
     justify-content: center;
     width: 100%;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba(233,96,87,0.05);
+    }
 
     &.sticky-name {
       cursor: pointer;
       font-family: 'Museo', 'Museo Sans 500', 'Arial', 'Helvetica', sans-serif;
-      font-size: 1.7em;
       font-style: normal;
     }
   }
@@ -125,45 +129,120 @@ html {
   height: 80vh;
   justify-content: center;
 
-  // &.header-content {
-  // 	min-width:700px;
-  // }
+  .splash-container {
+    transition: transform 0.5s;
+    transform: translateY(1em);
 
-  .intro-title {
-    font-size: 3em;
-    font-family: 'Museo', 'Museo Sans 500', 'Arial', 'Helvetica', sans-serif;
-    font-weight: 500;
+    &.slide {
+      transform: translateY(-2em);
+    }
 
-    .title-name {
-      text-decoration: none;
-      color: @font-red-highlight;
-      font-weight: 600;
-      position: relative;
-      top: 1px;
-      font-size: 1.1em;
+    .intro-title {
+      font-size: 3em;
+      font-family: 'Museo', 'Museo Sans 500', 'Arial', 'Helvetica', sans-serif;
+      font-weight: 500;
+      text-align: center;
+
+      .title-name {
+        text-decoration: none;
+        color: @font-red-highlight;
+        font-weight: 600;
+        position: relative;
+        top: 1px;
+        font-size: 1.1em;
+      }
+    }
+
+    .intro-text {
+      text-align: center;
+      width: 35vw;
+      line-height: 1.7;
+      font-weight: 500;
+      margin: 0.5em 0 1em;
+      color: #999;
+    }
+
+    .header-nav {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      .intro-link {
+        color: @font-red-highlight;
+        font-style: italic;
+        font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        font-size: 1.4em;
+        transition: background-color 0.2s;
+        border-radius: 6px;
+
+        &:hover {
+          background-color: rgba(233, 96, 87, 0.05);
+        }
+      }
     }
   }
 
-  .intro-text {
-    text-align: center;
-    width: 35vw;
-    line-height: 1.7;
-    font-weight: 500;
-    margin: 0.5em 0 1em;
-    color: #999;
-  }
+  .contact-container {
+    opacity: 0;
+    height: 8em;
+    transition: opacity 0.3s ease-in-out;
 
-  .header-nav {
-    align-items: center;
-    display: flex;
+    &.show {
+      opacity: 1;
+    }
 
-    .intro-link {
-      color: @font-red-highlight;
-      font-style: italic;
-      font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
-      text-decoration: none;
-      padding: 0.5em 1em;
-      font-size: 1.4em;
+    .contact-options {
+      display: none;
+      flex-direction: row;
+      width: 50vw;
+      justify-content: space-around;
+      font-family: 'Lato';
+      color: #868686;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.75px;
+      font-size: 1em;
+      margin-top: 0.5em;
+
+      &.flex {
+        display: flex;
+      }
+
+      a {
+        background-repeat: no-repeat;
+        background-size: 4em;
+        height: 5.5em;
+        width: 5em;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        padding: 1.5em;
+        background-position: center 1em;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #868686;
+
+        &:hover {
+          background-color: #f7f7f7;
+        }
+
+        &.email {
+          background-image: url("../svg/email.svg");
+        }
+        &.linkedin {
+          background-image: url("../svg/linkedin.svg");
+        }
+        &.twitter {
+          background-image: url("../svg/twitter.svg");
+        }
+        &.form {
+          background-image: url("../svg/form.svg");
+        }
+      }
     }
   }
 }
@@ -172,11 +251,11 @@ html {
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 90vh;
 }
 
 // Individual groupings
 .projects.featured {
-  // margin: 0 20vw;
 
   .project {
     margin-bottom: 3em;
