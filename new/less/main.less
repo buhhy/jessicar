@@ -36,20 +36,6 @@
   }
 }
 
-// Transitions
-@keyframes slidein {
-  from {
-    position: relative;
-    top: -60px;
-  }
-
-  to {
-    position: relative;
-    top: 0;
-    display: flex;
-  }
-}
-
 html, body {
   width: 100%;
   height: 100%;
@@ -123,9 +109,9 @@ html {
 
 // Splash Intro
 .page-header {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 80vh;
   justify-content: center;
 
@@ -138,28 +124,28 @@ html {
     }
 
     .intro-title {
-      font-size: 3em;
-      font-family: 'Museo', 'Museo Sans 500', 'Arial', 'Helvetica', sans-serif;
-      font-weight: 500;
       text-align: center;
+      font-family: 'Museo', 'Museo Sans 500', 'Arial', 'Helvetica', sans-serif;
+      font-size: 3em;
+      font-weight: 500;
 
       .title-name {
-        text-decoration: none;
         color: @font-red-highlight;
+        font-size: 1.1em;
         font-weight: 600;
         position: relative;
+        text-decoration: none;
         top: 1px;
-        font-size: 1.1em;
       }
     }
 
     .intro-text {
+      color: #999;
+      font-weight: 500;
+      line-height: 1.7;
+      margin: 0.5em 0 1em;
       text-align: center;
       width: 35vw;
-      line-height: 1.7;
-      font-weight: 500;
-      margin: 0.5em 0 1em;
-      color: #999;
     }
 
     .header-nav {
@@ -168,14 +154,14 @@ html {
       justify-content: center;
 
       .intro-link {
+        border-radius: 6px;
         color: @font-red-highlight;
+        font-size: 1.4em;
         font-style: italic;
         font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
-        text-decoration: none;
         padding: 0.5em 1em;
-        font-size: 1.4em;
+        text-decoration: none;
         transition: background-color 0.2s;
-        border-radius: 6px;
 
         &:hover {
           background-color: rgba(233, 96, 87, 0.05);
@@ -185,8 +171,8 @@ html {
   }
 
   .contact-container {
-    opacity: 0;
     height: 8em;
+    opacity: 0;
     transition: opacity 0.3s ease-in-out;
 
     &.show {
@@ -196,35 +182,35 @@ html {
     .contact-options {
       display: none;
       flex-direction: row;
-      width: 50vw;
       justify-content: space-around;
-      font-family: 'Lato';
+      font-family: 'Lato', sans-serif;
       color: #868686;
       text-transform: uppercase;
       font-weight: 600;
       letter-spacing: 0.75px;
       font-size: 1em;
       margin-top: 0.5em;
+      width: 50vw;
 
       &.flex {
         display: flex;
       }
 
       a {
-        background-repeat: no-repeat;
-        background-size: 4em;
-        height: 5.5em;
-        width: 5em;
-        display: flex;
-        justify-content: center;
         align-items: flex-end;
         cursor: pointer;
-        transition: background-color 0.3s;
-        padding: 1.5em;
         background-position: center 1em;
+        background-repeat: no-repeat;
+        background-size: 4em;
         border-radius: 6px;
-        text-decoration: none;
         color: #868686;
+        display: flex;
+        height: 5.5em;
+        justify-content: center;
+        padding: 1.5em;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        width: 5em;
 
         &:hover {
           background-color: #f7f7f7;
@@ -233,12 +219,15 @@ html {
         &.email {
           background-image: url("../svg/email.svg");
         }
+
         &.linkedin {
           background-image: url("../svg/linkedin.svg");
         }
+
         &.twitter {
           background-image: url("../svg/twitter.svg");
         }
+
         &.form {
           background-image: url("../svg/form.svg");
         }
@@ -256,22 +245,20 @@ html {
 
 // Individual groupings
 .projects.featured {
-
   .project {
     margin-bottom: 3em;
     width: 50vw;
 
     .pre {
-      overflow: hidden;
-      width: 41%;
-      background-position: center;
       background-origin: border-box;
+      background-position: center;
       background-repeat: no-repeat;
       background-size: 100%;
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-      border-right: 1px solid #ececec;
       border-radius: 3px 0 0 3px;
+      border-right: 1px solid #ececec;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      width: 41%;
 
       &.quora {
         background-image: url("../img/quora-pre.png");
@@ -287,11 +274,11 @@ html {
     }
 
     .project-title {
-      font-weight: 600;
-      text-transform: uppercase;
       font-size: 0.85em;
+      font-weight: 600;
       letter-spacing: 0.1em;
       margin-bottom: 0.3em;
+      text-transform: uppercase;
     }
 
     // Large card style
@@ -299,8 +286,6 @@ html {
       .mixin-card();
 
       display: flex;
-      // padding: 1.5em;
-      
 
       &:hover .pre {
         background-size: 150%;
