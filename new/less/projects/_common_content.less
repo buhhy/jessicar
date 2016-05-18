@@ -1,33 +1,35 @@
+@import "../_constants";
+
 .window-container {
-  border-radius: 5px;
-  background: #eaeaea url("../../svg/browser.svg") no-repeat 11px 11px;
+  background: @window-gray url("../../svg/browser.svg") no-repeat 11px 11px;
   background-size: 60px;
-  margin: 1.5em 3em 0.5em;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  margin: 1.5em 3em 0.5em;
   width: 50vw;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   img {
-    top: 0;
-    width: 100%;
     border-radius: 0 0 5px 5px;
     box-sizing: border-box;
     position: relative;
+    top: 0;
+    width: 100%;
   }
 
   h4 {
-    text-align: center;
-    font-family: 'Lato', sans-serif;
+    background-color: @bg-light-gray;
+    color: @font-light-gray;
+    font-family: @font-lato;
     font-size: 0.75em;
-    color: #777;
     margin: 0.75em auto;
-    background-color: #f7f7f7;
-    width: 50%;
     padding: 0.2em 0;
-  }
-
-  &:last-of-type {
-    margin-bottom: 0;
+    text-align: center;
+    width: 50%;
   }
 }

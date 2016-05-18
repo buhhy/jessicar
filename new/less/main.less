@@ -2,6 +2,7 @@
 @import "_common";
 @import "_constants";
 @import "_header_bar";
+@import "projects/_common_footer";
 
 .hidden {
   display: none;
@@ -16,22 +17,22 @@
   justify-content: center;
 
   .splash-container {
-    transition: transform 0.5s;
-    transform: translateY(1em);
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    transform: translateY(1em);
+    transition: transform 0.5s;
 
     &.slide {
       transform: translateY(-2em);
     }
 
     .intro-title {
-      text-align: center;
-      font-family: 'Museo Sans', 'Museo Sans 500', 'Arial', 'Helvetica', sans-serif;
+      font-family: @font-museo-sans;
       font-size: 3em;
       font-weight: 500;
+      text-align: center;
 
       .title-name {
         color: @font-red-highlight;
@@ -44,7 +45,7 @@
     }
 
     .intro-text {
-      color: #999;
+      color: @font-black;
       font-weight: 500;
       line-height: 1.7;
       margin: 0.5em 0 1em;
@@ -62,7 +63,7 @@
         color: @font-red-highlight;
         font-size: 1.4em;
         font-style: italic;
-        font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
+        font-family: @font-lato;
         padding: 0.5em 1em;
         text-decoration: none;
         transition: background-color 0.2s;
@@ -84,16 +85,16 @@
     }
 
     .contact-options {
+      color: @font-dark-gray;
       display: none;
       flex-direction: row;
-      justify-content: space-around;
-      font-family: 'Lato', sans-serif;
-      color: #868686;
-      text-transform: uppercase;
-      font-weight: 600;
-      letter-spacing: 0.75px;
+      font-family: @font-lato;
       font-size: 1em;
+      font-weight: 600;
+      justify-content: space-around;
+      letter-spacing: 0.75px;
       margin-top: 0.5em;
+      text-transform: uppercase;
       width: 36vw;
 
       &.flex {
@@ -102,12 +103,12 @@
 
       a {
         align-items: flex-end;
-        cursor: pointer;
         background-position: center 1em;
         background-repeat: no-repeat;
         background-size: 4em;
         border-radius: 6px;
-        color: #868686;
+        color: @font-dark-gray;
+        cursor: pointer;
         display: flex;
         height: 5.5em;
         justify-content: center;
@@ -117,7 +118,7 @@
         width: 5em;
 
         &:hover {
-          background-color: #f7f7f7;
+          background-color: @bg-light-gray;
         }
 
         &.email {
@@ -151,8 +152,8 @@
 .projects.featured {
   .project {
     margin-bottom: 3em;
-    width: 70vw;
     max-width: 760px;
+    width: 70vw;
 
     .project-title {
       font-size: 0.85em;
@@ -165,7 +166,6 @@
     // Large card style
     .card {
       .mixin-card();
-
       display: flex;
 
       &:hover .pre .image {
@@ -174,7 +174,7 @@
 
       .pre {
         border-radius: 3px 0 0 3px;
-        border-right: 1px solid #ececec;
+        border-right: 1px solid @border-gray;
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -205,9 +205,9 @@
 
       .card-content {
         display: inline-block;
-        width: 50%;
-        vertical-align: top;
         margin: 1.5em;
+        vertical-align: top;
+        width: 50%;
 
         .read-more {
           display: block;
@@ -217,9 +217,9 @@
       }
 
       .card-text {
+        color: @font-black;
         font-size: 1.1em;
         line-height: 1.7em;
-        color: #999;
       }
     }
   }
@@ -244,8 +244,8 @@
       padding: 0;
 
       .image {
-        width: 100%;
         height: 100px;
+        width: 100%;
       }
 
       .card-title {
@@ -253,12 +253,12 @@
       }
 
       .card-content {
-        width: 92%;
-        text-align: center;
-        margin: 1em 0;
-        display: flex;
         align-items: center;
+        display: flex;
         flex-direction: column;
+        margin: 1em 0;
+        text-align: center;
+        width: 92%;
 
         .read-more {
           font-size: 1em;
@@ -277,8 +277,8 @@
 
 @media only screen and (max-width : 1080px) {
   .projects.featured .project {
-    width: 80vw;
     max-width: none;
+    width: 80vw;
   }
 }
 
@@ -309,10 +309,10 @@
 
     .page-header .splash-container {
       .intro-title {
-        width: 85vw;
         font-size: 4em;
         line-height: 1.2;
         margin-bottom: 0.25em;
+        width: 85vw;
       }
       .header-nav .intro-link {
         text-align: center;

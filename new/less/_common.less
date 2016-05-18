@@ -1,5 +1,7 @@
+@import "_constants";
+
 .mixin-card() {
-  border: 1px solid #ececec;
+  border: 1px solid @border-gray;
   border-radius: 6px;
   box-shadow: 0 1px 4px #e6e6e6;
   text-decoration: none;
@@ -10,7 +12,7 @@
   }
 
   .image {
-    background-color: #f7f7f7;
+    background-color: @bg-light-gray;
   }
 
   .read-more {
@@ -21,14 +23,14 @@
   }
 
   .card-title {
-    margin: 0 0 0.4em;
+    color: @font-light-gray;
     font-size: 1.5em;
-    color: #777;
+    margin: 0 0 0.4em;
   }
 
   .card-text {
+    color: @font-black;
     font-size: 1.1em;
     line-height: 1.7em;
-    color: #999;
   }
 }

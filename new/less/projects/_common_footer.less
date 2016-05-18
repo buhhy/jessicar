@@ -2,10 +2,10 @@
 @import "../_constants";
 
 .footer-contact() {
-  color: #868686;
+  color: @font-dark-gray;
   display: flex;
   flex-direction: row;
-  font-family: 'Lato', sans-serif;
+  font-family: @font-lato;
   font-size: 1em;
   font-weight: 600;
   justify-content: space-around;
@@ -19,7 +19,7 @@
     background-repeat: no-repeat;
     background-position: center 1.25em;
     border-radius: 6px;
-    color: #868686;
+    color: @font-dark-gray;
     cursor: pointer;
     display: flex;
     height: 6.5em;
@@ -30,20 +30,23 @@
     width: 6.5em;
 
     &:hover {
-      background-color: #f7f7f7;
+      background-color: @bg-light-gray;
     }
 
     &.email {
       background-image: url("../../svg/email.svg");
     }
+
+    &.form {
+      background-image: url("../../svg/form.svg");
+    }
+
     &.linkedin {
       background-image: url("../../svg/linkedin.svg");
     }
+
     &.twitter {
       background-image: url("../../svg/twitter.svg");
-    }
-    &.form {
-      background-image: url("../../svg/form.svg");
     }
   }
 }
@@ -53,7 +56,6 @@
 
   .card {
     .mixin-card();
-
     display: flex;
 
     &:hover .pre .image {
@@ -62,7 +64,7 @@
 
     .pre {
       border-radius: 3px 0 0 3px;
-      border-right: 1px solid #ececec;
+      border-right: 1px solid @border-gray;
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -93,9 +95,9 @@
 
     .card-content {
       display: inline-block;
-      width: 50%;
-      vertical-align: top;
       margin: 1.5em;
+      vertical-align: top;
+      width: 50%;
 
       .read-more {
         display: block;
@@ -105,36 +107,36 @@
     }
 
     .card-text {
+      color: @font-black;
       font-size: 1.1em;
       line-height: 1.7em;
-      color: #999;
     }
   }
 }
 
 .project-footer {
-  background-color: #fff;
-  border-top: 1px solid #dfdfdf;
+  align-items: center;
+  background-color: @bg-white;
+  border-top: 1px solid @footer-gray;
   box-shadow: 0 -0.2em 20em rgba(0, 0, 0, 0.1);
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 10em 0 5em;
+  position: relative;
 
   h2 {
-    font-family: "Museo Sans", "Museo Sans 500", sans-serif;
-    font-weight: 500;
-    color: #bababa;
+    color: @font-medium-gray;
+    font-family: @font-museo-sans;
     font-size: 2em;
+    font-weight: 500;
     margin-bottom: 1.5em;
   }
 
   h3 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-family: @font-lato;
     font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 600;
     letter-spacing: 0.1em;
     margin: 3em 0 0.3em;
 
@@ -152,6 +154,20 @@
   }
 }
 
+.copyright {
+  align-items: center;
+  background-color: @bg-light-gray;
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  margin-top: 5em;
+  position: absolute;
+  width: 100%;
+}
+
+
+
+// Media Queries
 
 @media only screen and (max-width : 1110px) {
   .project-footer .footer-projects .card .card-text {
@@ -160,14 +176,19 @@
 }
 
 @media only screen and (max-width : 690px) {
+
   .project-footer {
+
     .footer-contact {
       width: 100vw;
     }
+
     .footer-projects {
+
       h3.project-title {
         margin-left: 1em;
       }
+
       .card {
         border-radius: 0;
       }
@@ -176,31 +197,37 @@
 }
 
 @media only screen and (max-width : 575px) {
+
   .project-footer .footer-contact {
     width: 85vw;
+
     a {
-      // background-position: 2.5em 1em;
       background-size: 50px;
     }
   }
 }
 
 @media only screen and (max-width : 450px) {
+
   html .project-page .project-footer {
     font-size: 10px;
+
     .footer-contact a {
       background-size: 38px;
     }
+
     .footer-projects .card .card-text {
       font-size: 1.3em;
     }
+
     h2 {
-      text-align: center;
       line-height: 1.5;
+      text-align: center;
     }
+
     h3 {
-      margin-left: 1em;
       font-size: 1em;
+      margin-left: 1em;
     }
   }
 }

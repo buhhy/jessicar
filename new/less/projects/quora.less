@@ -8,53 +8,36 @@ html {
   font-size: 15px;
 }
 
-.project-page {
-  .sticky-header {
-    z-index: 3;
+.project-page .sticky-header {
+  z-index: 3;
 
-    .nav-item {
-      align-items: center;
-      color: #777;
-      display: flex;
-      text-decoration: none;
-      font-size: 1.2em;
-      justify-content: center;
-      width: 100%;
-      transition: background-color .2s;
+  .nav-item {
+    align-items: center;
+    color: @font-light-gray;
+    display: flex;
+    font-size: 1.2em;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color .2s;
+    width: 100%;
+
+    &:hover {
+      background-color: rgba(233,96,87,.05);
+    }
+
+    &.disabled {
+      color: @font-disabled;
+      cursor: default;
 
       &:hover {
-        background-color: rgba(233,96,87,.05);
-      }
-
-      &.disabled {
-        color: #ccc;
-        cursor: default;
-
-        &:hover {
-          background-color: #fff;
-        }
-      }
-
-      .sticky-name {
-        cursor: pointer;
-        font-family: 'Museo Sans','Museo Sans 500',Arial,Helvetica,sans-serif;
-        font-style: normal;
+        background-color: @bg-white;
       }
     }
-  }
 
-  .box {
-    margin: 1.5em 0 0;
-    height: 30vh;
-    background-color: aliceblue;
-
-    &.full-b {
-      width: 90vw;
-      max-width: 760px;
-    }
-
-    &.half-b {
-      width: 25vw;
+    .sticky-name {
+      cursor: pointer;
+      font-family: @font-museo-sans;
+      font-style: normal;
     }
   }
 
@@ -62,14 +45,15 @@ html {
     align-items: center;
     background-color: #8e191f;
     display: flex;
-    padding: 10em 10vw;
     height: 70vh;
+    padding: 10em 10vw;
 
     h1, h2 {
-      color: #fff;
+      color: @bg-white;
       max-width: 760px;
       text-align: left;
     }
+
     .logo {
       max-width: 200px;
       min-width: 100px;
@@ -77,35 +61,36 @@ html {
     }
 
     h1 {
-      margin: 0.5em 0;
+      font-family: @font-museo-sans;
       font-size: 2.75em;
-      line-height: 1.1em;
-      font-family: 'Museo Sans', 'Museo Sans 500', sans-serif;
       font-weight: 500;
+      line-height: 1.1em;
+      margin: 0.5em 0;
     }
 
     h2 {
-      letter-spacing: 0.05em;
-      line-height: 1.8;
-      font-family: 'Lato', sans-serif;
+      font-family: @font-lato;
       font-size: 1.25em;
       font-weight: 300;
+      letter-spacing: 0.05em;
+      line-height: 1.8;
     }
 
     .half {
       width: 50vw;
     }
+
     .chevron {
       background-image: url("../../svg/white-chevron.svg");
-      width: 100%;
-      height: 100px;
-      bottom: 0vh;
-      position: absolute;
-      background-repeat: no-repeat;
-      left: 0;
       background-position: center;
+      background-repeat: no-repeat;
+      bottom: 0vh;
       cursor: pointer;
+      height: 100px;
+      left: 0;
+      position: absolute;
       transition: background-color 0.2s;
+      width: 100%;
 
       &:hover {
         background-color: rgba(255, 255, 255, 0.05);
@@ -117,23 +102,22 @@ html {
   article {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    font-family: 'Lato', sans-serif;
+    font-family: @font-lato;
     line-height: 1.8;
+    text-align: center;
 
     div {
-      line-height: 1.8;
       font-size: 1.4em;
-      // margin: 0 7vw;
+      line-height: 1.8;
     }
 
     section {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      width: 100%;
-      padding: 10em 0;
       margin: 0;
+      padding: 10em 0;
+      width: 100%;
 
       &.blunt {
         padding-bottom: 0;
@@ -146,12 +130,12 @@ html {
           margin: 0 auto 1em;
 
           .little-card {
-            position: relative;
+            border-top: none;
             bottom: 0.5em;
             box-shadow: 0 2px 4px #e6e6e6;
-            border-top: none;
-            padding: 0.5em;
             box-sizing: border-box;
+            padding: 0.5em;
+            position: relative;
 
             h4 {
               margin: 0;
@@ -161,11 +145,11 @@ html {
       }
 
       &:nth-child(even) {
-        background-color: #f4f4f4;
+        background-color: @bg-light-gray;
       }
 
       div {
-        color: #777;
+        color: @font-light-gray;
         font-size: 1.3em;
         letter-spacing: 0.75px;
 
@@ -174,21 +158,21 @@ html {
         }
 
         &.half {
-          width: 50vw;
-          text-align: left;
-          min-width: 320px;
           align-self: center;
           margin-right: 1em;
+          min-width: 320px;
+          text-align: left;
+          width: 50vw;
         }
 
         &.third-container {
           display: flex;
+          justify-content: space-between;
           margin-top: 2em;
           width: 75vw;
-          justify-content: space-between;
 
           .third-item {
-            background-color: white;
+            background-color: @bg-white;
             border-radius: 4px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
             display: flex;
@@ -204,6 +188,7 @@ html {
               line-height: 1.6;
               margin: 0 auto 0.5em;
             }
+
             p {
               font-size: 0.5em;
               line-height: 1.7;
@@ -228,8 +213,8 @@ html {
           }
 
           h4 {
-            padding: 0;
             letter-spacing: 0.35px;
+            padding: 0;
           }
 
           &:last-of-type {
@@ -237,86 +222,86 @@ html {
           }
             .video {
               display: block;
-              width: 65vw;
               position: relative;
               top: 0.5em;
+              width: 65vw;
             }
         }
 
         &.mobile-container {
           display: flex;
-          width: 50vw;
           justify-content: center;
+          width: 50vw;
           
           video {
-            max-width: 370px;
-            max-height: 630px;
-            background-color: #515151;
-            padding: 3.5em 0.1em;
+            background-color: @bg-dark-gray;
             border-radius: 1em;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            max-height: 630px;
+            max-width: 370px;
+            padding: 3.5em 0.1em;
           }
         }
       }
 
       h3 {
-        width: 100%;
+        color: @bg-dark-gray;
         font-size: 0.9em;
-        color: #515151;
+        letter-spacing: 1.5px;
         margin-top: 6em;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        width: 100%;
 
         &.blue {
-          color: #81aad9;
+          color: @font-light-blue;
         }
       }
 
       img {
-        width: 25vw;
         position: relative;
+        width: 25vw;
       }
 
       .over-cards {
         display: flex;
         flex-wrap: wrap;
-        width: 45%;
-        justify-content: space-around;
         margin-top: 3em;
+        justify-content: space-around;
+        width: 45%;
 
         .little-card {
-          width: 14vw;
-          border: 1px solid #ececec;
+          background-color: @bg-white;
+          border: 1px solid @border-gray;
           box-shadow: 0 1px 4px #e6e6e6;
-          background-color: #fff;
-          margin: 0;
           box-sizing: border-box;
+          margin: 0;
           min-width: 200px;
+          width: 14vw;
 
           h4 {
-            font-weight: 600;
-            text-transform: uppercase;
             font-size: 0.6em;
+            font-weight: 600;
             letter-spacing: 0.1em;
             margin: 0.75em 0 0;
+            text-transform: uppercase;
 
             &.red {
-              color: #ce2d2d;
+              color: @font-dark-red;
             }
 
             &.blue {
-              color: #81aad9;
+              color: @font-light-blue;
             }
 
             &.green {
-              color: #a0c98c;
+              color: @font-green;
             }
           }
 
           p {
             font-size: 0.5em;
-            padding: 0 1em;
             line-height: 1.7;
+            padding: 0 1em;
           }
         }
       }
@@ -328,14 +313,14 @@ html {
       padding-left: 2.5em;
 
       li {
-        list-style-type: lower-roman;
         font-weight: 600;
+        list-style-type: lower-roman;
         margin-bottom: 1em;
 
         p {
           font-weight: 500;
-          margin: 0.5em 0 0;
           line-height: 1.6;
+          margin: 0.5em 0 0;
         }
 
         &:last-of-type {
@@ -413,18 +398,11 @@ html {
         }
       }
     }
-    .project-footer .footer-projects .card .card-text {
-      line-height: 1.4;
-    }
   }
 }
 
 @media only screen and (max-width : 935px) {
   html {
-    .sticky-nav {
-      width: 100vw;
-      padding: 0;
-    }
     .project-page {
       header {
         .chevron {
@@ -491,11 +469,6 @@ html {
 
 @media only screen and (max-width : 805px) {
   html {
-    .sticky-nav {
-      width: 100vw;
-      padding: 0;
-    }
-
     .project-page {
       header {
         flex-direction: column;
@@ -651,19 +624,6 @@ html {
         }
         &.halves-container {
           margin-top: 4em;
-        }
-      }
-    }
-    .project-footer {
-      .footer-contact {
-        width: 100vw;
-      }
-      .footer-projects {
-        h3.project-title {
-          margin-left: 1em;
-        }
-        .card {
-          border-radius: 0;
         }
       }
     }

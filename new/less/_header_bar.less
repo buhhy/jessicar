@@ -1,4 +1,5 @@
 @import "_constants";
+
 // Sticky Header Navigation
 .sticky-header {
   position: fixed;
@@ -8,7 +9,7 @@
 .sticky-nav {
   align-items: center;
   background-color: white;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid @footer-gray;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-around;
@@ -19,14 +20,14 @@
     align-items: center;
     color: @font-red-highlight;
     display: flex;
-    padding: 0.75em;
-    text-decoration: none;
     font-size: 1.2em;
     font-style: italic;
     justify-content: center;
-    width: 100%;
-    transition: background-color 0.2s;
+    padding: 0.75em;
     text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    width: 100%;
 
     &:hover {
       background-color: rgba(233, 96, 87, 0.05);
@@ -34,7 +35,7 @@
 
     &.sticky-name {
       cursor: pointer;
-      font-family: 'Museo Sans', 'Museo Sans 500', 'Arial', 'Helvetica', sans-serif;
+      font-family: @font-museo-sans;
       font-style: normal;
     }
   }
@@ -42,7 +43,7 @@
 
 @media only screen and (max-width : 800px) {
   .sticky-nav {
-    width: 100vw;
     padding: 0;
+    width: 100vw;
   }
 }
