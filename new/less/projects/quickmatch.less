@@ -46,36 +46,38 @@ html {
   }
 }
 
-.project-page .sticky-header {
-  z-index: 3;
+.project-page { 
+  .sticky-header {
+    z-index: 3;
 
-  .nav-item {
-    align-items: center;
-    color: @font-light-gray;
-    display: flex;
-    font-size: 1.2em;
-    justify-content: center;
-    text-decoration: none;
-    transition: background-color .2s;
-    width: 100%;
-
-    &:hover {
-      background-color: rgba(233,96,87,.05);
-    }
-
-    &.disabled {
-      color: @font-disabled;
-      cursor: default;
+    .nav-item {
+      align-items: center;
+      color: @font-light-gray;
+      display: flex;
+      font-size: 1.2em;
+      justify-content: center;
+      text-decoration: none;
+      transition: background-color .2s;
+      width: 100%;
 
       &:hover {
-        background-color: @bg-white;
+        background-color: rgba(233,96,87,.05);
       }
-    }
 
-    .sticky-name {
-      cursor: pointer;
-      font-family: @font-museo-sans;
-      font-style: normal;
+      &.disabled {
+        color: @font-disabled;
+        cursor: default;
+
+        &:hover {
+          background-color: @bg-white;
+        }
+      }
+
+      .sticky-name {
+        cursor: pointer;
+        font-family: @font-museo-sans;
+        font-style: normal;
+      }
     }
   }
 
