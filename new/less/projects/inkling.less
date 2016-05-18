@@ -69,12 +69,12 @@ body {
   header {
     padding: 10em 10vw;
     align-items: flex-start;
-    background-color: #8e191f;
+    background-color: #f0f7f0;
     display: flex;
     align-items: center;
 
     h1, h2 {
-      color: #fff;
+      color: #868686;
       text-align: left;
       max-width: 760px;
     }
@@ -97,7 +97,7 @@ body {
       line-height: 1.8;
       font-family: 'Lato';
       font-size: 1.25em;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     .half {
@@ -131,7 +131,8 @@ body {
       }
 
       &.continued {
-        padding-top: 0;
+        background-color: white;
+        z-index: 2;
 
         .over-cards {
           margin: 0 auto 1em;
@@ -162,14 +163,26 @@ body {
 
         &.full {
           width: 60vw;
+
+          .half {
+            width: 50%;
+          }
         }
 
         &.half {
-          width: 50vw;
+          width: 40vw;
           text-align: left;
           min-width: 320px;
-          align-self: center;
+          align-self: flex-start;
           margin-right: 1em;
+
+          .red {
+            color: @font-dark-red;
+          }
+
+          p {
+            max-width: 550px;
+          }
         }
 
         &.third-container {
@@ -212,7 +225,9 @@ body {
         &.window-container {
           font-size: 1em;
           letter-spacing: 0;
-          margin-bottom: 3em;
+          margin: 5em 0 0;
+          width: 40vw;
+          max-height: 500px;
 
           img {
             width: 100%;
@@ -221,6 +236,7 @@ body {
           h4 {
             padding: 0;
             letter-spacing: 0.35px;
+            font-size: 0.6em;
           }
 
           &:last-of-type {
@@ -293,7 +309,7 @@ body {
             margin: 0.75em 0 0;
 
             &.red {
-              color: #ce2d2d;
+              color: @font-dark-red;
             }
 
             &.blue {
