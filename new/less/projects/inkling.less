@@ -69,12 +69,12 @@ body {
   header {
     padding: 10em 10vw;
     align-items: flex-start;
-    background-color: #5cacc8;
+    background-color: #f0f7f0;
     display: flex;
     align-items: center;
 
     h1, h2 {
-      color: #fff;
+      color: #868686;
       text-align: left;
       max-width: 760px;
     }
@@ -171,14 +171,6 @@ body {
 
           .half {
             width: 50%;
-          }
-
-          h3 {
-            margin-top: 3em;
-          }
-
-          p {
-            margin-bottom: 3em;
           }
         }
 
@@ -322,31 +314,18 @@ body {
             margin-top: 0;
           }
         }
-        &.standalone {
-          height: 16em;
-          margin-top: 3em;
-          overflow: hidden;
-
-          img {
-            width: 100%;
-          }
-        }
       }
 
       h3 {
         width: 100%;
         font-size: 0.9em;
         color: #515151;
+        margin-top: 6em;
         text-transform: uppercase;
         letter-spacing: 1.5px;
-        margin-top: 0;
 
         &.blue {
           color: #81aad9;
-        }
-
-        &.red {
-          color: @font-dark-red;
         }
       }
 
@@ -449,7 +428,7 @@ footer {
     text-transform: uppercase;
     font-size: 0.8em;
     letter-spacing: 0.1em;
-    margin-bottom: 0.3em;
+    margin: 3em 0 0.3em;
   }
 
   .footer-contact {
@@ -501,25 +480,44 @@ footer {
   .footer-projects {
     max-width: 760px;
 
-    .card {
+.card {
       .mixin-card();
-      margin-bottom: 4em;
 
       display: flex;
-      // padding: 1.5em;
 
-      &:hover .pre {
-        background-size: 150%;
+      &:hover .pre .image {
+        transform: scale(1.25);
       }
 
-      .image {
-        width: 18vw;
-        height: 11vw;
-        display: inline-block;
-      }
+      .pre {
+        border-radius: 3px 0 0 3px;
+        border-right: 1px solid #ececec;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        width: 41%;
 
-      .card-title {
-        font-size: 1.4em;
+        .image {
+          background-origin: border-box;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          flex: 1 1 auto;
+          transition: transform 0.3s ease-in-out,
+              -webkit-filter 0.3s ease-in-out;
+        }
+
+        &.quora .image {
+          background-image: url("../../img/quora-pre.png");
+        }
+
+        &.inkling .image {
+          background-image: url("../../img/inkling-pre.png");
+        }
+
+        &.quickmatch .image {
+          background-image: url("../../img/quickmatch-pre.png");
+        }
       }
 
       .card-content {
@@ -536,34 +534,9 @@ footer {
       }
 
       .card-text {
-        font-size: 1em;
+        font-size: 1.1em;
         line-height: 1.7em;
         color: #999;
-      }
-
-      .pre {
-        overflow: hidden;
-        width: 41%;
-        background-position: center;
-        background-origin: border-box;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        border-right: 1px solid #ececec;
-        border-radius: 3px 0 0 3px;
-
-        &.quora {
-          background-image: url("../../img/quora-pre.png");
-        }
-
-        &.inkling {
-          background-image: url("../../img/inkling-pre.png");
-        }
-
-        &.quickmatch {
-          background-image: url("../../img/quickmatch-pre.png");
-        }
       }
     }
   }

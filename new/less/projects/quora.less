@@ -88,7 +88,7 @@ body {
       margin: 0.5em 0;
       font-size: 2.75em;
       line-height: 1.1em;
-      font-family: 'Museo Sans 500';
+      font-family: 'Museo Sans', 'Museo Sans 500';
       font-weight: 500;
     }
 
@@ -349,7 +349,7 @@ footer {
   padding-top: 10em;
 
   h2 {
-    font-family: "Museo Sans 500";
+    font-family: "Museo Sans", "Museo Sans 500";
     font-weight: 500;
     color: #bababa;
     font-size: 2em;
@@ -362,7 +362,7 @@ footer {
     text-transform: uppercase;
     font-size: 0.8em;
     letter-spacing: 0.1em;
-    margin-bottom: 0.3em;
+    margin: 3em 0 0.3em;
   }
 
   .footer-contact {
@@ -416,23 +416,42 @@ footer {
 
     .card {
       .mixin-card();
-      margin-bottom: 4em;
 
       display: flex;
-      // padding: 1.5em;
 
-      &:hover .pre {
-        background-size: 150%;
+      &:hover .pre .image {
+        transform: scale(1.25);
       }
 
-      .image {
-        width: 18vw;
-        height: 11vw;
-        display: inline-block;
-      }
+      .pre {
+        border-radius: 3px 0 0 3px;
+        border-right: 1px solid #ececec;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        width: 41%;
 
-      .card-title {
-        font-size: 1.4em;
+        .image {
+          background-origin: border-box;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          flex: 1 1 auto;
+          transition: transform 0.3s ease-in-out,
+              -webkit-filter 0.3s ease-in-out;
+        }
+
+        &.quora .image {
+          background-image: url("../../img/quora-pre.png");
+        }
+
+        &.inkling .image {
+          background-image: url("../../img/inkling-pre.png");
+        }
+
+        &.quickmatch .image {
+          background-image: url("../../img/quickmatch-pre.png");
+        }
       }
 
       .card-content {
@@ -449,34 +468,9 @@ footer {
       }
 
       .card-text {
-        font-size: 1em;
+        font-size: 1.1em;
         line-height: 1.7em;
         color: #999;
-      }
-
-      .pre {
-        overflow: hidden;
-        width: 41%;
-        background-position: center;
-        background-origin: border-box;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        border-right: 1px solid #ececec;
-        border-radius: 3px 0 0 3px;
-
-        &.quora {
-          background-image: url("../../img/quora-pre.png");
-        }
-
-        &.inkling {
-          background-image: url("../../img/inkling-pre.png");
-        }
-
-        &.quickmatch {
-          background-image: url("../../img/quickmatch-pre.png");
-        }
       }
     }
   }
