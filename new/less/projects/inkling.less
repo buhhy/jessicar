@@ -88,7 +88,7 @@ body {
       margin: 0.5em 0;
       font-size: 2.75em;
       line-height: 1.1em;
-      font-family: 'Museo Sans 500';
+      font-family: 'Museo Sans 500', 'Museo Sans';
       font-weight: 500;
     }
 
@@ -102,6 +102,11 @@ body {
 
     .half {
       width: 50vw;
+
+      .img-container {
+        max-height:500px;
+        overflow-y: scroll;
+      }
     }
   }
 
@@ -131,7 +136,7 @@ body {
       }
 
       &.continued {
-        background-color: white;
+        background-color: #fff;
         z-index: 2;
 
         .over-cards {
@@ -180,6 +185,10 @@ body {
             color: @font-dark-red;
           }
 
+          .blue {
+            color: @font-light-blue;
+          }
+
           p {
             max-width: 550px;
           }
@@ -216,6 +225,31 @@ body {
           }
         }
 
+        &.fourth {
+          display: flex;
+          width: 80%;
+          justify-content: space-around;
+          margin-bottom: 3em;
+
+          .paper {
+            height: 180px;
+            width: 150px;
+            background-color: #fff;
+            border: 1px solid #ececec;
+            box-shadow: 0 1px 4px #e6e6e6;
+
+            img {
+              width: 100%;
+              min-width: 0;
+              position: relative;
+              bottom: 6px;
+              right: 6px;
+              border: 1px solid #ececec;
+              box-shadow: 0 1px 4px #e6e6e6;
+            }
+          }
+        }
+
         video {
           width: 100%;
           display: flex;
@@ -225,9 +259,16 @@ body {
         &.window-container {
           font-size: 1em;
           letter-spacing: 0;
-          margin: 5em 0 0;
-          width: 40vw;
+          // margin: 5em 0 0;
+          // width: 40vw;
           max-height: 500px;
+          // overflow: scroll;
+          // width: 100%;
+
+          .img-container {
+            max-height:500px;
+            overflow-y: scroll;
+          }
 
           img {
             width: 100%;
@@ -264,6 +305,15 @@ body {
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
           }
         }
+        &.halves-container {
+          display: flex;
+          margin-top: 3em;
+          font-size: 1em;
+
+          h3 {
+            margin-top: 0;
+          }
+        }
       }
 
       h3 {
@@ -280,7 +330,7 @@ body {
       }
 
       img {
-        width: 25vw;
+        width: 80%;
         position: relative;
         min-width: 320px;
       }
@@ -313,7 +363,7 @@ body {
             }
 
             &.blue {
-              color: #81aad9;
+              color: @font-light-blue;
             }
 
             &.green {
@@ -365,7 +415,7 @@ footer {
   padding-top: 10em;
 
   h2 {
-    font-family: "Museo Sans 500";
+    font-family: "Museo Sans", "Museo Sans 500";
     font-weight: 500;
     color: #bababa;
     font-size: 2em;
