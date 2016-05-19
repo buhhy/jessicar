@@ -69,12 +69,12 @@ body {
   header {
     padding: 10em 10vw;
     align-items: flex-start;
-    background-color: #f0f7f0;
+    background-color: #5cacc8;
     display: flex;
     align-items: center;
 
     h1, h2 {
-      color: #868686;
+      color: #fff;
       text-align: left;
       max-width: 760px;
     }
@@ -171,6 +171,14 @@ body {
 
           .half {
             width: 50%;
+          }
+
+          h3 {
+            margin-top: 3em;
+          }
+
+          p {
+            margin-bottom: 3em;
           }
         }
 
@@ -314,18 +322,31 @@ body {
             margin-top: 0;
           }
         }
+        &.standalone {
+          height: 16em;
+          margin-top: 3em;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+        }
       }
 
       h3 {
         width: 100%;
         font-size: 0.9em;
         color: #515151;
-        margin-top: 6em;
         text-transform: uppercase;
         letter-spacing: 1.5px;
+        margin-top: 0;
 
         &.blue {
           color: #81aad9;
+        }
+
+        &.red {
+          color: @font-dark-red;
         }
       }
 
