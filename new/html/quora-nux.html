@@ -3,20 +3,22 @@
   <head>
     <title>Jessica Fung</title>
     <link rel="stylesheet" type="text/css" href="../css/projects/quora.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+    <link
+        href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700"
+        rel="stylesheet"
+        type="text/css">
     <link rel="stylesheet" type="text/css" href="../css/fonts.css">
     <link rel="shortcut icon" href="../jessicon.ico">
   </head>
   <body class="project-page">
-    <div id='stickyNavContainer'>
+    <div class="sticky-header hidden" id='stickyNavContainer'>
       <nav class="sticky-nav" id='stickyNav'>
-        <a class="sticky-name" id="stickyName">Jessica Fung</a>
-        <div class="nav-divider"></div>
-        <a target="_blank" href="../Jessica-Fung-Resume.pdf">Resume</a>
-        <div class="nav-divider"></div>
-        <a href="#" id="stickyProjectsLink">Projects</a>
-        <div class="nav-divider"></div>
-        <a href="#" id="projectsLink">Say Hi</a>
+        <a class="nav-item sticky-name" id="stickyName">Jessica Fung</a>
+        <a class="nav-item" target="_blank" href="../Jessica-Fung-Resume.pdf">
+          Resume
+        </a>
+        <a class="nav-item" href="#" id="stickyProjectsLink">Projects</a>
+        <a class="nav-item" href="#" id="projectsLink">Contact</a>
       </nav>
     </div>
 
@@ -167,7 +169,7 @@
         <h3>My NUX Concept</h3>
         <div class="window-container video">
           <video src="../mov/nux-web.mov" controls muted>
-            <h4> hello</h4>
+            <h4>hello</h4>
           </video>
         </div>
         <div class="mobile-container video">
@@ -229,15 +231,14 @@
           </div>
         </a>
       </div>
-
     </footer>
 
     <script
         src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
     </script>
     <script src="../js/classlist_shim.js"></script>
-    <script src="../js/main.js"></script>
-
+    <script src="../js/sticky_nav.js"></script>
+    <script src="../js/projects/quora.js"></script>
     <script src="https://use.typekit.net/zky3mif.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </body>

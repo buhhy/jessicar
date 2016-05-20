@@ -27,25 +27,6 @@ $("#stickyName").click(function(event){
   }, '1000', 'swing')
 });
 
-function setUpStickyHeader() {
-  var $navContainer = $("#stickyNavContainer");
-  var hiddenClass = "hidden";
-
-  $navContainer.css("opacity", 0.0);
-
-  $(window).scroll(function () {
-    if (window.scrollY >= $("#splashProjectsLink").offset().top) {
-      $navContainer.removeClass(hiddenClass).stop().animate({
-        opacity: 1.0
-      }, 200);
-    } else {
-      $navContainer.stop().animate({opacity: 0}, 200, function () {
-        $navContainer.addClass(hiddenClass);
-      });
-    }
-  });
-}
-
 function scrollProjects(event) {
   event.preventDefault();
   body.stop().animate({
@@ -60,4 +41,6 @@ function openContactContainer(event) {
   $("#contactContainer").toggleClass("show");
 }
 
-setUpStickyHeader();
+setUpStickyHeader(function () {
+  return $("#splashProjectsLink").offset().top;
+});
