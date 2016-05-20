@@ -1,21 +1,18 @@
+@import "../_base";
 @import "../_constants";
-@import "../main";
+@import "../_header_bar";
+@import "_common_footer";
 
 html {
   font-size: 15px;
 }
 
-body {
-  margin: 0;
-}
+.sticky-header();
 
 .window-container {
-  background-color: #eaeaea;
   border-radius: 5px;
-  background-image: url("../../svg/browser.svg");
   background-size: 3.5em;
-  background-repeat: no-repeat;
-  background-position: 11px 11px;
+  background: #eaeaea url("../../svg/browser.svg") no-repeat 11px 11px;
   margin: 1.5em 3em 0.5em;
   display: flex;
   flex-direction: column;
@@ -23,7 +20,7 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
   img {
-    top: 0em;
+    top: 0;
     width: 100%;
     border-radius: 0 0 5px 5px;
     box-sizing: border-box;
@@ -32,7 +29,7 @@ body {
 
   h4 {
     text-align: center;
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-size: 0.75em;
     color: #777;
     margin: 0.75em auto;
@@ -47,10 +44,6 @@ body {
 }
 
 .project-page {
-  .sticky-nav {
-    display: none;
-  }
-
   .box {
     margin: 1.5em 0 0;
     height: 30vh;
@@ -67,35 +60,34 @@ body {
   }
 
   header {
-    padding: 10em 10vw;
-    align-items: flex-start;
+    align-items: center;
     background-color: #8e191f;
     display: flex;
-    align-items: center;
+    padding: 10em 10vw;
 
     h1, h2 {
       color: #fff;
-      text-align: left;
       max-width: 760px;
+      text-align: left;
     }
     .logo {
-      width: 14vw;
       max-width: 200px;
       min-width: 100px;
+      width: 14vw;
     }
 
     h1 {
       margin: 0.5em 0;
       font-size: 2.75em;
       line-height: 1.1em;
-      font-family: 'Museo Sans', 'Museo Sans 500';
+      font-family: 'Museo Sans', 'Museo Sans 500', sans-serif;
       font-weight: 500;
     }
 
     h2 {
       letter-spacing: 0.05em;
       line-height: 1.8;
-      font-family: 'Lato';
+      font-family: 'Lato', sans-serif;
       font-size: 1.25em;
       font-weight: 300;
     }
@@ -109,7 +101,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     line-height: 1.8;
 
     div {
@@ -349,7 +341,7 @@ footer {
   padding-top: 10em;
 
   h2 {
-    font-family: "Museo Sans", "Museo Sans 500";
+    font-family: "Museo Sans", "Museo Sans 500", sans-serif;
     font-weight: 500;
     color: #bababa;
     font-size: 2em;
@@ -357,7 +349,7 @@ footer {
   }
 
   h3 {
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.8em;
@@ -366,113 +358,11 @@ footer {
   }
 
   .footer-contact {
-    display: flex;
-    flex-direction: row;
-    width: 50vw;
-    justify-content: space-around;
-    font-family: 'Lato';
-    color: #868686;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.75px;
-    font-size: 1em;
-    margin-bottom: 4em;
-
-    a {
-      background-repeat: no-repeat;
-      height: 6.5em;
-      width: 6.5em;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      padding: 1.5em;
-      background-position: 2.25em 1.25em;
-      border-radius: 6px;
-      text-decoration: none;
-      color: #868686;
-
-      &:hover {
-        background-color: #f7f7f7;
-      }
-
-      &.email {
-        background-image: url("../../svg/email.svg");
-      }
-      &.linkedin {
-        background-image: url("../../svg/linkedin.svg");
-      }
-      &.twitter {
-        background-image: url("../../svg/twitter.svg");
-      }
-      &.form {
-        background-image: url("../../svg/form.svg");
-      }
-    }
+    .footer-contact();
   }
+
   .footer-projects {
-    max-width: 760px;
-
-    .card {
-      .mixin-card();
-
-      display: flex;
-
-      &:hover .pre .image {
-        transform: scale(1.25);
-      }
-
-      .pre {
-        border-radius: 3px 0 0 3px;
-        border-right: 1px solid #ececec;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        width: 41%;
-
-        .image {
-          background-origin: border-box;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          flex: 1 1 auto;
-          transition: transform 0.3s ease-in-out,
-              -webkit-filter 0.3s ease-in-out;
-        }
-
-        &.quora .image {
-          background-image: url("../../img/quora-pre.png");
-        }
-
-        &.inkling .image {
-          background-image: url("../../img/inkling-pre.png");
-        }
-
-        &.quickmatch .image {
-          background-image: url("../../img/quickmatch-pre.png");
-        }
-      }
-
-      .card-content {
-        display: inline-block;
-        width: 50%;
-        vertical-align: top;
-        margin: 1.5em;
-
-        .read-more {
-          display: block;
-          margin-top: 0.7em;
-          width: 7em;
-        }
-      }
-
-      .card-text {
-        font-size: 1.1em;
-        line-height: 1.7em;
-        color: #999;
-      }
-    }
+    .footer-projects();
   }
 }
 
