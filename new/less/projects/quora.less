@@ -338,7 +338,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10em;
+  padding: 10em 0 5em;
 
   h2 {
     font-family: "Museo Sans", "Museo Sans 500", sans-serif;
@@ -355,6 +355,10 @@ footer {
     font-size: 0.8em;
     letter-spacing: 0.1em;
     margin: 3em 0 0.3em;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
 
   .footer-contact {
