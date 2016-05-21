@@ -8,19 +8,21 @@
     <link rel="shortcut icon" href="../jessicon.ico">
   </head>
   <body class="project-page">
-    <div id='stickyNavContainer'>
+
+    <div class="sticky-header" id='stickyNavContainer'>
       <nav class="sticky-nav" id='stickyNav'>
-        <a class="sticky-name" id="stickyName">Jessica Fung</a>
-        <div class="nav-divider"></div>
-        <a target="_blank" href="../Jessica-Fung-Resume.pdf">Resume</a>
-        <div class="nav-divider"></div>
-        <a href="#" id="stickyProjectsLink">Projects</a>
-        <div class="nav-divider"></div>
-        <a href="#" id="projectsLink">Say Hi</a>
+        <a class="nav-item sticky-name" id="stickyName" href="index.html">Jessica Fung</a>
+        <a class="nav-item" target="_blank" href="../Jessica-Fung-Resume.pdf">Resume</a>
+        <a class="nav-item" href="#" id="contactLink">Contact</a>
+        <a class="nav-item disabled" href="#" id="scrollTop">Scroll Top</a>
+        <a class="nav-item" href="inkling-lib.html" id="projectsLink">Next Project</a>
       </nav>
     </div>
 
     <header>
+      <div class="full">
+        <div class="chevron" id="quickmatchChevron"></div>
+      </div>
       <div class="half">
         <img class="logo" src="../svg/inkling-logo.svg" alt="Inkling Logo">
         <h1>Paginated Library</h1>
@@ -43,7 +45,7 @@
     </header>
 
     <article>
-      <section>
+      <section class="blunt">
         <div class="full">
           <p>I worked on Inkling's Product Design team as a User Experience Design 
           Intern from September to December 2013. Although my responsibilities 
@@ -55,6 +57,9 @@
           <p>I could barely prepare any questions for George beforehand. When we 
           met, I understood him as our product specialist, in that he knew our 
           users very well. He frequently talked to and worked with our users.</p>
+        </div>
+        <div class="standalone">
+          <img src="../img/inkling-lib/inkling-team.png" alt="Inkling Colleagues">
         </div>
       </section>
 
@@ -144,21 +149,21 @@
         <div class="halves-container">
           <div class="half">
             <h3 class="blue">Publishing Professionals</h3>
-            <h4>Load more</h4>
+            <h4>Load More</h4>
             <p>Instead of loading all projects at once, the page will only load ten of the most relevant projects at a time. To sort by the most relevant projects, I looked at the API to see what kinds of sorting was available. I decided that we would sort by projects "Last Published", which means that most active projects will be ranked higher. Clicking the Load More button at the end of the page would load the next most relevant projects.</p>
           </div>
           <div class="half-image">
-            <img src="../svg/inkling-magnify.svg" alt="balance">
+            <img class="screenshot" src="../img/inkling-lib/inkling-loadmore.png" alt="balance">
           </div>
         </div>
 
         <div class="halves-container">
           <div class="half">
-            <h4>Organized tabs</h4>
+            <h4>Organized Tabs</h4>
             <p>Publishing professionals use Inkling for both work (via our enterprise produce, Habitat) and for leisure. Therefore, these users can switch between the two tabs, Habitat Projects and their Personal Library. It was important to name the tabs clearly so that users could easily differentiate work projects from their personal reading.</p>
           </div>
           <div class="half-image">
-            <img src="../svg/inkling-magnify.svg" alt="balance">
+            <img class="screenshot" src="../img/inkling-lib/inkling-tabs.png" alt="balance">
           </div>
         </div>
 
@@ -168,18 +173,18 @@
             <p>Adding a simple search engine that matches project titles can help users find any projects or books that were added earlier on. This is a fallback for professionals in the less frequent use case that they need to find something from a few months ago.</p>
           </div>
           <div class="half-image">
-            <img src="../svg/inkling-magnify.svg" alt="balance">
+            <img class="screenshot" src="../img/inkling-lib/inkling-prosearch.png" alt="balance">
           </div>
         </div>
 
         <div class="halves-container">
           <div class="half">
             <h3 class="blue">Regular Users</h3>
-            <h4>Tailored interface</h4>
+            <h4>Tailored Interface</h4>
             <p>Although I was focused on solving the identified problems for publishing professionals, the regular users should not be left in the dark. Most of the changes that we were bringing to publishing professionals did not apply to our regular users. Therefore, we made few changes to the regular library.</p>
           </div>
           <div class="half-image">
-            <img src="../svg/inkling-magnify.svg" alt="balance">
+            <img class="screenshot" src="../img/inkling-lib/inkling-tailored.png" alt="balance">
           </div>
         </div>
 
@@ -189,7 +194,7 @@
             <p>Regular users would also benefit from searching their libraries, so it was also included in our plan to redesign the library.</p>
           </div>
           <div class="half-image">
-            <img src="../svg/inkling-magnify.svg" alt="balance">
+            <img class="screenshot" src="../img/inkling-lib/inkling-regsearch.png" alt="balance">
           </div>
         </div>
       </section>
@@ -241,7 +246,7 @@
         src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
     </script>
     <script src="../js/classlist_shim.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/projects/inkling.js"></script>
 
     <script src="https://use.typekit.net/zky3mif.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
