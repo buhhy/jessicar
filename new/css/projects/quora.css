@@ -368,8 +368,16 @@ html {
   html .project-page .project-footer .footer-contact a {
     background-size: 38px;
   }
+  html .project-page .project-footer .footer-projects .card {
+    -webkit-border-radius: 0;
+            border-radius: 0;
+  }
   html .project-page .project-footer .footer-projects .card .card-text {
     font-size: 1.3em;
+  }
+  html .project-page .project-footer .footer-projects .card .pre {
+    -webkit-border-radius: 0;
+            border-radius: 0;
   }
   html .project-page .project-footer h2 {
     line-height: 1.5;
@@ -431,8 +439,11 @@ html {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 70vh;
+  height: 100vh;
   padding: 10em 10vw;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .project-page header h1,
 .project-page header h2 {
@@ -1018,7 +1029,7 @@ html {
     letter-spacing: 0.5px;
   }
   html .project-page header .chevron {
-    bottom: 6vh;
+    bottom: 0vh;
   }
   html .project-page article section {
     padding: 5em 0;
@@ -1050,12 +1061,29 @@ html {
     width: 65%;
     font-size: 0.75em;
   }
+  html .project-page article section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   html .project-page article section h3 {
     margin-top: 2em;
   }
   html .project-page article section div.full,
   html .project-page article section div.half p {
     width: 85vw;
+    text-align: left;
+  }
+  html .project-page article section div.half {
+    width: 90vw;
+    margin-right: 0;
+    text-align: left;
   }
   html .project-page article section div.fourth {
     margin-bottom: 0;
@@ -1088,18 +1116,22 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
     font-size: 1.5em;
+    width: 80vw;
   }
   html .project-page article section div.third-container .third-item {
-    width: 100vw;
+    width: 100%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
-    margin: 0;
+    margin: 0 0 1em 0;
   }
   html .project-page article section div.third-container .third-item p {
     line-height: 1.5;
   }
   html .project-page article section img {
-    width: 100%;
+    width: 90vw;
+  }
+  html .project-page article section .over-cards .little-card {
+    width: 80vw;
   }
 }

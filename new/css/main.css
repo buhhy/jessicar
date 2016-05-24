@@ -326,8 +326,16 @@ html {
   html .project-page .project-footer .footer-contact a {
     background-size: 38px;
   }
+  html .project-page .project-footer .footer-projects .card {
+    -webkit-border-radius: 0;
+            border-radius: 0;
+  }
   html .project-page .project-footer .footer-projects .card .card-text {
     font-size: 1.3em;
+  }
+  html .project-page .project-footer .footer-projects .card .pre {
+    -webkit-border-radius: 0;
+            border-radius: 0;
   }
   html .project-page .project-footer h2 {
     line-height: 1.5;
@@ -787,5 +795,21 @@ footer {
   }
   html .page-header .splash-container .header-nav .intro-link {
     text-align: center;
+  }
+}
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 10px;
+  }
+  html .page-header .splash-container .jessica-picture {
+    width: 25vw;
+  }
+  html .page-header .splash-container .intro-title {
+    font-size: 3em;
+    margin-top: 0.25em;
+  }
+  html .projects.featured .project .card {
+    -webkit-border-radius: 0;
+            border-radius: 0;
   }
 }

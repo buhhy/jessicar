@@ -86,8 +86,9 @@ html {
     align-items: center;
     background-color: #5cacc8;
     display: flex;
-    height: 70vh;
+    height: 100vh;
     padding: 10em 10vw;
+    box-sizing: border-box;
 
     h1, h2 {
       color: @bg-white;
@@ -944,10 +945,19 @@ footer {
             }
           }
         }
+
         img {
           width: 100%;
         }
+
+        .over-cards .little-card p {
+          box-sizing: border-box;
+          width: 100%;
+        }
       }
+    }
+    .project-footer h2 {
+      width: 85vw;
     }
   }
 }

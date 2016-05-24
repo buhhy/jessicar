@@ -326,8 +326,16 @@ html {
   html .project-page .project-footer .footer-contact a {
     background-size: 38px;
   }
+  html .project-page .project-footer .footer-projects .card {
+    -webkit-border-radius: 0;
+            border-radius: 0;
+  }
   html .project-page .project-footer .footer-projects .card .card-text {
     font-size: 1.3em;
+  }
+  html .project-page .project-footer .footer-projects .card .pre {
+    -webkit-border-radius: 0;
+            border-radius: 0;
   }
   html .project-page .project-footer h2 {
     line-height: 1.5;
@@ -789,6 +797,22 @@ footer {
     text-align: center;
   }
 }
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 10px;
+  }
+  html .page-header .splash-container .jessica-picture {
+    width: 25vw;
+  }
+  html .page-header .splash-container .intro-title {
+    font-size: 3em;
+    margin-top: 0.25em;
+  }
+  html .projects.featured .project .card {
+    -webkit-border-radius: 0;
+            border-radius: 0;
+  }
+}
 html {
   font-size: 15px;
 }
@@ -888,8 +912,11 @@ html body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 70vh;
+  height: 100vh;
   padding: 10em 10vw;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .project-page header h1,
 .project-page header h2 {
@@ -1771,5 +1798,14 @@ footer .footer-projects .card .card-text {
   }
   html .project-page article section img {
     width: 100%;
+  }
+  html .project-page article section .over-cards .little-card p {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+  html .project-page .project-footer h2 {
+    width: 85vw;
   }
 }
