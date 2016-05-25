@@ -590,9 +590,6 @@ html .project-page article section div.half {
 html .project-page article section div.half:first-of-type {
   margin-right: 2em;
 }
-html .project-page article section div.half h3 {
-  margin: 0 0 0 4em;
-}
 html .project-page article section div.half h3.red {
   color: #CE2D2D;
 }
@@ -1062,6 +1059,9 @@ html .project-page article ol li:last-of-type {
   }
   html .project-page article section div.half {
     min-width: 100%;
+  }
+  html .project-page article section div.half h3 {
+    margin: 0 0 0 4em;
   }
   html .project-page article section div.half .img-container {
     max-height: 130px;
