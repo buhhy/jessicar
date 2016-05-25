@@ -742,6 +742,12 @@ html .project-page article section div.halves-container {
   width: 75vw;
 }
 html .project-page article section div.halves-container h3 {
+  margin: 0;
+}
+html .project-page article section div.halves-container h4 {
+  margin-bottom: 0;
+}
+html .project-page article section div.halves-container p {
   margin-top: 0;
 }
 html .project-page article section div.halves-container .half-image {
