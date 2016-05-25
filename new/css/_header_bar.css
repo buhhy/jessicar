@@ -1,0 +1,42 @@
+.sticky-header {
+  position: fixed;
+  z-index: 2;
+}
+.sticky-nav {
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #DFDFDF;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  padding: 0 18vw;
+  width: 64vw;
+}
+.sticky-nav .nav-item {
+  align-items: center;
+  color: #E96057;
+  display: flex;
+  font-size: 1.2em;
+  font-style: italic;
+  justify-content: center;
+  padding: 0.75em;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  width: 100%;
+  height: 19px;
+}
+.sticky-nav .nav-item:hover {
+  background-color: rgba(233, 96, 87, 0.05);
+}
+.sticky-nav .nav-item.sticky-name {
+  cursor: pointer;
+  font-family: "Museo Sans", "Museo Sans 500", sans-serif;
+  font-style: normal;
+}
+@media only screen and (max-width: 800px) {
+  .sticky-nav {
+    padding: 0;
+    width: 100vw;
+  }
+}

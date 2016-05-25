@@ -59,6 +59,7 @@ html {
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   width: 100%;
+  height: 19px;
 }
 .sticky-nav .nav-item:hover {
   background-color: rgba(233, 96, 87, 0.05);
