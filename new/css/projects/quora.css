@@ -726,6 +726,7 @@ html {
 }
 .project-page article section .over-cards .little-card h4.green {
   color: #A0C98C;
+  padding: 0;
 }
 .project-page article section .over-cards .little-card p {
   font-size: 0.55em;
