@@ -823,9 +823,6 @@ html {
             box-shadow: none;
     margin-bottom: 1em;
   }
-  html .project-page article section .over-cards .little-card h4 {
-    margin-top: 1.5em;
-  }
   html .project-page article section .over-cards .little-card p {
     width: 100%;
     font-size: 0.75em;
