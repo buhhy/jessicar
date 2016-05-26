@@ -559,6 +559,9 @@ html {
 .project-page article section div.full {
   width: 60vw;
 }
+.project-page article section div.full.condensed {
+  margin-bottom: 3em;
+}
 .project-page article section div.half {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
