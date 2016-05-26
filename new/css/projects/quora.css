@@ -562,6 +562,9 @@ html {
 .project-page article section div.full.condensed {
   margin-bottom: 3em;
 }
+.project-page article section div.full.condensed:last-of-type {
+  margin-bottom: 0;
+}
 .project-page article section div.half {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
