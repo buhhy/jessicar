@@ -9,6 +9,7 @@
         type="text/css">
     <link rel="stylesheet" type="text/css" href="../css/fonts.css">
     <link rel="shortcut icon" href="../jessicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body class="project-page">
     <div class="sticky-header" id='stickyNavContainer'>
@@ -16,8 +17,8 @@
         <a class="nav-item sticky-name" id="stickyName" href="index.html">Jessica Fung</a>
         <a class="nav-item" target="_blank" href="../Jessica-Fung-Resume.pdf">Resume</a>
         <a class="nav-item" href="#" id="contactLink">Contact</a>
-        <a class="nav-item disabled" href="#" id="scrollTop">Scroll Top</a>
-        <a class="nav-item" href="inkling-lib.html" id="projectsLink">Next Project</a>
+        <a class="nav-item scrolltop disabled" href="#" id="scrollTop">Scroll Top</a>
+        <a class="nav-item nextproj" href="inkling-lib.html" id="projectsLink">Next Project</a>
       </nav>
     </div>
 
@@ -29,9 +30,10 @@
         <img class="logo" src="../svg/quora-logo.svg" alt="Quora Logo">
         <h1>New User Experience</h1>
         <h2>
-          As of March 2016, Quora had 100 million monthly unique visitors to the
-          website. With this amount of growth, it is important for the company
-          to convert more visitors into happy, retained users.
+          Quora had 100 million monthly unique visitors as of March 2016, up from 
+          80 million at the end of 2015.  With this amount of growth, it is 
+          important for the company to convert more visitors into happy, retained 
+          users.
         </h2>
       </div>
       <div class="half">
@@ -45,48 +47,67 @@
     <article>
       <section>
         <div class="full">
-          At Quora, I was able to touch on many parts of the product. I was 
-          drawn to improving the New User Experience (NUX), especially due 
-          to the user criticism. I felt it was not receiving as much attention
-          as it deserved. I started with running many small experiments to 
-          understand the space as best I could. Eventually, I fully assumed the 
-          responsibility to improve NUX. 
+          At Quora, I was able to work on many parts of the product. I was drawn 
+          to improving the New User Experience (NUX) in particular, because it was 
+          often the target of user criticism. Given its importance, I felt it was 
+          not receiving as much attention as it deserved. I started with running 
+          many small experiments to understand the space as best I could. 
+          Eventually, I fully assumed the responsibility of improving NUX.
         </div>
-        <h3>Old NUX</h3>
+        <h3>The Old NUX</h3>
+        <div class="full condensed">
+          After a new user signs up using their social media account or email 
+          address, they have to complete a few more steps before they can read 
+          content on Quora.
+        </div>
         <div class="window-container">
           <h4>Follow Topics</h4>
           <img src="../img/quora-nux/nux-followtopics.png" alt="balance">
+        </div>
+        <div class="full condensed">
+          In the first screen of our old NUX, we asked users to follow topics so we could 
+          collect explicit signal on what the user likes to read. The options had no 
+          significance and were arbitrarily selected a few years ago. As the user selects 
+          a topic, new options are dynamically added to the very bottom of the list. The 
+          user could only continue to the next step once they have followed at least 10 
+          topics.
         </div>
 
         <div class="window-container">
           <h4>Add Knows About Topics</h4>
           <img src="../img/quora-nux/nux-knowsabout.png" alt="balance">
         </div>
+        <div class="full condensed">
+          The next step was important for collecting signal on the user's experiences and 
+          areas of expertise. We needed to learn what kinds of questions we can route to 
+          the user based off their self-reported expertise and, if they fill out their 
+          topic biography, professional credentials.
+        </div>
       </section>
 
       <section>
         <div class="half">
-          When users sign up, they want to read great content right away. Some
-          users felt that Quora was putting unnecessary work between them and
-          the content. However at this point in time, Quora needed to get
-          explicit signal on what users liked to read. Therefore, we learned 
-          that we needed keep the step, for now.
+          When users sign up, they want to read great content right away. Some users 
+          felt that Quora was putting unnecessary work between them and the content. 
+          However at this point in time, Quora needed explicit signal to serve the 
+          most relevant questions to the new users. Therefore, we learned that we 
+          needed to keep the step, for now.
         </div>
         <img class="standalone" src="../svg/quora-venn.svg" alt="balance">
       </section>
 
-      <section class="blunt">
+      <section>
         <div class="full">
-          I explored the problem further by conducting research via user
-          interviews, workships, and brainstorms. Although we had to keep the
-          step, it did not mean that our NUX had to be as painful as it was 
-          for our users. The research boiled down to two main problems.
+          I explored the problem further by conducting research via user interviews, 
+          workshops, and brainstorms. Although we had to keep the step, it did not 
+          mean that our NUX had to be as painful as it was for our users. The 
+          research boiled down to two main problems.
         </div>
         <div class="over-cards">
           <div class="little-card">
             <h4 class="red">Problem 1</h4>
             <p>
-              Users perceived the product as <b>untrustworthy</b> due to the low
+              Users perceived the product as <b>untrustworthy</b> due to low
               design quality and product transparency.
             </p>
           </div>
@@ -94,8 +115,8 @@
           <div class="little-card">
             <h4 class="red">Problem 2</h4>
             <p>
-              Users felt <b>forced to work</b> in order to see content, without
-              an understanding of why they should sign up.
+              Users did not understand why they were <b>forced</b> to do more work 
+              to see content when they have already created their accounts.
             </p>
           </div>
         </div>
@@ -103,24 +124,24 @@
 
       <section class="blunt">
         <div class="full">
-          I took the problems and transformed them into goals and principles to
-          inform the redesign and experiments to come.
+          I took the problems and transformed them into goals and principles to 
+          guide the eventual NUX redesign and experiments.
         </div>
         <div class="over-cards">
           <div class="little-card">
             <h4 class="blue">Trust ++</h4>
             <p>
-              The new experience should present itself as a carefully crafted
-              and transparent product (e.g., beautifully show the value).
+              The new experience should present itself as a carefully crafted and 
+              transparent product (i.e. beautifully show the value).
             </p>
           </div>
 
           <div class="little-card">
             <h4 class="blue">Simplicity ++</h4>
             <p>
-              The new experience should reduce cognitive load to help the user
-              get past it quickly and easily (e.g., presenting fewer options,
-              simple words).
+              The new experience should reduce cognitive load to help the user 
+              complete the signup process faster and with less effort (e.g., 
+              presenting fewer options, simple words).
             </p>
           </div>
         </div>
@@ -141,11 +162,11 @@
           </div>
         </div>
         <div class="full">
-          Our qualitative goals had to be measured using metrics and user
-          feedback. I worked with the project manager to determine which metrics
-          to use as a proxy for measuring success. We anticipated a big gain in
-          brand, which is often an improvement that usually takes time to take
-          effect.
+          Our qualitative goals had to be measured using metrics and user 
+          feedback. I worked with the project manager to determine which metrics 
+          to use as a proxy for measuring success. I designed a new concept to 
+          achieve a more trustworthy and simple NUX. We anticipate a big gain in 
+          brand, which is often an improvement that takes time to take effect.
         </div>
       </section>
 
@@ -165,7 +186,8 @@
           <div class="third-item">
             <h3 class="blue">Simpler wording</h3>
             <p>
-              Users can parse short and concise language faster and more easily
+              Users can parse short and concise language faster and with less 
+              cognitive load
             </p>
           </div>
         </div>

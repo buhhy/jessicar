@@ -47,8 +47,9 @@ html {
     align-items: center;
     background-color: #8e191f;
     display: flex;
-    height: 70vh;
+    height: 100vh;
     padding: 10em 10vw;
+    box-sizing: border-box;
 
     h1, h2 {
       color: @bg-white;
@@ -157,6 +158,14 @@ html {
 
         &.full {
           width: 60vw;
+
+          &.condensed {
+            margin-bottom: 3em;
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
         }
 
         &.half {
@@ -268,42 +277,49 @@ html {
         display: flex;
         flex-wrap: wrap;
         margin-top: 3em;
-        justify-content: space-around;
-        width: 45%;
+        justify-content: center;
+        width: 100%;
 
         .little-card {
           background-color: @bg-white;
           border: 1px solid @border-gray;
+          border-radius: 6px;
           box-shadow: 0 1px 4px #e6e6e6;
           box-sizing: border-box;
-          margin: 0;
+          margin: 0 2em;
           min-width: 200px;
-          width: 14vw;
+          width: 25vw;
 
           h4 {
+            border-radius: 6px 6px 0 0;
             font-size: 0.6em;
             font-weight: 600;
             letter-spacing: 0.1em;
-            margin: 0.75em 0 0;
+            margin: 0;
+            padding: 0.5em;
             text-transform: uppercase;
 
             &.red {
-              color: @font-dark-red;
+              background-color: @bg-red;
+              color: @bg-white;
             }
 
             &.blue {
-              color: @font-light-blue;
+              background-color: @bg-blue;
+              color: @bg-white;
             }
 
             &.green {
               color: @font-green;
+              padding: 0;
             }
           }
 
           p {
-            font-size: 0.5em;
-            line-height: 1.7;
-            padding: 0 1em;
+            font-size: 0.55em;
+            line-height: 1.6;
+            padding: 0 0.75em;
+            letter-spacing: 0.5px;
           }
         }
       }
@@ -424,9 +440,6 @@ html {
             box-shadow: none;
             margin-bottom: 1em;
 
-            h4 {
-              margin-top: 1.5em;
-            }
             p {
               width: 100%;
               font-size: 0.75em;
@@ -647,7 +660,7 @@ html {
           }
         }
         .chevron {
-          bottom: 6vh;
+          bottom: 0vh;
         }
       }
       article section {
@@ -690,12 +703,23 @@ html {
     }
     article {
       section { 
+        display: flex;
+        width: 100vw;
+        align-items: center;
+
         h3 {
           margin-top: 2em;
         }
         div {
           &.full, &.half p {
             width: 85vw;
+            text-align: left;
+          }
+
+          &.half {
+            width: 90vw;
+            margin-right: 0;
+            text-align: left;
           }
           &.fourth {
             margin-bottom: 0;
@@ -725,11 +749,12 @@ html {
           &.third-container {
             flex-direction: column;
             font-size: 1.5em;
+            width: 80vw;
 
             .third-item {
-              width: 100vw;
+              width: 100%;
               box-sizing: border-box;
-              margin: 0;
+              margin: 0 0 1em 0;
 
               p {
                 line-height: 1.5;
@@ -738,7 +763,10 @@ html {
           }
         }
         img {
-          width: 100%;
+          width: 90vw;
+        }
+        .over-cards .little-card {
+          width: 80vw;
         }
       }
     }

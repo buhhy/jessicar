@@ -10,7 +10,7 @@ $("#quickmatchChevron").click(function(event){
 $("#contactLink").click(function(event){
   event.preventDefault();
   body.stop().animate({
-    scrollTop: $("#contactInfo").offset().top-100
+    scrollTop: $(".footer-contact").offset().top
   }, '2000', 'swing')
 });
 

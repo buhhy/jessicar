@@ -59,6 +59,7 @@ html {
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   width: 100%;
+  height: 19px;
 }
 .sticky-nav .nav-item:hover {
   background-color: rgba(233, 96, 87, 0.05);
@@ -368,8 +369,16 @@ html {
   html .project-page .project-footer .footer-contact a {
     background-size: 38px;
   }
+  html .project-page .project-footer .footer-projects .card {
+    -webkit-border-radius: 0;
+            border-radius: 0;
+  }
   html .project-page .project-footer .footer-projects .card .card-text {
     font-size: 1.3em;
+  }
+  html .project-page .project-footer .footer-projects .card .pre {
+    -webkit-border-radius: 0;
+            border-radius: 0;
   }
   html .project-page .project-footer h2 {
     line-height: 1.5;
@@ -431,8 +440,11 @@ html .project-page header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 70vh;
+  height: 100vh;
   padding: 10em 10vw;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 html .project-page header .window-container {
   background-size: 3em;
@@ -579,10 +591,10 @@ html .project-page article section div.half {
 html .project-page article section div.half:first-of-type {
   margin-right: 2em;
 }
-html .project-page article section div.half .red {
+html .project-page article section div.half h3.red {
   color: #CE2D2D;
 }
-html .project-page article section div.half .blue {
+html .project-page article section div.half h3.blue {
   color: #81AAD9;
 }
 html .project-page article section div.half p {
@@ -731,6 +743,12 @@ html .project-page article section div.halves-container {
   width: 75vw;
 }
 html .project-page article section div.halves-container h3 {
+  margin: 0;
+}
+html .project-page article section div.halves-container h4 {
+  margin-bottom: 0;
+}
+html .project-page article section div.halves-container p {
   margin-top: 0;
 }
 html .project-page article section div.halves-container .half-image {
@@ -993,7 +1011,7 @@ html .project-page article ol li:last-of-type {
     letter-spacing: 0.5px;
   }
   html .project-page header .chevron {
-    bottom: 6vh;
+    bottom: 0vh;
   }
   html .project-page article section {
     padding: 5em 0;
@@ -1015,14 +1033,46 @@ html .project-page article ol li:last-of-type {
   }
 }
 @media only screen and (max-width: 450px) {
+  html .project-page header .window-container .img-container {
+    height: 23vh;
+  }
   html .project-page header .window-container h4 {
     width: 65%;
     font-size: 0.75em;
   }
+  html .project-page article section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   html .project-page article section h3 {
     margin-top: 2em;
   }
-  html .project-page article section div.full,
+  html .project-page article section h4 {
+    margin-left: 4.25em;
+    width: 100vw;
+  }
+  html .project-page article section div.full {
+    width: 90vw;
+    text-align: left;
+  }
+  html .project-page article section div.full p {
+    text-align: left;
+  }
+  html .project-page article section div.half {
+    min-width: 100%;
+  }
+  html .project-page article section div.half h3 {
+    margin: 0 0 0 4em;
+  }
+  html .project-page article section div.half .img-container {
+    max-height: 130px;
+  }
   html .project-page article section div.half p {
     width: 85vw;
   }
@@ -1038,6 +1088,10 @@ html .project-page article ol li:last-of-type {
   }
   html .project-page article section div.window-container {
     width: 90%;
+  }
+  html .project-page article section div.window-container h4 {
+    margin: 1.2em auto 0;
+    width: 50%;
   }
   html .project-page article section div.window-container .img-container {
     overflow-x: hidden;

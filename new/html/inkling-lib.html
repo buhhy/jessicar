@@ -6,6 +6,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../css/fonts.css">
     <link rel="shortcut icon" href="../jessicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body class="project-page">
 
@@ -14,8 +15,8 @@
         <a class="nav-item sticky-name" id="stickyName" href="index.html">Jessica Fung</a>
         <a class="nav-item" target="_blank" href="../Jessica-Fung-Resume.pdf">Resume</a>
         <a class="nav-item" href="#" id="contactLink">Contact</a>
-        <a class="nav-item disabled" href="#" id="scrollTop">Scroll Top</a>
-        <a class="nav-item" href="quickmatch.html" id="projectsLink">Next Project</a>
+        <a class="nav-item scrolltop disabled" href="#" id="scrollTop">Scroll Top</a>
+        <a class="nav-item nextproj" href="quickmatch.html" id="projectsLink">Next Project</a>
       </nav>
     </div>
 
@@ -27,10 +28,10 @@
         <img class="logo" src="../svg/inkling-logo.svg" alt="Inkling Logo">
         <h1>Paginated Library</h1>
         <h2>
-          Inkling offers a comprehensive list of interactive books through a
-          library interface. Although many of our users read for leisure, there
-          was an increasing number of enterprise users who used Inkling to 
-          collaborate and manage hundreds or thousands of publishing projects.
+          Inkling offers a comprehensive list of interactive books through a library 
+          interface. Although many of our users read for leisure, there was an 
+          increasing number of enterprise users who used Inkling to collaborate and 
+          manage hundreds or thousands of publishing projects.
         </h2>
       </div>
       <div class="half">
@@ -47,12 +48,11 @@
       <section class="blunt">
         <div class="full">
           <p>I worked on Inkling's Product Design team as a User Experience Design 
-          Intern from September to December 2013. Although my responsibilities 
-          included assisting product designers with their projects or to create 
-          assets for them, I also led my own projects. One of these projects was 
-          the paginated library. It all began with a brief meeting with my 
-          manager, who said "I have a project for you. I don't know the details, 
-          but you should find out more from George."</p>
+           Intern from September to December 2013. Although my responsibilities included
+           assisting product designers with their projects or creating assets for them, 
+           I also led my own projects. One of these projects was the paginated library. 
+           It all began with a brief meeting with my manager, who said "I have a project 
+           for you. I don't know the details, but you should find out more from Greg."</p>
         </div>
         <div class="standalone">
           <img src="../img/inkling-lib/inkling-team.png" alt="Inkling Colleagues">
@@ -61,14 +61,14 @@
 
       <section>
         <div class="full">
-          <p>I learned that George was our Product Specialist; he knew our users well 
-          because he worked very closely with them. George described the issues that 
-          our users were experiencing at length, and explained the typical workflow 
-          of our users to me. For example, they waited over a minute for the page to 
-          load, then used cmd+f to search for their project. Also, they were confused 
-          by how the library would show two versions of a project with the same name, 
-          and that they were only were distinguishable by examining their URLs. I 
-          condensed these concerns into two main problems:</p>
+          <p>I learned that Greg was our Product Specialist; he knew our users well 
+          because he worked very closely with them. Greg described the issues that our 
+          users were experiencing at length, and explained the typical workflow of our 
+          users to me. For example, they waited over a minute for the page to load, then 
+          used cmd+f to search for their project. Also, they were confused by how the 
+          library would show two versions of a project with the same name, and that they 
+          were only were distinguishable by examining their URLs. I condensed these 
+          concerns into two main problems:</p>
         </div>
         <div class="half">
           <h3 class="red">Slow Loading Times</h3>
@@ -76,9 +76,9 @@
           wait over a minute for the page to load before they could start reading or 
           working.</p>
           <h3 class="red">Difficult to Find Projects</h3>
-          <p>Users relied on browser searching (cmd+f) to find a particular 
-          book. They were also confused by seeing multiple projects with the same name,
-          that could only be distinguished as different versions when the URL is examined.</p>
+          <p>Users relied on browser searching (cmd+f) to find a particular book. They 
+          were also confused by seeing multiple projects with the same name that could 
+          only be distinguished as different versions when the URL is examined.</p>
         </div>
         <div class="half">
           <div class="window-container">
@@ -92,9 +92,10 @@
 
       <section class="continued">
         <div class="full">
-          Whle redesigning the new library, I had to also consider the fact that a good number
-          of enterprise users would use Inkling for both work and leisure. The new design had 
-          to have the ability to switch between work projects and personal reading.
+          While redesigning the new library, I had to also consider the fact that a 
+          considerable number of enterprise users would use Inkling for both work 
+          and leisure. The new design had to have the ability to switch between work 
+          projects and personal reading.
           <div class="full image">
             <img src="../svg/inkling-venn.svg" alt="balance">
           </div>
@@ -118,15 +119,16 @@
         </div>
 
         <div class="full">
-          After wireframing different ideas, I came up with two hypotheses to address the 
-          slow loading times and difficulty with finding projects:
+          After wireframing different ideas, I came up with two hypotheses to address 
+          the slow loading times and difficulty with finding projects:
         </div>
         <div class="halves-container icon">
           <div class="half">
             <h3 class="blue">Pagination</h3>
-            <p>Dividing the results into separate pages will significantly reduce loading 
-            times in the library. People would not have to wait to start working or reading 
-            because not all of books and projects will loaded at once.</p>
+            <p>Dividing the results into separate pages will significantly reduce 
+            loading times in the library. Users will not have to wait to start working 
+            or reading because books and projects will load on demand instead of all 
+            at once.</p>
           </div>
           <div class="half-image">
             <img src="../svg/inkling-pagicon.svg" alt="balance">
@@ -135,9 +137,9 @@
         <div class="halves-container icon">
           <div class="half">
             <h3 class="blue">Smarter sorting and search</h3>
-            <p>In order to help users find the right books faster, we want to show the most
-            relevant projects and books first. We will also implement a search which will
-            return all relevant books or projects.</p>
+            <p>In order to help users find the right books faster, we want to show the 
+            most relevant projects and books first. We will also implement a search which 
+            will return all relevant books or projects.</p>
           </div>
           <div class="half-image">
             <img src="../svg/inkling-magnify.svg" alt="balance">
@@ -147,13 +149,19 @@
 
       <section>
         <div class="full">
-          <p>After many iterations, the following design solution was approved by the project manager and sent for development.</p>
+          <p>After many iterations, the following design solution was approved by the 
+          project manager and sent for development.</p>
         </div>
         <div class="halves-container">
           <div class="half">
             <h3 class="blue">Publishing Professionals</h3>
             <h4>Load More</h4>
-            <p>Instead of loading all projects at once, the page will only load ten of the most relevant projects at a time. To sort by the most relevant projects, I looked at the API to see what kinds of sorting was available. I decided that we would sort by projects "Last Published", which means that most active projects will be ranked higher. Clicking the Load More button at the end of the page would load the next most relevant projects.</p>
+            <p>Instead of loading all projects at once, the page will only load ten of 
+            the most relevant projects at a time. To sort by the most relevant projects, 
+            I looked at the API to see what kinds of sorting was available. I decided 
+            that we would sort by "Last Published", which means that the most active 
+            projects will be ranked higher. Clicking the Load More button at the end of 
+            the page would load the next most relevant projects.</p>
           </div>
           <div class="half-image">
             <img class="screenshot" src="../img/inkling-lib/inkling-loadmore.png" alt="balance">
@@ -163,7 +171,11 @@
         <div class="halves-container">
           <div class="half">
             <h4>Organized Tabs</h4>
-            <p>Publishing professionals use Inkling for both work (via our enterprise produce, Habitat) and for leisure. Therefore, these users can switch between the two tabs, Habitat Projects and their Personal Library. It was important to name the tabs clearly so that users could easily differentiate work projects from their personal reading.</p>
+            <p>Publishing professionals use Inkling for both work, via our enterprise 
+            product Habitat, and for leisure. Users switch between the two products by 
+            clicking tabs - Habitat Projects and their Personal Library. It was important 
+            to name the tabs clearly so that users could easily differentiate work 
+            projects from their personal reading.</p>
           </div>
           <div class="half-image">
             <img class="screenshot" src="../img/inkling-lib/inkling-tabs.png" alt="balance">
@@ -173,7 +185,10 @@
         <div class="halves-container">
           <div class="half">
             <h4>Search</h4>
-            <p>Adding a simple search engine that matches project titles can help users find any projects or books that were added earlier on. This is a fallback for professionals in the less frequent use case that they need to find something from a few months ago.</p>
+            <p>Adding a simple search engine that filters on project titles can help 
+            users find any projects or books that were added earlier on. This is a useful 
+            feature for professionals who may occasionally need to find something from a 
+            few months ago.</p>
           </div>
           <div class="half-image">
             <img class="screenshot" src="../img/inkling-lib/inkling-prosearch.png" alt="balance">
@@ -184,7 +199,11 @@
           <div class="half">
             <h3 class="blue">Regular Users</h3>
             <h4>Tailored Interface</h4>
-            <p>Although I was focused on solving the identified problems for publishing professionals, the regular users should not be left in the dark. Most of the changes that we were bringing to publishing professionals did not apply to our regular users. Therefore, I made few changes to the regular library.</p>
+            <p>Although our efforts were primarily aimed at solving problems for 
+            professional users, I looked for ways to bring implement those improvements 
+            for our regular users as well. Despite the fact that most of changes did not 
+            apply to our regular users, I was able to make positive changes to the regular 
+            library as well.</p>
           </div>
           <div class="half-image">
             <img class="screenshot" src="../img/inkling-lib/inkling-tailored.png" alt="balance">
@@ -194,9 +213,10 @@
         <div class="halves-container">
           <div class="half">
             <h4>Search</h4>
-            <p>Regular users would also benefit from searching their libraries. Most regular 
-            leisure readers did not have more than ten books, but rolling search out to them 
-            would provide an opportunity to recommend unpurchased, but relevant, books.</p>
+            <p>Regular users would also benefit from searching their libraries. Most 
+            regular leisure readers did not have more than ten books, but rolling search 
+            out to them would provide an opportunity to recommend unpurchased, but 
+            relevant, books.</p>
           </div>
           <div class="half-image">
             <img class="screenshot" src="../img/inkling-lib/inkling-regsearch.png" alt="balance">

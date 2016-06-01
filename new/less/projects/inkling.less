@@ -46,8 +46,9 @@ html {
       align-items: center;
       background-color: #f0f7f0;
       display: flex;
-      height: 70vh;
+      height: 100vh;
       padding: 10em 10vw;
+      box-sizing: border-box;
 
       .window-container {
         background-size: 3em;
@@ -193,12 +194,15 @@ html {
               margin-right: 2em;
             }
 
-            .red {
-              color: @font-dark-red;
-            }
+            h3 {
 
-            .blue {
-              color: @font-light-blue;
+              &.red {
+                color: @font-dark-red;
+              }
+
+              &.blue {
+                color: @font-light-blue;
+              }
             }
 
             p {
@@ -325,6 +329,14 @@ html {
             width: 75vw;
 
             h3 {
+              margin: 0;
+            }
+
+            h4 {
+              margin-bottom: 0;
+            }
+
+            p {
               margin-top: 0;
             }
 
@@ -647,7 +659,7 @@ html {
         }
 
         .chevron {
-          bottom: 6vh;
+          bottom: 0vh;
         }
       }
 
@@ -679,6 +691,9 @@ html {
 @media only screen and (max-width : 450px) {
   html .project-page {
     header .window-container {
+      .img-container {
+        height: 23vh;
+      }
 
       h4 {
         width: 65%;
@@ -688,13 +703,41 @@ html {
 
     article {
       section { 
+        display: flex;
+        align-items: center;
+
         h3 {
           margin-top: 2em;
         }
 
+        h4 {
+          margin-left: 4.25em;
+          width: 100vw;
+        }
+
         div {
-          &.full, &.half p {
-            width: 85vw;
+          &.full {
+            width: 90vw;
+            text-align: left;
+
+            p {
+              text-align: left;
+            }
+          }
+
+          &.half {
+            min-width: 100%;
+
+            h3 {
+             margin: 0 0 0 4em; 
+            }
+
+            .img-container {
+              max-height: 130px;
+            }
+            p {
+              width: 85vw;
+            }
           }
 
           &.fourth {
@@ -712,6 +755,11 @@ html {
 
           &.window-container {
             width: 90%;
+
+            h4 {
+              margin: 1.2em auto 0;
+              width: 50%;
+            }
 
             .img-container {
               overflow-x: hidden;
