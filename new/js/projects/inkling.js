@@ -21,20 +21,4 @@ $("#scrollTop").click(function(event){
   }, '2000', 'swing')
 });
 
-$(function() {
-	var previousScroll = 0;
-	
-	$(window).scroll(function(){
-		var currentScroll = $(this).scrollTop();
-		if (currentScroll == 0) {
-			$("#scrollTop").addClass("disabled");
-		} else if (currentScroll > previousScroll) {
-			$("#stickyNavContainer").fadeOut();
-			$("#scrollTop").removeClass("disabled");
-		} else {
-			$("#stickyNavContainer").fadeIn();
-			$("#scrollTop").removeClass("disabled");
-		}
-		previousScroll = currentScroll;
-	});
-});
+setUpProjectNav($("#stickyNavContainer"), $("#scrollTop"));
