@@ -19,25 +19,44 @@ html {
   z-index: 2;
 }
 .sticky-nav {
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: white;
   border-bottom: 1px solid #DFDFDF;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   padding: 0 18vw;
   width: 64vw;
 }
 .sticky-nav .nav-item {
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #E96057;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   font-size: 1.2em;
   font-style: italic;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0.75em;
   text-align: center;
   text-decoration: none;
+  -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   width: 100%;
   height: 19px;
@@ -59,10 +78,19 @@ html {
 .window-container {
   background: #EAEAEA url("../../svg/browser.svg") no-repeat 11px 11px;
   background-size: 60px;
-  border-radius: 5px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 1.5em 3em 0.5em;
   width: 50vw;
 }
@@ -70,8 +98,11 @@ html {
   margin-bottom: 0;
 }
 .window-container img {
-  border-radius: 0 0 5px 5px;
-  box-sizing: border-box;
+  -webkit-border-radius: 0 0 5px 5px;
+          border-radius: 0 0 5px 5px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   top: 0;
   width: 100%;
@@ -87,12 +118,23 @@ html {
   width: 50%;
 }
 .project-footer {
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #FFF;
   border-top: 1px solid #DFDFDF;
-  box-shadow: 0 -0.2em 20em rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 -0.2em 20em rgba(0, 0, 0, 0.1);
+          box-shadow: 0 -0.2em 20em rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 10em 0 5em;
   position: relative;
 }
@@ -116,29 +158,49 @@ html {
 }
 .project-footer .footer-contact {
   color: #868686;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   font-family: "Lato", sans-serif;
   font-size: 1em;
   font-weight: 600;
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   letter-spacing: 0.75px;
   margin-bottom: 4em;
   text-transform: uppercase;
   width: 50vw;
 }
 .project-footer .footer-contact a {
-  align-items: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   background-repeat: no-repeat;
   background-position: center 1.25em;
-  border-radius: 6px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
   color: #868686;
   cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   height: 6.5em;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1.5em;
   text-decoration: none;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   width: 6.5em;
 }
@@ -162,14 +224,23 @@ html {
 }
 .project-footer .footer-projects .card {
   border: 1px solid #ECECEC;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px #e6e6e6;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px #e6e6e6;
+          box-shadow: 0 1px 4px #e6e6e6;
   text-decoration: none;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
   transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 .project-footer .footer-projects .card:hover {
-  box-shadow: 0 3px 5px #ddd;
+  -webkit-box-shadow: 0 3px 5px #ddd;
+          box-shadow: 0 3px 5px #ddd;
 }
 .project-footer .footer-projects .card .image {
   background-color: #F7F7F7;
@@ -191,13 +262,23 @@ html {
   line-height: 1.7em;
 }
 .project-footer .footer-projects .card:hover .pre .image {
-  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+      -ms-transform: scale(1.25);
+          transform: scale(1.25);
 }
 .project-footer .footer-projects .card .pre {
-  border-radius: 3px 0 0 3px;
+  -webkit-border-radius: 3px 0 0 3px;
+          border-radius: 3px 0 0 3px;
   border-right: 1px solid #ECECEC;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   overflow: hidden;
   width: 41%;
 }
@@ -206,7 +287,10 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   transition: transform 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
 }
 .project-footer .footer-projects .card .pre.quora .image {
@@ -235,11 +319,20 @@ html {
   line-height: 1.7em;
 }
 .copyright {
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #F7F7F7;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   height: 10vh;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 5em;
   position: absolute;
   width: 100%;
@@ -257,7 +350,8 @@ html {
     margin-left: 1em;
   }
   .project-footer .footer-projects .card {
-    border-radius: 0;
+    -webkit-border-radius: 0;
+            border-radius: 0;
   }
 }
 @media only screen and (max-width: 575px) {
@@ -276,13 +370,15 @@ html {
     background-size: 38px;
   }
   html .project-page .project-footer .footer-projects .card {
-    border-radius: 0;
+    -webkit-border-radius: 0;
+            border-radius: 0;
   }
   html .project-page .project-footer .footer-projects .card .card-text {
     font-size: 1.3em;
   }
   html .project-page .project-footer .footer-projects .card .pre {
-    border-radius: 0;
+    -webkit-border-radius: 0;
+            border-radius: 0;
   }
   html .project-page .project-footer h2 {
     line-height: 1.5;
@@ -300,12 +396,22 @@ html .project-page .sticky-header {
   z-index: 3;
 }
 html .project-page .sticky-header .nav-item {
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #777;
   font-size: 1.2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-decoration: none;
+  -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   width: 100%;
 }
@@ -325,12 +431,20 @@ html .project-page .sticky-header .nav-item .sticky-name {
   font-style: normal;
 }
 html .project-page header {
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #f0f7f0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   height: 100vh;
   padding: 10em 10vw;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 html .project-page header .window-container {
   background-size: 3em;
@@ -378,6 +492,7 @@ html .project-page header .chevron {
   height: 100px;
   left: 0;
   position: absolute;
+  -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   width: 100%;
 }
@@ -386,8 +501,15 @@ html .project-page header .chevron:hover {
   cursor: pointer;
 }
 html .project-page article {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: "Lato", sans-serif;
   line-height: 1.8;
   text-align: center;
@@ -397,9 +519,17 @@ html .project-page article div {
   line-height: 1.8;
 }
 html .project-page article section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   overflow: hidden;
   padding: 10em 0;
@@ -418,8 +548,11 @@ html .project-page article section.continued .over-cards {
 html .project-page article section.continued .over-cards .little-card {
   border-top: none;
   bottom: 0.5em;
-  box-shadow: 0 2px 4px #e6e6e6;
-  box-sizing: border-box;
+  -webkit-box-shadow: 0 2px 4px #e6e6e6;
+          box-shadow: 0 2px 4px #e6e6e6;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0.5em;
   position: relative;
 }
@@ -455,7 +588,9 @@ html .project-page article section div.full.workflow img {
   margin: 0;
 }
 html .project-page article section div.half {
-  align-self: flex-start;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
   min-width: 320px;
   text-align: left;
   width: 40vw;
@@ -473,21 +608,39 @@ html .project-page article section div.half p {
   max-width: 550px;
 }
 html .project-page article section div.third-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 2em;
   width: 60vw;
 }
 html .project-page article section div.third-container .third-item {
   background-color: #FFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0.5em;
   width: 250px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
 }
 html .project-page article section div.third-container .third-item h3 {
   display: block;
@@ -501,14 +654,20 @@ html .project-page article section div.third-container .third-item p {
   margin: 0;
 }
 html .project-page article section div.fourth {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   margin-bottom: 3em;
   width: 80%;
 }
 html .project-page article section div.fourth .paper {
   background-color: #FFF;
-  box-shadow: 0 1px 4px #e6e6e6;
+  -webkit-box-shadow: 0 1px 4px #e6e6e6;
+          box-shadow: 0 1px 4px #e6e6e6;
   border: 1px solid #ECECEC;
   height: 180px;
   width: 150px;
@@ -516,7 +675,8 @@ html .project-page article section div.fourth .paper {
 html .project-page article section div.fourth .paper img {
   bottom: 6px;
   border: 1px solid #ECECEC;
-  box-shadow: 0 1px 4px #e6e6e6;
+  -webkit-box-shadow: 0 1px 4px #e6e6e6;
+          box-shadow: 0 1px 4px #e6e6e6;
   margin-top: 0.4em;
   min-width: 0;
   position: relative;
@@ -524,6 +684,9 @@ html .project-page article section div.fourth .paper img {
   width: 100%;
 }
 html .project-page article section div video {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 2.5em;
   width: 100%;
@@ -557,19 +720,30 @@ html .project-page article section div.window-container .video {
   width: 65vw;
 }
 html .project-page article section div.mobile-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 50vw;
 }
 html .project-page article section div.mobile-container video {
   background-color: #515151;
-  border-radius: 1em;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 1em;
+          border-radius: 1em;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   max-height: 630px;
   max-width: 370px;
   padding: 3.5em 0.1em;
 }
 html .project-page article section div.halves-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   font-size: 1em;
   margin-top: 3em;
@@ -585,9 +759,18 @@ html .project-page article section div.halves-container p {
   margin-top: 0;
 }
 html .project-page article section div.halves-container .half-image {
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 40vw;
 }
 html .project-page article section div.halves-container .half-image img {
@@ -596,7 +779,8 @@ html .project-page article section div.halves-container .half-image img {
 }
 html .project-page article section div.halves-container .half-image img.screenshot {
   border: 1px solid #ECECEC;
-  box-shadow: 0 1px 4px #e6e6e6;
+  -webkit-box-shadow: 0 1px 4px #e6e6e6;
+          box-shadow: 0 1px 4px #e6e6e6;
   width: 100%;
 }
 html .project-page article section div.standalone {
@@ -677,7 +861,11 @@ html .project-page article ol li:last-of-type {
     width: 100vw;
   }
   html .project-page header {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   html .project-page header h1,
   html .project-page header h2 {
@@ -709,9 +897,19 @@ html .project-page article ol li:last-of-type {
     margin: 0 0 2em;
   }
   html .project-page article div.half {
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
     width: 100vw;
   }
@@ -720,7 +918,11 @@ html .project-page article ol li:last-of-type {
     width: 70vw;
   }
   html .project-page article section {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 8em 0;
   }
   html .project-page article section div.fourth {
@@ -734,12 +936,20 @@ html .project-page article ol li:last-of-type {
     width: 95%;
   }
   html .project-page article section div.halves-container {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 6em;
     width: 100vw;
   }
   html .project-page article section div.halves-container.icon {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   html .project-page article section div.halves-container .half-image {
     width: 100vw;
@@ -824,7 +1034,8 @@ html .project-page article ol li:last-of-type {
   }
   html .project-page article section div.fourth .paper {
     background: none;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     border: none;
   }
 }
@@ -837,8 +1048,14 @@ html .project-page article ol li:last-of-type {
     font-size: 0.75em;
   }
   html .project-page article section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   html .project-page article section h3 {
     margin-top: 2em;
