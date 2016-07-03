@@ -6,4 +6,4 @@ if [[ `git status --porcelain` ]]; then
   git commit -am "auto-deploy commit"
 fi
 
-git push jessido8@jessicafung.com:www/jf-website.git
+git push ec2-user@jessicafung.com:/srv/servers/jessica/jessica.git
